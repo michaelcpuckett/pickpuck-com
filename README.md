@@ -1,4 +1,3 @@
-pickpuck-com
-============
+== Personal Portfilio Site of Michael Puckett ==
 
-portfolio site
+* http://www.pickpuck.com

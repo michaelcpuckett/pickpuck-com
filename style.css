@@ -1,31 +1,161 @@
-html, body, p, ul { padding:0; margin:0; border:0; }
+@font-face {
+    font-family: 'melbourneregularregular';
+    src: url("fonts/melbourne.eot");
+    src: url("/silverEagle/fonts/states/fonts/melbourne.woff") format("woff"), url("fonts/melbourne.ttf") format("truetype"), url("fonts/melbourne.svg#melbourneregularregular") format("svg");
+}
 
-body { background-image:url('bodybg.png'); background-repeat:repeat-y; background-position:30% 0%; margin:50px 0 0;
-font-size:10px; color:#222; text-align:center; }
+html,
+body,
+p,
+ul {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
 
-a { text-decoration:none; color:#222; }
-a:hover { text-decoration:underline; }
+body {
+    background-image: url('bodybg.png');
+    background-position: 30% 0%;
+    background-repeat: repeat-y;
+    color:#222;
+    font-family: 'melbourneregularregular', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    margin: 0;
+    text-align: center;
+}
 
-#container { background-image:url('cloud.png'); width:100%; background-position:50% 0%; height:600px; background-repeat:no-repeat; position:relative; font-family:Georgia, serif;  }
+a {
+    color:#222;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
 
-#sky { text-align:left; width:775px; padding-left:10px; margin:0 auto; font-weight:900; letter-spacing:-1px;
-font-size:2.4em; text-shadow: -1px 1px 1px #999; }
+.banner {
+    font-size: 1.6em;
+    padding: 5px 0 0;
+}
+.banner a {
+    border-bottom: 1px solid;
+}
+.banner a:hover {
+    color: #1a68ac;
+    text-decoration: none;
+}
 
-h1 { position:relative; top:-15px; height:295px; text-indent:-9999px; }
+h1 {
+    border-bottom: 1px solid #64C39D;
+    color: #0792cb;
+    display: inline-block;
+    font-size: 70px;
+    font-weight: 100;
+    letter-spacing: 6px;
+    line-height: 1.2;
+    margin: 30px 0 45px;
+    padding-bottom: 17px;
+    text-shadow: -2px 2px 1px #64C39D;
+    text-transform: uppercase;
+}
 
-#explain { text-align:center; text-transform:uppercase; font-family:Arial,sans-serif; letter-spacing:-1px; position:relative; z-index:99; }
-#explain span { font-family:Georgia, serif; text-transform:lowercase; font-style:italic; letter-spacing:-2px; font-size:1.2em; }
+.explain {
+    font-size: 2.4em;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 99;
+}
+.explain span {
+    font-family: Georgia, serif;
+    font-size: 1.15em;
+    font-style: italic;
+    letter-spacing: -2px;
+    text-transform: lowercase;
+}
 
-#hurricane li { display:block; position:fixed; bottom:0; left:0; width:100%; height:238px; background-repeat:repeat-x; text-indent:-9999px; background-image:url('hurricane.png'); }
-#andrew { background-position:200px 10px; }
-#ivan { background-position:-700px 20px; }
-#rita { background-position:40px 20px; }
-#katrina { background-position:300px 20px; }
+.hurricane li {
+    background-image: url('hurricane.png');
+    background-repeat: repeat-x;
+    bottom: 0;
+    display: block;
+    height: 238px;
+    left: 0;
+    position: fixed;
+    text-indent: -9999px;
+    width: 100%;
+    z-index: -1;
+}
+.andrew {
+    background-position: 200px 10px;
+}
+.ivan {
+    background-position: -700px 20px;
+}
+.rita {
+    background-position: 40px 20px;
+}
+.katrina {
+    background-position: 300px 20px;
+}
 
-#footer {  text-align:center; position:fixed; bottom:20px; z-index:99; width:100%; *left:0; }
+.footer {
+    margin: 30px 0;
+    text-align: center;
+    width: 100%;
+}
 
-#links { list-style-type:none; font-family:Arial,sans-serif; font-size:1.8em; text-transform:lowercase; font-weight:normal; letter-spacing:0; color:#f9f9f9; width:775px; margin:100px auto 0 auto; }
-#links li { display:inline; padding:0 20px 0 16px; line-height:2em; border-right:1px solid #f9f9f9;}
-#links li.last { border-right:none; }
-#links a { color:#f9f9f9;  white-space:nowrap;  }
-#links span { font-size:.5em; font-weight:900;  text-transform:uppercase; letter-spacing:-1px; }
+.links {
+    color:#f9f9f9;
+    font-size: 1.8em;
+    font-weight: normal;
+    letter-spacing: 0;
+    list-style-type: none;
+    margin: 0 auto;
+    text-transform: lowercase;
+}
+.links li {
+    line-height: 2em;
+    padding: 0 20px 0 16px;
+}
+.links a {
+    white-space: nowrap;
+ }
+.links span {
+    font-size:.5em;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.at {
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;font-size: .8em;
+    position: relative;
+    top: -1px;
+}
+.love {
+    color: #1a68ac;
+    font-size: 2em;
+}
+
+@media (max-width: 480px) {
+    p {
+        display: inline;
+    }
+    .banner * {
+        display: none;
+    }
+    .banner h1 {
+        display: block;
+        margin-top: 10px;
+    }
+    .explain span {
+        white-space: nowrap;
+    }
+    .hurricane {
+        display: none;
+    }
+}
