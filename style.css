@@ -75,7 +75,35 @@ h1 {
     letter-spacing: -2px;
     text-transform: lowercase;
 }
+
+@-webkit-keyframes andrew {
+    to {
+        background-position: 400px 10px;
+    }
+}
+
+@-webkit-keyframes ivan {
+    to {
+        background-position: -850px 20px;
+    }
+}
+
+@-webkit-keyframes rita {
+    to {
+        background-position: -200px 20px;
+    }
+}
+
+@-webkit-keyframes katrina {
+    to {
+        background-position: 200px 20px;
+    }
+}
+
 .hurricane li {
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
     background-image: url('hurricane.png');
     background-repeat: repeat-x;
     bottom: 0;
@@ -88,20 +116,24 @@ h1 {
     z-index: -1;
 }
 .andrew {
+    -webkit-animation-name: andrew;
     background-position: 200px 10px;
 }
 .ivan {
+    -webkit-animation-name: ivan;
     background-position: -700px 20px;
 }
 .rita {
+    -webkit-animation-name: rita;
     background-position: 40px 20px;
 }
 .katrina {
+    -webkit-animation-name: katrina;
     background-position: 300px 20px;
 }
 
 .footer {
-    margin: 30px 0;
+    margin: 30px 0 300px;
     text-align: center;
     width: 100%;
 }
