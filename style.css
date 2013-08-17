@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'melbourneregularregular';
     src: url("fonts/melbourne.eot");
-    src: url("/silverEagle/fonts/states/fonts/melbourne.woff") format("woff"), url("fonts/melbourne.ttf") format("truetype"), url("fonts/melbourne.svg#melbourneregularregular") format("svg");
+    src: url("fonts/melbourne.woff") format("woff"), url("fonts/melbourne.ttf") format("truetype"), url("fonts/melbourne.svg#melbourneregularregular") format("svg");
 }
 
 html,
@@ -15,7 +15,7 @@ ul {
 
 body {
     background-image: url('bodybg.png');
-    background-position: 30% 0%;
+    background-position: 30% 0;
     background-repeat: repeat-y;
     color:#222;
     font-family: 'melbourneregularregular', Helvetica, Arial, sans-serif;
@@ -29,7 +29,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid;
 }
 
 .banner {
@@ -75,7 +75,6 @@ h1 {
     letter-spacing: -2px;
     text-transform: lowercase;
 }
-
 .hurricane li {
     background-image: url('hurricane.png');
     background-repeat: repeat-x;
@@ -108,7 +107,6 @@ h1 {
 }
 
 .links {
-    color:#f9f9f9;
     font-size: 1.8em;
     font-weight: normal;
     letter-spacing: 0;
@@ -124,29 +122,58 @@ h1 {
     white-space: nowrap;
  }
 .links span {
-    font-size:.5em;
+    font-size: .5em;
     font-weight: 900;
     letter-spacing: -1px;
     text-transform: uppercase;
 }
+.cnn-expansion {
+    margin: .5em 0 1em;
+}
+.sublinks li {
+    padding: 0 .25em;
+}
+.sublinks a {
+    display: inline-block;
+}
+.highlighted-link {
+    -webkit-transition: .3s all;
+       -moz-transition: .3s all;
+        -ms-transition: .3s all;
+         -o-transition: .3s all;
+            transition: .3s all;
+    background: rgba(7,146,203, .7);
+    border-bottom: 2px solid #0792cb;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 5px 5px 8px;
+}
+.highlighted-link:hover {
+    border-bottom: 2px solid #64C39D;
+    background-color: #64C39D;
+    color: black;
+}
+.link-group-header {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1em;
+}
 
 .at {
     font-family: 'Arial', sans-serif;
-    font-weight: normal;font-size: .8em;
+    font-weight: normal;
+    font-size: .8em;
     position: relative;
     top: -1px;
-}
-.love {
-    color: #1a68ac;
-    font-size: 2em;
 }
 
 @media (max-width: 480px) {
     p {
         display: inline;
-    }
-    .banner * {
-        display: none;
     }
     .banner h1 {
         display: block;
