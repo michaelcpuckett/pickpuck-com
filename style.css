@@ -213,6 +213,9 @@ h1 {
     p {
         display: inline;
     }
+    .banner p {
+        display: none;
+    }
     .banner h1 {
         display: block;
         margin-top: 10px;
@@ -221,6 +224,6 @@ h1 {
         white-space: nowrap;
     }
     .hurricane {
-        display: none;
+        /*display: none;*/
     }
 }
