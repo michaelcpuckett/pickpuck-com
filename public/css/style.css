@@ -14,9 +14,12 @@ ul {
 }
 
 body {
-  background-image: url("/public/images/bodybg.png");
-  background-position: 30% 0;
-  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-color: #E7E689;
+  background-image: url("/public/images/clouds.png");
+  background-position: 50% 40px;
+  background-repeat: no-repeat;
+  background-size: 100%;
   color: #222;
   font-family: 'melbourneregularregular', Helvetica, Arial, sans-serif;
   font-size: 10px;
@@ -312,6 +315,10 @@ h1 {
 }
 
 @media (max-width: 480px) {
+  body {
+    background-image: none;
+  }
+
   p {
     display: inline;
   }
