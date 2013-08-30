@@ -1,3 +1,5 @@
+@import 'mixins';
+
 @font-face {
     font-family: 'melbourneregularregular';
     src: url('/fonts/melbourne.eot');
@@ -73,35 +75,31 @@ h1 {
     text-transform: lowercase;
 }
 
-@-webkit-keyframes andrew {
+@include keyframes(andrew) {
     to {
         background-position: 400px -20px;
     }
 }
 
-@-webkit-keyframes ivan {
+@include keyframes(ivan) {
     to {
         background-position: -850px 50px;
     }
 }
 
-@-webkit-keyframes rita {
+@include keyframes(rita) {
     to {
         background-position: -400px -20px;
     }
 }
 
-@-webkit-keyframes katrina {
+@include keyframes(katrina) {
     to {
         background-position: 200px -20px;
     }
 }
 
 .hurricane li {
-    -webkit-animation-direction: alternate;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-duration: 10s;
     background-image: url('/public/images/hurricane.png');
     background-repeat: repeat-x;
     bottom: -35px;
@@ -113,22 +111,26 @@ h1 {
     text-indent: -9999px;
     width: 100%;
     z-index: -1;
+    @include prefix(animation-direction, alternate);
+    @include prefix(animation-iteration-count, infinite);
+    @include prefix(animation-timing-function, linear);
+    @include prefix(animation-duration, 10s);
 }
 .andrew {
-    -webkit-animation-name: andrew;
     background-position: 200px 10px;
+    @include prefix(animation-name, andrew);
 }
 .ivan {
-    -webkit-animation-name: ivan;
     background-position: -400px 20px;
+    @include prefix(animation-name, ivan);
 }
 .rita {
-    -webkit-animation-name: rita;
     background-position: -100px 20px;
+    @include prefix(animation-name, rita);
 }
 .katrina {
-    -webkit-animation-name: katrina;
     background-position: 300px 20px;
+    @include prefix(animation-name, katrina);
 }
 
 .footer {
@@ -166,14 +168,14 @@ h1 {
     padding-bottom: 3px;
     position: relative;
     width: 100%;
-    -webkit-transform-origin: 50% 0;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: all .35s;
+    @include prefix(transform-origin, 50% 0);
+    @include prefix(transform-style, preserve-3d);
+    @include prefix(transition, all .35s);
 }
 
 .links a:hover span,
 .links a:focus span {
-    -webkit-transform: rotateX(90deg) translateY(-22px);
+    @include prefix(transform, rotateX(90deg) translateY(-22px));
 }
 
 .links a span:before {
@@ -185,8 +187,8 @@ h1 {
     position: absolute;
     top: 100%;
     width: 100%;
-    -webkit-transform: rotateX(-90deg);
-    -webkit-transform-origin: 50% 0;
+    @include prefix(transform, rotateX(-90deg));
+    @include prefix(transform-origin, 50% 0);
 }
 
 .cnn-expansion {
