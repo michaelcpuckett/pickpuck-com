@@ -1,0 +1,28 @@
+{
+  "name": "pickpuck-com",
+  "version": "0.0.0",
+  "description": "Personal portfolio site of Michael Puckett",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michaelcpuckett/pickpuck-com.git"
+  },
+  "author": "Michael Puckett <michaelcpuckett@gmail.com>",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "2c5e6048636eb0271a097c48cf6dac3f2e8ce24e",
+  "bugs": {
+    "url": "https://github.com/michaelcpuckett/pickpuck-com/issues"
+  },
+  "dependencies": {
+    "express": "~3.3.7",
+    "grunt": "~0.4.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-compass": "~0.5.0"
+  }
+}

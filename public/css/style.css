@@ -1,0 +1,293 @@
+@font-face {
+  font-family: 'melbourneregularregular';
+  src: url("/fonts/melbourne.eot");
+  src: url("/fonts/melbourne.woff") format("woff"), url("/fonts/melbourne.ttf") format("truetype"), url("/fonts/melbourne.svg#melbourneregularregular") format("svg");
+}
+
+/* line 10, ../../src/scss/style.scss */
+html,
+body,
+p,
+ul {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, ../../src/scss/style.scss */
+body {
+  background-image: url("/public/images/bodybg.png");
+  background-position: 30% 0;
+  background-repeat: repeat-y;
+  color: #222;
+  font-family: 'melbourneregularregular', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+/* line 27, ../../src/scss/style.scss */
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+/* line 32, ../../src/scss/style.scss */
+.banner {
+  font-size: 1.6em;
+  padding: 5px 0 0;
+}
+
+/* line 36, ../../src/scss/style.scss */
+.banner a {
+  border-bottom: 1px solid;
+}
+
+/* line 39, ../../src/scss/style.scss */
+.banner a:hover {
+  color: #1a68ac;
+  text-decoration: none;
+}
+
+/* line 44, ../../src/scss/style.scss */
+h1 {
+  border-bottom: 1px solid #64C39D;
+  color: #0792cb;
+  display: inline-block;
+  font-size: 70px;
+  font-weight: 100;
+  letter-spacing: 6px;
+  line-height: 1.2;
+  margin: 25px 0 50px;
+  padding-bottom: 17px;
+  text-shadow: -2px 2px 1px #64C39D;
+  text-transform: uppercase;
+}
+
+/* line 58, ../../src/scss/style.scss */
+.explain {
+  font-size: 2.4em;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 99;
+}
+
+/* line 68, ../../src/scss/style.scss */
+.explain span {
+  font-family: Georgia, serif;
+  font-size: 1.15em;
+  font-style: italic;
+  letter-spacing: -2px;
+  text-transform: lowercase;
+}
+
+@-webkit-keyframes andrew {
+  /* line 77, ../../src/scss/style.scss */
+  to {
+    background-position: 400px -20px;
+  }
+}
+
+@-webkit-keyframes ivan {
+  /* line 83, ../../src/scss/style.scss */
+  to {
+    background-position: -850px 50px;
+  }
+}
+
+@-webkit-keyframes rita {
+  /* line 89, ../../src/scss/style.scss */
+  to {
+    background-position: -400px -20px;
+  }
+}
+
+@-webkit-keyframes katrina {
+  /* line 95, ../../src/scss/style.scss */
+  to {
+    background-position: 200px -20px;
+  }
+}
+
+/* line 100, ../../src/scss/style.scss */
+.hurricane li {
+  -webkit-animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 10s;
+  background-image: url("/public/images/hurricane.png");
+  background-repeat: repeat-x;
+  bottom: -35px;
+  opacity: .8;
+  display: block;
+  height: 238px;
+  left: 0;
+  position: fixed;
+  text-indent: -9999px;
+  width: 100%;
+  z-index: -1;
+}
+
+/* line 117, ../../src/scss/style.scss */
+.andrew {
+  -webkit-animation-name: andrew;
+  background-position: 200px 10px;
+}
+
+/* line 121, ../../src/scss/style.scss */
+.ivan {
+  -webkit-animation-name: ivan;
+  background-position: -400px 20px;
+}
+
+/* line 125, ../../src/scss/style.scss */
+.rita {
+  -webkit-animation-name: rita;
+  background-position: -100px 20px;
+}
+
+/* line 129, ../../src/scss/style.scss */
+.katrina {
+  -webkit-animation-name: katrina;
+  background-position: 300px 20px;
+}
+
+/* line 134, ../../src/scss/style.scss */
+.footer {
+  margin: 30px 0 280px;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 140, ../../src/scss/style.scss */
+.links {
+  font-size: 1.8em;
+  font-weight: normal;
+  letter-spacing: 0;
+  list-style: none;
+  margin: 0 auto;
+  text-transform: lowercase;
+}
+
+/* line 148, ../../src/scss/style.scss */
+.links li {
+  line-height: 2em;
+  padding: 0 20px 0 16px;
+}
+
+/* line 152, ../../src/scss/style.scss */
+.links a {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  width: 220px;
+  line-height: 30px;
+}
+
+/* line 163, ../../src/scss/style.scss */
+.links a span {
+  background: #0792cb;
+  /* .7 */
+  display: inline-block;
+  padding-bottom: 3px;
+  position: relative;
+  width: 100%;
+  -webkit-transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all .35s;
+}
+
+/* line 175, ../../src/scss/style.scss */
+.links a:hover span,
+.links a:focus span {
+  -webkit-transform: rotateX(90deg) translateY(-22px);
+}
+
+/* line 179, ../../src/scss/style.scss */
+.links a span:before {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  content: attr(data-hover);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  -webkit-transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 0;
+}
+
+/* line 192, ../../src/scss/style.scss */
+.cnn-expansion {
+  margin: .5em 0 1em;
+}
+
+/* line 195, ../../src/scss/style.scss */
+.sublinks {
+  list-style: none;
+}
+
+/* line 198, ../../src/scss/style.scss */
+.sublinks li {
+  padding: 0 .25em;
+}
+
+/* line 201, ../../src/scss/style.scss */
+.sublinks a {
+  display: inline-block;
+}
+
+/* line 204, ../../src/scss/style.scss */
+.link-group-header {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1em;
+  letter-spacing: -1px;
+}
+
+/* line 211, ../../src/scss/style.scss */
+.at {
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+  font-size: .8em;
+  position: relative;
+  top: -1px;
+}
+
+@media (max-width: 480px) {
+  /* line 220, ../../src/scss/style.scss */
+  p {
+    display: inline;
+  }
+
+  /* line 223, ../../src/scss/style.scss */
+  .banner p {
+    display: none;
+  }
+
+  /* line 226, ../../src/scss/style.scss */
+  .banner h1 {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-bottom: 0;
+  }
+
+  /* line 232, ../../src/scss/style.scss */
+  .explain span {
+    white-space: nowrap;
+  }
+
+  /* line 235, ../../src/scss/style.scss */
+  .hurricane {
+    display: none;
+  }
+}

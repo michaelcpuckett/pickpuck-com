@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'melbourneregularregular';
+    src: url('/fonts/melbourne.eot');
+    src: url('/fonts/melbourne.woff') format('woff'), url('/fonts/melbourne.ttf') format('truetype'), url('/fonts/melbourne.svg#melbourneregularregular') format('svg');
+}
+
+html,
+body,
+p,
+ul {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/public/images/bodybg.png');
+    background-position: 30% 0;
+    background-repeat: repeat-y;
+    color:#222;
+    font-family: 'melbourneregularregular', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+a {
+    color:#222;
+    text-decoration: none;
+}
+
+.banner {
+    font-size: 1.6em;
+    padding: 5px 0 0;
+}
+.banner a {
+    border-bottom: 1px solid;
+}
+.banner a:hover {
+    color: #1a68ac;
+    text-decoration: none;
+}
+
+h1 {
+    border-bottom: 1px solid #64C39D;
+    color: #0792cb;
+    display: inline-block;
+    font-size: 70px;
+    font-weight: 100;
+    letter-spacing: 6px;
+    line-height: 1.2;
+    margin: 25px 0 50px;
+    padding-bottom: 17px;
+    text-shadow: -2px 2px 1px #64C39D;
+    text-transform: uppercase;
+}
+
+.explain {
+    font-size: 2.4em;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 99;
+}
+.explain span {
+    font-family: Georgia, serif;
+    font-size: 1.15em;
+    font-style: italic;
+    letter-spacing: -2px;
+    text-transform: lowercase;
+}
+
+@-webkit-keyframes andrew {
+    to {
+        background-position: 400px -20px;
+    }
+}
+
+@-webkit-keyframes ivan {
+    to {
+        background-position: -850px 50px;
+    }
+}
+
+@-webkit-keyframes rita {
+    to {
+        background-position: -400px -20px;
+    }
+}
+
+@-webkit-keyframes katrina {
+    to {
+        background-position: 200px -20px;
+    }
+}
+
+.hurricane li {
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 10s;
+    background-image: url('/public/images/hurricane.png');
+    background-repeat: repeat-x;
+    bottom: -35px;
+    opacity: .8;
+    display: block;
+    height: 238px;
+    left: 0;
+    position: fixed;
+    text-indent: -9999px;
+    width: 100%;
+    z-index: -1;
+}
+.andrew {
+    -webkit-animation-name: andrew;
+    background-position: 200px 10px;
+}
+.ivan {
+    -webkit-animation-name: ivan;
+    background-position: -400px 20px;
+}
+.rita {
+    -webkit-animation-name: rita;
+    background-position: -100px 20px;
+}
+.katrina {
+    -webkit-animation-name: katrina;
+    background-position: 300px 20px;
+}
+
+.footer {
+    margin: 30px 0 280px;
+    text-align: center;
+    width: 100%;
+}
+
+.links {
+    font-size: 1.8em;
+    font-weight: normal;
+    letter-spacing: 0;
+    list-style: none;
+    margin: 0 auto;
+    text-transform: lowercase;
+}
+.links li {
+    line-height: 2em;
+    padding: 0 20px 0 16px;
+}
+.links a {
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    width: 220px;
+    line-height: 30px;
+}
+ .links a span {
+    background: rgba(7, 146, 203, 1); /* .7 */
+    display: inline-block;
+    padding-bottom: 3px;
+    position: relative;
+    width: 100%;
+    -webkit-transform-origin: 50% 0;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: all .35s;
+}
+
+.links a:hover span,
+.links a:focus span {
+    -webkit-transform: rotateX(90deg) translateY(-22px);
+}
+
+.links a span:before {
+    background-color: rgba(255, 255, 255, .7);
+    color: black;
+    content: attr(data-hover);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0;
+}
+
+.cnn-expansion {
+    margin: .5em 0 1em;
+}
+.sublinks {
+    list-style: none;
+}
+.sublinks li {
+    padding: 0 .25em;
+}
+.sublinks a {
+    display: inline-block;
+}
+.link-group-header {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1em;
+    letter-spacing: -1px;
+}
+
+.at {
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    font-size: .8em;
+    position: relative;
+    top: -1px;
+}
+
+@media (max-width: 480px) {
+    p {
+        display: inline;
+    }
+    .banner p {
+        display: none;
+    }
+    .banner h1 {
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        border-bottom: 0;
+    }
+    .explain span {
+        white-space: nowrap;
+    }
+    .hurricane {
+        display: none;
+    }
+}
