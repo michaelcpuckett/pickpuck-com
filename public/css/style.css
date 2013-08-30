@@ -13,6 +13,18 @@ ul {
   padding: 0;
 }
 
+@-webkit-keyframes andrew {
+  to {
+    background-position: 400px -20px;
+  }
+}
+
+@keyframes andrew {
+  to {
+    background-position: 400px -20px;
+  }
+}
+
 body {
   background-attachment: fixed;
   background-color: #E7E689;
@@ -79,122 +91,34 @@ h1 {
   text-transform: lowercase;
 }
 
-@-webkit-keyframes andrew {
-  to {
-    background-position: 400px -20px;
-  }
-}
-
-@keyframes andrew {
-  to {
-    background-position: 400px -20px;
-  }
-}
-
-@-webkit-keyframes ivan {
-  to {
-    background-position: -850px 50px;
-  }
-}
-
-@keyframes ivan {
-  to {
-    background-position: -850px 50px;
-  }
-}
-
-@-webkit-keyframes rita {
-  to {
-    background-position: -400px -20px;
-  }
-}
-
-@keyframes rita {
-  to {
-    background-position: -400px -20px;
-  }
-}
-
-@-webkit-keyframes katrina {
-  to {
-    background-position: 200px -20px;
-  }
-}
-
-@keyframes katrina {
-  to {
-    background-position: 200px -20px;
-  }
-}
-
 .hurricane li {
   background-image: url("/public/images/hurricane.png");
   background-repeat: repeat-x;
-  bottom: -35px;
-  opacity: .8;
+  bottom: 0;
   display: block;
   height: 238px;
   left: 0;
+  pointer-events: none;
   position: fixed;
   text-indent: -9999px;
   width: 100%;
   z-index: -1;
-  -webkit-animation-direction: alternate;
-  -moz-animation-direction: alternate;
-  -ms-animation-direction: alternate;
-  -o-animation-direction: alternate;
-  animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -ms-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: 10s;
-  -moz-animation-duration: 10s;
-  -ms-animation-duration: 10s;
-  -o-animation-duration: 10s;
-  animation-duration: 10s;
 }
 
 .andrew {
   background-position: 200px 10px;
-  -webkit-animation-name: andrew;
-  -moz-animation-name: andrew;
-  -ms-animation-name: andrew;
-  -o-animation-name: andrew;
-  animation-name: andrew;
 }
 
 .ivan {
-  background-position: -400px 20px;
-  -webkit-animation-name: ivan;
-  -moz-animation-name: ivan;
-  -ms-animation-name: ivan;
-  -o-animation-name: ivan;
-  animation-name: ivan;
+  background-position: -700px 20px;
 }
 
 .rita {
-  background-position: -100px 20px;
-  -webkit-animation-name: rita;
-  -moz-animation-name: rita;
-  -ms-animation-name: rita;
-  -o-animation-name: rita;
-  animation-name: rita;
+  background-position: 40px 20px;
 }
 
 .katrina {
   background-position: 300px 20px;
-  -webkit-animation-name: katrina;
-  -moz-animation-name: katrina;
-  -ms-animation-name: katrina;
-  -o-animation-name: katrina;
-  animation-name: katrina;
 }
 
 .footer {

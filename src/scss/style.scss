@@ -15,6 +15,13 @@ ul {
     padding: 0;
 }
 
+
+@include keyframes(andrew) {
+    to {
+        background-position: 400px -20px;
+    }
+}
+
 body {
     background-attachment: fixed;
     background-color: #E7E689;
@@ -78,63 +85,23 @@ h1 {
     text-transform: lowercase;
 }
 
-@include keyframes(andrew) {
-    to {
-        background-position: 400px -20px;
-    }
-}
-
-@include keyframes(ivan) {
-    to {
-        background-position: -850px 50px;
-    }
-}
-
-@include keyframes(rita) {
-    to {
-        background-position: -400px -20px;
-    }
-}
-
-@include keyframes(katrina) {
-    to {
-        background-position: 200px -20px;
-    }
-}
-
 .hurricane li {
-    background-image: url('/public/images/hurricane.png');
+    background-image:url('/public/images/hurricane.png');
     background-repeat: repeat-x;
-    bottom: -35px;
-    opacity: .8;
+    bottom: 0;
     display: block;
     height: 238px;
     left: 0;
+    pointer-events: none;
     position: fixed;
     text-indent: -9999px;
     width: 100%;
     z-index: -1;
-    @include prefix(animation-direction, alternate);
-    @include prefix(animation-iteration-count, infinite);
-    @include prefix(animation-timing-function, linear);
-    @include prefix(animation-duration, 10s);
 }
-.andrew {
-    background-position: 200px 10px;
-    @include prefix(animation-name, andrew);
-}
-.ivan {
-    background-position: -400px 20px;
-    @include prefix(animation-name, ivan);
-}
-.rita {
-    background-position: -100px 20px;
-    @include prefix(animation-name, rita);
-}
-.katrina {
-    background-position: 300px 20px;
-    @include prefix(animation-name, katrina);
-}
+.andrew  { background-position:  200px 10px; }
+.ivan    { background-position: -700px 20px; }
+.rita    { background-position:   40px 20px; }
+.katrina { background-position:  300px 20px; }
 
 .footer {
     margin: 30px 0 280px;
