@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+}
+
+.login-module,
+.login-module * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.login-module {
+    $component-width:  500px;
+    $form-field-width: 300px;
+
+    $dark-color:  #232323;
+    $red-color:   #db4a39;
+    $light-color: #e8e8e8;
+
+    background-color: $dark-color;
+    color: $light-color;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding: 40px 10%;
+    margin: 10px auto;
+    max-width: $component-width;
+
+    @media (min-width: $component-width) {
+        padding-left:  ($component-width - $form-field-width) / 2;
+        padding-right: ($component-width - $form-field-width) / 2;
+    }
+
+    h2,
+    input {
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 14px; // 18px in mock
+        margin-top: 0;
+    }
+
+    input,
+    button {
+        border: none;
+        border-radius: 2px;
+        font-family: inherit;
+        font-size: inherit;
+        width: 100%;
+    }
+
+    input {
+        background-color: $light-color;
+        padding: 10px;
+    }
+
+    button {
+        background-color: $red-color;
+        color: inherit;
+        cursor: pointer;
+        // font-size: 14px in mock
+        font-weight: bold;
+        padding: 15px 0;
+
+        &:hover {
+            background-color: darken($red-color, 10%);
+        }
+    }
+}
+
+.tests {
+    background-color: #D2E0E6;
+    bottom: 0;
+    color: #366097;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 0;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}

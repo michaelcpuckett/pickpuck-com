@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login Module Test Suite</title>
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/qunit/1.11.0/qunit.min.css">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/qunit/1.11.0/qunit.min.js"></script>
+        <script src="sinon-1.7.3.js"></script>
+        <script src="sinon-qunit-1.0.0.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script>
+            test('UI speciﬁcations', function () {
+                var $component = $('.login-module'),
+                    $title = $component.find('h2'),
+                    $username = $component.find('input[name="username"]'),
+                    $password = $component.find('input[name="password"]'),
+                    $button = $component.find('button'),
+                    darkColorRGB = $('<div/>').css('background-color', '#232323').css('background-color'),
+                    redColorRGB = $('<div/>').css('background-color', '#db4a39').css('background-color'),
+                    lightColorRGB = $('<div/>').css('background-color', '#e8e8e8').css('background-color');
+
+                equal($component.outerWidth(), 500, 'Component width is 500px');
+                equal($username.outerWidth(), 300, 'Username field width is 300px');
+                equal($password.outerWidth(), 300, 'Password field width is 300px');
+                equal($component.css('background-color'), darkColorRGB, 'Component background is dark color');
+                equal($button.css('background-color'), redColorRGB, 'Button is red color');
+                equal($username.css('background-color'), lightColorRGB, 'Username field background is light color');
+                equal($password.css('background-color'), lightColorRGB, 'Password field background is light color');
+                equal($title.css('color'), lightColorRGB, 'Title text is light color');
+                equal($button.css('color'), lightColorRGB, 'Button text is light color');
+                equal($title.css('font-family').substring(0, 5), 'Arial', 'Title is Arial');
+                equal($username.css('font-size'), '12px', 'Username field is 12px');
+                equal($password.css('font-size'), '12px', 'Password field is 12px');
+                equal($button.css('font-size'), '12px', 'Button is 12px');
+                equal($title.css('font-size'), '14px', 'Title is 14px');
+            });
+
+            test('If both form fields are empty, an alert message displays', function () {
+                var $component = $('.login-module');
+
+                // hijack window.alert
+                this.stub(window, 'alert', function () {
+                    ok(true, 'Alert message displays');
+                    window.alert.restore();
+                });
+
+                $component.find('input').val('');
+                $component.trigger('submit');
+            });
+
+
+            // IE9 only knows about console.log if Developer Tools are open
+            if(!(window.console && console.log)) {
+                window.console = {
+                    log: function () {}
+                }
+            }
+
+            test('Login form submits username and password data using AJAX to api.yoursite.com/login', function () {
+                var $component = $('.login-module'),
+                    server = this.sandbox.useFakeServer(),
+                    url = 'http://api.yoursite.com/login',
+                    fakeData = 'foo';
+
+                // intercept response
+                server.respondWith('POST', url, function (xhr) {
+                    var body = xhr.requestBody.replace(new RegExp('=' + fakeData, 'g'), '').split('&');
+                    ok(body.indexOf('username') > -1, 'Username data sent using AJAX.');
+                    ok(body.indexOf('password') > -1, 'Password data sent using AJAX.');
+                    equal(xhr.url, url, 'AJAX url is ' + url);
+                });
+                $.support.cors = true;
+
+                $component.find('input').val('foo');
+                $component.trigger('submit');
+
+                server.respond();
+            });
+
+            test('If login succeeds, display in the browser JS console the "succeeded" message.', function () {
+                var $component = $('.login-module'),
+                    server = this.sandbox.useFakeServer(),
+                    url = 'http://api.yoursite.com/login',
+                    responseMessage = 'succeeded';
+
+                // fake a success (200) response
+                server.respondWith('POST', url, [200, {}, '']);
+                $.support.cors = true;
+
+                // hijack console.log
+                this.stub(console, 'log', function (message) {
+                    equal(message, responseMessage, 'JS console message is "' + responseMessage + '"');
+                    console.log.restore();
+                });
+
+                $component.find('input').val('foo');
+                $component.trigger('submit');
+
+                server.respond();
+            });
+
+            test('If login fails, display in the browser JS console the "failed" message.', function () {
+                var $component = $('.login-module'),
+                    server = this.sandbox.useFakeServer(),
+                    url = 'http://api.yoursite.com/login',
+                    responseMessage = 'failed';
+
+                // fake a bad (500) response
+                server.respondWith('POST', url, [500, {}, '']);
+                $.support.cors = true;
+
+                // hijack console.log
+                this.stub(console, 'log', function (message) {
+                    equal(message, responseMessage, 'JS console message is "' + responseMessage + '"');
+                    console.log.restore();
+                });
+
+                $component.find('input').val('foo');
+                $component.trigger('submit');
+
+                server.respond();
+            });
+        </script>
+
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <link rel="stylesheet" href="../css/login-module.css">
+            <form action="http://api.yoursite.com/login" class="login-module" method="POST">
+                <h2>User Login</h2>
+                <input name="username" placeholder="Apple ID" type="input">
+                <input name="password" placeholder="Password" type="password">
+                <button>Login to your account</button>
+            </form>
+            <script src="../js/vendor/placeholdr.js"></script>
+            <script src="../js/login-module.js"></script>
+        </div>
+    </body>
+</html>
