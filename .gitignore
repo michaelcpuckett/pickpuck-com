@@ -1,4 +1,2 @@
-.htaccess
-_bck/
-sandbox/
 node_modules/
+public/

@@ -1,9 +1,11 @@
-@import 'mixins';
+@function path ($url) {
+    @return '/assets/' + $url;
+}
 
 @font-face {
     font-family: 'melbourneregularregular';
-    src: url('/fonts/melbourne.eot');
-    src: url('/fonts/melbourne.woff') format('woff'), url('/fonts/melbourne.ttf') format('truetype'), url('/fonts/melbourne.svg#melbourneregularregular') format('svg');
+    src: url(path('/fonts/melbourne.eot'));
+    src: url(path('/fonts/melbourne.woff')) format('woff'), url(path('/fonts/melbourne.ttf')) format('truetype'), url(path('/fonts/melbourne.svg#melbourneregularregular')) format('svg');
 }
 
 html,
@@ -15,17 +17,10 @@ ul {
     padding: 0;
 }
 
-
-@include keyframes(andrew) {
-    to {
-        background-position: 400px -20px;
-    }
-}
-
 body {
     background-attachment: fixed;
     background-color: #E7E689;
-    background-image: url('/public/images/clouds.png');
+    background-image: url(path('/images/clouds.png'));
     background-position: 50% 40px;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -86,7 +81,7 @@ h1 {
 }
 
 .hurricane li {
-    background-image:url('/public/images/hurricane.png');
+    background-image:url(path('/images/hurricane.png'));
     background-repeat: repeat-x;
     bottom: 0;
     display: block;
@@ -138,14 +133,14 @@ h1 {
     padding-bottom: 3px;
     position: relative;
     width: 100%;
-    @include prefix(transform-origin, 50% 0);
-    @include prefix(transform-style, preserve-3d);
-    @include prefix(transition, all .35s);
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    transition: all .35s;
 }
 
 .links a:hover span,
 .links a:focus span {
-    @include prefix(transform, rotateX(90deg) translateY(-22px));
+    transform: rotateX(90deg) translateY(-22px);
 }
 
 .links a span:before {
@@ -157,8 +152,8 @@ h1 {
     position: absolute;
     top: 100%;
     width: 100%;
-    @include prefix(transform, rotateX(-90deg));
-    @include prefix(transform-origin, 50% 0);
+    transform: rotateX(-90deg);
+    transform-origin: 50% 0;
 }
 
 .cnn-expansion {
