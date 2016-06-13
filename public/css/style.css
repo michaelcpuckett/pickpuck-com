@@ -21,7 +21,8 @@ body {
   font-family: 'melbourneregularregular', Helvetica, Arial, sans-serif;
   font-size: 10px;
   margin: 0;
-  text-align: center; }
+  text-align: center;
+  min-height: 133vh; }
 
 a {
   color: #222;
@@ -35,20 +36,17 @@ h1 {
   letter-spacing: 6px;
   line-height: 1.2;
   margin: 30px 0 0;
-  text-shadow: -2px 2px 1px #64C39D;
   text-transform: uppercase; }
 
 h2 {
-  font-family: Georgia, serif;
   font-weight: 900;
   line-height: 1.2;
   text-align: center;
   font-size: 24px;
-  font-style: italic;
-  letter-spacing: -2px;
-  text-transform: lowercase;
+  text-transform: uppercase;
   display: block;
-  margin: 30px auto 30px; }
+  margin: 20px auto 35px;
+  color: #64C39D; }
   h2 sup,
   h2 sub,
   h2 span {
@@ -78,7 +76,7 @@ h2 {
   line-height: 30px; }
 
 .links a span {
-  background: magenta;
+  background: #0792cb;
   display: inline-block;
   padding-bottom: 3px;
   position: relative;
@@ -89,6 +87,9 @@ h2 {
           transform-style: preserve-3d;
   -webkit-transition: all .35s;
           transition: all .35s; }
+
+.links.links-secondary a span {
+  background-color: #64C39D; }
 
 .links a:hover span,
 .links a:focus span {
