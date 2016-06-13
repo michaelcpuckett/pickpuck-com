@@ -1,9 +1,12 @@
 @font-face {
   font-family: 'melbourneregularregular';
-  src: url('/assets//fonts/melbourne.eot');
-  src: url('/assets//fonts/melbourne.woff') format('woff'), url('/assets//fonts/melbourne.ttf') format('truetype'), url('/assets//fonts/melbourne.svg#melbourneregularregular') format('svg'); }
+  src: url("/assets//fonts/melbourne.eot");
+  src: url("/assets//fonts/melbourne.woff") format("woff"), url("/assets//fonts/melbourne.ttf") format("truetype"), url("/assets//fonts/melbourne.svg#melbourneregularregular") format("svg"); }
 
-html, body, p, ul {
+html,
+body,
+p,
+ul {
   border: 0;
   margin: 0;
   padding: 0; }
@@ -11,7 +14,6 @@ html, body, p, ul {
 body {
   background-attachment: fixed;
   background-color: #E7E689;
-  background-image: url('/assets//images/clouds.png');
   background-position: 50% 40px;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -25,76 +27,32 @@ a {
   color: #222;
   text-decoration: none; }
 
-.banner {
-  font-size: 1.6em;
-  padding: 5px 0 0; }
-
-.banner a {
-  border-bottom: 1px solid; }
-
-.banner a:hover {
-  color: #1a68ac;
-  text-decoration: none; }
-
 h1 {
-  border-bottom: 1px solid #64C39D;
   color: #0792cb;
   display: inline-block;
   font-size: 70px;
   font-weight: 100;
   letter-spacing: 6px;
   line-height: 1.2;
-  margin: 25px 0 50px;
-  padding-bottom: 17px;
+  margin: 30px 0 0;
   text-shadow: -2px 2px 1px #64C39D;
   text-transform: uppercase; }
 
-.explain {
-  font-size: 2.4em;
-  font-weight: 900;
-  letter-spacing: -1px;
-  line-height: 1.2;
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  z-index: 99; }
-
-.explain span {
+h2 {
   font-family: Georgia, serif;
-  font-size: 1.15em;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 24px;
   font-style: italic;
   letter-spacing: -2px;
-  text-transform: lowercase; }
-
-.hurricane li {
-  background-image: url('/assets//images/hurricane.png');
-  background-repeat: repeat-x;
-  bottom: 0;
+  text-transform: lowercase;
   display: block;
-  height: 238px;
-  left: 0;
-  pointer-events: none;
-  position: fixed;
-  text-indent: -9999px;
-  width: 100%;
-  z-index: -1; }
-
-.andrew {
-  background-position: 200px 10px; }
-
-.ivan {
-  background-position: -700px 20px; }
-
-.rita {
-  background-position: 40px 20px; }
-
-.katrina {
-  background-position: 300px 20px; }
-
-.footer {
-  margin: 30px 0 280px;
-  text-align: center;
-  width: 100%; }
+  margin: 30px auto 30px; }
+  h2 sup,
+  h2 sub,
+  h2 span {
+    font-size: 1.35em; }
 
 .links {
   font-size: 1.8em;
@@ -120,8 +78,7 @@ h1 {
   line-height: 30px; }
 
 .links a span {
-  background: #0792cb;
-  /* .7 */
+  background: magenta;
   display: inline-block;
   padding-bottom: 3px;
   position: relative;
@@ -133,7 +90,8 @@ h1 {
   -webkit-transition: all .35s;
           transition: all .35s; }
 
-.links a:hover span, .links a:focus span {
+.links a:hover span,
+.links a:focus span {
   -webkit-transform: rotateX(90deg) translateY(-22px);
           transform: rotateX(90deg) translateY(-22px); }
 
@@ -177,19 +135,8 @@ h1 {
   top: -1px; }
 
 @media (max-width: 480px) {
-  body {
-    background-image: none; }
-  p {
-    display: inline; }
-  .banner p {
-    display: none; }
   .banner h1 {
     display: block;
     margin-bottom: 10px;
     margin-top: 5px;
-    border-bottom: 0; }
-  .explain span {
-    white-space: nowrap; }
-  .hurricane {
-    display: none; } }
-
+    border-bottom: 0; } }
