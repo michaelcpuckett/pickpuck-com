@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var livereload = require('gulp-livereload');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
@@ -24,12 +25,14 @@ gulp.task('styles', function () {
             })
         ]))
         .pipe(gulp.dest('./public/css/'))
+				.pipe(livereload());
 });
 
 gulp.task('markup', function () {
     return gulp.src('./src/mustache/*.mustache')
         .pipe(mustache(templateData, {}, templateData['_partials']))
-        .pipe(gulp.dest('./public/'));
+        .pipe(gulp.dest('./public/'))
+				.pipe(livereload());
 });
 
 gulp.task('assets', function () {

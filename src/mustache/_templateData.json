@@ -1,1 +1,4 @@
-{}
+{
+	"serverUrl": "localhost",
+	"foo": "FOO!"
+}
