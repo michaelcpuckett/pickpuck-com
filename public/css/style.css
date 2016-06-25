@@ -38,20 +38,22 @@ h1 {
   margin: 30px 0 0;
   text-shadow: -2px 2px 1px #64C39D;
   text-transform: uppercase; }
+  @media (max-width: 480px) {
+    h1 {
+      display: block;
+      margin-bottom: 10px;
+      margin-top: 5px;
+      border-bottom: 0; } }
 
 h2 {
   font-weight: 900;
   line-height: 1.2;
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
   text-transform: uppercase;
   display: block;
   margin: 25px auto 35px;
   color: #64C39D; }
-  h2 sup,
-  h2 sub,
-  h2 span {
-    font-size: 1.35em; }
 
 .links {
   font-size: 1.8em;
@@ -60,34 +62,25 @@ h2 {
   list-style: none;
   margin: 0 auto;
   text-transform: lowercase; }
-
-.links li {
-  line-height: 2em;
-  padding: 0 20px 0 16px; }
-
-.links a {
-  color: white;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  width: 220px;
-  line-height: 30px; }
-
-.links a span {
-  background: #0792cb;
-  display: inline-block;
-  padding-bottom: 3px;
-  position: relative;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  margin-bottom: 10px; }
-
-.links.links-secondary a span {
-  background-color: #64C39D; }
+  .links li {
+    line-height: 2em;
+    padding: 0 20px 0 16px; }
+  .links a {
+    background: #0792cb;
+    padding-bottom: 3px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    width: 220px; }
+  .links.links-secondary a {
+    background-color: #64C39D; }
 
 .at {
   font-family: 'Arial', sans-serif;
@@ -95,10 +88,3 @@ h2 {
   font-size: .8em;
   position: relative;
   top: -1px; }
-
-@media (max-width: 480px) {
-  .banner h1 {
-    display: block;
-    margin-bottom: 10px;
-    margin-top: 5px;
-    border-bottom: 0; } }

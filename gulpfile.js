@@ -42,7 +42,7 @@ gulp.task('assets', function () {
 
 gulp.task('default', ['styles', 'markup', 'assets']);
 
-gulp.task('watch', ['default'], function () {
+gulp.task('watch', function () {
     gulp.watch('./src/scss/**', ['styles']);
     gulp.watch('./src/mustache/**', ['markup']);
     gulp.watch('./src/assets/**', ['assets']);
