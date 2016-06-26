@@ -1,13 +1,13 @@
 {
 	"serverUrl": "localhost",
-	"links": [
+	"links_DISABLED": [
 		{"url":"http://www.apple.com","title":"Apple"},
 		{"url":"http://www.cnn.com","title":"CNN"},
 		{"url":"http://www.nationalguard.com","title":"National Guard"},
 		{"url":"http://www.fruit.com","title":"Fruit of the Loom"},
 		{"url":"http://www.jerzees.com","title":"Jerzees Activewear"},
 		{"url":"http://www.redkap.com","title":"Red Kap"}
-	],
+],
 	"secondary-links": [
 		{"url":"/assets/michael_puckett_resume.pdf","title":"Resume"},
 		{"url":"mailto:michaelcpuckett@gmail.com","title":"Email"},
