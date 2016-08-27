@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'melbourneregularregular';
-    src: url(path('/fonts/melbourne.eot'));
-    src: url(path('/fonts/melbourne.woff')) format('woff'), url(path('/fonts/melbourne.ttf')) format('truetype'), url(path('/fonts/melbourne.svg#melbourneregularregular')) format('svg');
+    src: url(path('fonts/melbourne.eot'));
+    src: url(path('fonts/melbourne.woff')) format('woff'), url(path('fonts/melbourne.ttf')) format('truetype'), url(path('fonts/melbourne.svg#melbourneregularregular')) format('svg');
 }
 
 $swatch-yellow: #E7E689;
@@ -51,7 +51,7 @@ h1 {
     margin: 30px 0 0;
     text-shadow: -2px 2px 1px $swatch-green;
     text-transform: uppercase;
-	
+
 	@media (max-width: 480px) {
         display: block;
         margin-bottom: 10px;
@@ -71,7 +71,7 @@ h2 {
 	color: $swatch-green;
 }
 
- .links { 	
+ .links {
     font-size: 1.8em;
     font-weight: normal;
     letter-spacing: 0;

@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'melbourneregularregular';
-  src: url("/assets//fonts/melbourne.eot");
-  src: url("/assets//fonts/melbourne.woff") format("woff"), url("/assets//fonts/melbourne.ttf") format("truetype"), url("/assets//fonts/melbourne.svg#melbourneregularregular") format("svg"); }
+  src: url("/assets/fonts/melbourne.eot");
+  src: url("/assets/fonts/melbourne.woff") format("woff"), url("/assets/fonts/melbourne.ttf") format("truetype"), url("/assets/fonts/melbourne.svg#melbourneregularregular") format("svg"); }
 
 html,
 body,
