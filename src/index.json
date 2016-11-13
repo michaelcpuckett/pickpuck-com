@@ -1,0 +1,186 @@
+{
+    "displayName": "Michael Puckett",
+    "displayTitle": "JavaScript Engineer",
+    "displayLocation": "Louisville, KY 40206",
+    "badgeUrl": "avatar.jpg",
+    "links": [
+        {
+            "url": "mailto:michael.c.puckett@gmail.com?subject=yo",
+            "title": "E-mail"
+        }, {
+            "url": "http://linkedin.com/in/michaelcpuckett",
+            "title": "LinkedIn"
+        }, {
+            "url": "http://github.com/michaelcpuckett/pickpuck-com",
+            "title": "Github"
+        }, {
+            "url": "javascript:window.print()",
+            "title": "CV",
+            "last": true
+        }
+    ],
+    "sections": [
+        {
+            "headline": "Employment",
+            "articles": [
+                {
+                    "headline": "Apple",
+                    "kicker": "<strong>UI Engineer</strong> <i aria-hidden=\"true\"></i> Cupertino, CA <i aria-hidden=\"true\"></i> 2013 - 2016",
+                    "paragraphs": [
+                        "I helped build and maintain the front-end for apple.com across several redesigns."
+                    ]
+                }, {
+                    "headline": "CNN",
+                    "kicker": "<strong>Senior Web Developer</strong> <i aria-hidden=\"true\"></i> Atlanta, GA <i aria-hidden=\"true\"></i> 2013",
+                    "paragraphs": [
+                        "I worked on the responsive redesign and replatforming of CNN.com."
+                    ]
+                }, {
+                    "headline": "iostudio",
+                    "kicker": "<strong>Web Developer</strong> <i aria-hidden=\"true\"></i> Nashville, TN <i aria-hidden=\"true\"></i> 2012 - 2013",
+                    "paragraphs": [
+                        "I built marketing websites and web apps for clients, including the National Guard."
+                    ]
+                }, {
+                    "headline": "Fruit of the Loom",
+                    "kicker": "<strong>Web Developer</strong> <i aria-hidden=\"true\"></i> Bowling Green, KY <i aria-hidden=\"true\"></i> 2012",
+                    "paragraphs": [
+                        "I designed and developed a relaunch of jerzees.com and maintained other brand websites."
+                    ]
+                }, {
+                    "headline": "2-Com",
+                    "kicker": "<strong>Web Developer</strong> <i aria-hidden=\"true\"></i> Nashville, TN <i aria-hidden=\"true\"></i> 2010 - 2012",
+                    "paragraphs": [
+                        "I worked on a web app that generated marketing materials for small businesses using pre-designed templates and their uploaded logo and information."
+                    ]
+                }
+            ]
+        }, {
+            "headline": "Skills",
+            "class": "skills",
+            "articles": [
+                {
+                    "class": "cool",
+                    "headline": "Front-End Web Development",
+                    "kicker": "HTML <i aria-hidden=\"true\"></i> CSS/Sass <i aria-hidden=\"true\"></i> JS <i aria-hidden=\"true\"></i> Photoshop",
+                    "features": [
+                        {
+                            "title": "Pixel Perfect Implementation",
+                            "description": "I can <strong>reproduce design comps in code</strong> at such a high fidelity that overlaying the coded site and the original design reveals no differences."
+                        }, {
+                            "title": "Responsive Web Design",
+                            "description": "For years, I have advocated using <strong>CSS media queries</strong> and <strong>mobile-first patterns</strong> to target all screen sizes from a single responsive codebase."
+                        }, {
+                            "title": "Styleguide Driven Development",
+                            "description": "I've found that developers can better collaborate with designers by building a <strong>living library of reusable components</strong> that acts as a shared visual vocabulary."
+                        }, {
+                            "title": "Accessibility and Inclusivity",
+                            "description": "To accommodate all users, including those with screen readers, I keep in mind concerns like <strong>semantic markup</strong> and <strong>color contrast</strong>."
+                        }
+                    ],
+                    "projects": [
+                        {
+                            "brand": "Apple",
+                            "shortname": "apple",
+                            "description": "I built pixel-perfect interfaces to support <strong>product launches, campaigns, and transactions on apple.com</strong>. I created a living styleguide and led the transition of the UI codebase to Sass and SMACSS (Scalable &amp; Modular Architecture) style."
+                        }, {
+                            "brand": "iostudio",
+                            "shortname": "iostudio",
+                            "description": "I helped develop nationalguard.com, the <strong>first website of any branch in the U.S. military to go responsive</strong>, and among the first government sites to do so. I worked closely with designers to address visual issues that arose across multiple mobile and tablet screen sizes."
+                        }
+                    ]
+                }, {
+                    "class": "serene",
+                    "headline": "Full Stack Application Development",
+                    "kicker": "ES6 <i aria-hidden=\"true\"></i> React/JSX <i aria-hidden=\"true\"></i> NodeJS",
+                    "features": [
+                        {
+                            "title": "MVC/FRP Frameworks",
+                            "description": "I have experience with the previous generation of MVC frameworks, such as <strong>Angular</strong> and <strong>Backbone</strong>. I specialize in the next generation of frameworks based on web components and functional-reactive programming (FRP) concepts, like <strong>React</strong>."
+                        }, {
+                            "title": "iOS/Android App Development",
+                            "description": "I strongly believe that React is the right choice for web apps and mobile apps. I don't know Swift or Java, but I'm right at home with <strong>React Native</strong>, a JavaScript framework that leverages native code to produce highly performant native apps."
+                        }, {
+                            "title": "Crafted, Maintainable Code",
+                            "description": "To avoid technical debt, I focus on maintainability by establishing processes, standards and tooling to support writing <strong>testable, modular, peer-reviewed</strong> code."
+                        }, {
+                            "title": "Scripting &amp; Back-End Development",
+                            "description": "I've written build systems and CLI scripts with NodeJS and developed web servers and APIs with a MEAN (<strong>Mongo, Express, Angular, NodeJS</strong>) stack or similar."
+                        }
+                    ],
+                    "projects": [
+                        {
+                            "shortname": "cnn",
+                            "brand": "CNN",
+                            "reverse": true,
+                            "description": "Together with a small team of engineers, I helped migrate cnn.com from a Java backend to an <strong>Express web server</strong> that received JSON data from a nosql CMS. My main responsibility was templating data into markup. By using an <strong>isomorphic template engine</strong>, we gained the flexibility to send pre-rendered markup from the server or to generate markup from JSON on the client, from the same templates."
+                        }, {
+                            "shortname": "iostudio",
+                            "brand": "iostudio",
+                            "reverse": true,
+                            "description": "I wrote the front-end of a <strong>single page web app written in Angular that helped National Guard recruiters</strong> keep track of their potential and active recruits. Features included authentication, account priveledges, a calendar, and CRUD (create, read, update, delete) operations on the data over a REST API."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "headline": "Projects",
+            "class": "grid",
+            "articles": [
+                {
+                    "class": "lavish",
+                    "headline": "Draft Warren Campaign",
+                    "kicker": "<strong>Developer</strong> <i aria-hidden=\"true\"></i> San Francisco, CA <i aria-hidden=\"true\"></i> 2014",
+                    "paragraphs": [
+                        "I volunteered my time to build a responsive campaign microsite that let voters send pre-designed postcards to Senator Elizabeth Warren encouraging her to run for president.",
+                        "Although Senator Warren did not end up running in 2016, <strong>the campaign was still a hit</strong> and it sent a powerful message about what grassroots campaigns can achieve online."
+                    ]
+                },
+                {
+                    "class": "lavish",
+                    "headline": "Rise Over Run Magazine",
+                    "kicker": "<strong>Founder</strong> <i aria-hidden=\"true\"></i> Bowling Green, KY <i aria-hidden=\"true\"></i> 2007 - 2009</p>",
+                    "paragraphs": [
+                        "I started an online culture magazine in college. I built and maintained the website, produced content, art directed photo shoots, coordinated fundraising events, and managed a staff of student writers and photographers.",
+                        "The magazine won the 2007 Society of Professional Journalists <strong>Mark of Excellence Award</strong> for Best All-Around Independent Online Student Publication."
+                    ]
+                },
+                {
+                    "class": "lavish",
+                    "headline": "Hack Nashville 2013",
+                    "kicker": "<strong>Developer</strong> <i aria-hidden=\"true\"></i> Nashville, TN <i aria-hidden=\"true\"></i> 2013",
+                    "paragraphs": [
+                        "On several occasions, I have joined local developers for weekend-long hackathons to make games and apps.",
+                        "At Hack Nashville 2013, I built Superchat to experiment with web sockets and other HTML5 capabilities. Features included a <strong>chat room, drawing to a shared canvas, and drag-and-drop file uploads</strong> all in real time."
+                    ]
+                },
+                {
+                    "class": "lavish",
+                    "headline": "Marquee Mayfield",
+                    "kicker": "<strong>Developer</strong> <i aria-hidden=\"true\"></i> Nashville, TN <i aria-hidden=\"true\"></i> 2012",
+                    "paragraphs": [
+                        "Nashville singer and songwriter Andrew Glass turned to me to build the <strong>website for his funk and soul band</strong> Marquee Mayfield. The responsive website showcases their music videos and tour dates.",
+                        "I also designed a vinyl record and album sleeve promoting one of the band's live shows."
+                    ]
+                }
+            ]
+        }, {
+            "headline": "Education",
+            "articles": [
+                {
+                    "headline": "Western Kentucky University",
+                    "kicker": "<strong>BA, Advertising &amp; Graphic Design</strong> <i aria-hidden=\"true\"></i> 3.9 GPA <i aria-hidden=\"true\"></i> 2009"
+                },
+                {
+                    "headline": "Conferences Attended",
+                    "kicker": [
+                        "<strong>WWDC</strong> <i aria-hidden=\"true\"></i> 2014, 2015",
+                        "<strong>Camp Sass</strong> <i aria-hidden=\"true\"></i> 2013",
+                        "<strong>Throne of JavaScript</strong> <i aria-hidden=\"true\"></i> 2012"
+                    ]
+                }
+            ]
+        }
+    ]
+}

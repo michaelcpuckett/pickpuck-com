@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<title>{{displayName}} - {{displayTitle}} - CV</title>
+<meta name="description" content="Michael Puckett is a programmer for hire, based in Louisville, Kentucky.">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="style.css" media="only screen">
+<link rel="stylesheet" href="print.css" media="only print">
+</head>{{!
+
+TODO:
+* skills section article badges
+* skills features custom icons
+* ux article
+
+!}}<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title">{{displayName}}</h1>
+            <p class="header-tagline">{{displayTitle}}</p>
+        </header>
+        <main class="main">
+
+            <section class="section">
+                <div class="intro">
+                    <div class="summary">
+                        <div class="badge">
+                            <img src="{{badgeUrl}}" alt height="160" width="160" />
+                        </div>
+                        <div class="summary-text">
+                            <h2 class="section-headline">Summary</h3>
+                            <p>I'm a programmer for hire, currently based in Louisville, Kentucky.</p>
+                            <p>I've lived and worked across the U.S., most recently at Apple in California.</p>
+                            <p>My background is in design. My passion is making useful digital things.</p>
+                            <p class="links">
+                                {{#links}}
+                                    <a href="{{{url}}}">{{{title}}}</a>
+                                    {{^last}}
+                                        {{! bullet !}}
+                                        <i aria-hidden="true"></i>
+                                    {{/last}}
+                                {{/links}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {{#sections}}
+                <section class="section{{#class}} section-{{.}}{{/class}}">
+                    <h2 class="section-headline">{{headline}}</h2>
+
+                    {{#articles}}
+                        {{^hidden}}
+                            <article class="article{{#class}} article-{{.}}{{/class}}">
+                                <h3 class="article-headline">{{headline}}</h3>
+                                <div class="article-body">
+                                    {{#kicker}}
+                                        <div class="article-kicker">{{{.}}}</div>
+                                    {{/kicker}}
+
+                                    {{#paragraphs}}
+                                        <p>{{{.}}}</p>
+                                    {{/paragraphs}}
+
+                                    {{#features.length}}
+                                        <dl class="features row">
+                                            {{#features}}
+                                                <div class="feature half">
+                                                    <dt class="feature-title">{{{title}}}</dt>
+                                                    <dd class="feature-description">{{{description}}}</dd>
+                                                </div>
+                                            {{/features}}
+                                        </dl>
+                                    {{/features.length}}
+
+                                    {{#projects.length}}
+                                        <div class="article-kicker">Experience</div>
+                                        <ul class="projects">
+                                            {{#projects}}
+                                                <li class="project">
+                                                    <div class="row{{#reverse}}-reverse{{/reverse}}">
+                                                        <div class="project-brand {{shortname}}-brand">
+                                                            <div><img src="{{shortname}}.png" height="50" width="50" alt /></div>
+                                                            <div>{{brand}}</div>
+                                                        </div>
+                                                        <div class="project-description">
+                                                            {{{description}}}
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            {{/projects}}
+                                        </ul>
+                                    {{/projects.length}}
+
+                                </div>
+                            </article>
+                        {{/hidden}}
+                    {{/articles}}
+
+                </section>
+            {{/sections}}
+
+            <section class="section">
+                <div class="outro">
+                    <div class="summary">
+                        <div class="badge">
+                            <img src="{{badgeUrl}}" alt height="160" width="160" />
+                        </div>
+                        <div class="summary-text">
+                            <p><strong>{{displayName}}</strong></p>
+                            <p>{{displayLocation}}</p>
+                            <p class="links">
+                                {{#links}}
+                                    <a href="{{{url}}}">{{{title}}}</a>
+                                    {{^last}}
+                                        {{! bullet !}}
+                                        <i aria-hidden="true"></i>
+                                    {{/last}}
+                                {{/links}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>

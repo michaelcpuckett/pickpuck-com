@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+i:before {
+    content: '\2022';
+}
+img {
+    display: none;
+}
+strong {
+    font-weight: normal;
+}
+.article-kicker strong {
+    font-weight: bold;
+}
+
+.header-title,
+.header-tagline {
+    text-align: center;
+}
+
+.header-tagline,
+.links,
+.article-kicker:not(:first-child),
+.projects,
+.outro {
+    display: none;
+}
+
+.header-title:after {
+    font-size: 1rem;
+    font-weight: normal;
+    content: 'pickpuck.com \2022 \00a0 michaelcpuckett@gmail.com \2022 \00a0 615.209.1380';
+    display: block;
+    margin: 1em 0;
+}
+
+.section-skills {
+    display: none;
+}
+.section-grid {
+    page-break-before: always;
+}
