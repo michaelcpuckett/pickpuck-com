@@ -12,7 +12,7 @@
     --scale-factor-large: 1.175;
 
     --content-checkmark: '\2713';
-    --content-bullet: '\2022';
+    --content-bullet: '\2219';
 }
 
 @custom-media --small (max-width: 799px);

@@ -1,9 +1,15 @@
+:root {
+    --content-checkmark: '\2713';
+    --content-bullet: '\2219';
+    --content-nbsp: '\00a0';
+}
+
 body {
     font-family: sans-serif;
     font-size: 14px;
 }
 i:before {
-    content: '\2022';
+    content: --var(--content-bullet);
 }
 img {
     display: none;
@@ -31,7 +37,7 @@ strong {
 .header-title:after {
     font-size: 1rem;
     font-weight: normal;
-    content: 'pickpuck.com \2022 \00a0 michaelcpuckett@gmail.com \2022 \00a0 615.209.1380';
+    content: attr(data-contact-info);
     display: block;
     margin: 1em 0;
 }

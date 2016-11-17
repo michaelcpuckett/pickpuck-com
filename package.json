@@ -3,8 +3,7 @@
   "version": "0.3.0",
   "description": "Personal portfolio site of Michael Puckett",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -13,7 +12,6 @@
   "author": "Michael Puckett <michaelcpuckett@gmail.com>",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "2c5e6048636eb0271a097c48cf6dac3f2e8ce24e",
   "bugs": {
     "url": "https://github.com/michaelcpuckett/pickpuck-com/issues"
   },
@@ -22,9 +20,7 @@
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-mustache-plus": "^1.0.1",
-    "gulp-postcss": "^6.2.0"
-  },
-  "dependencies": {
+    "gulp-postcss": "^6.2.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.1"
   }
