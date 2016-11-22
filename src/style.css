@@ -375,15 +375,27 @@ i:before {
     flex-basis: 80px;
     flex-shrink: 0;
     font-weight: bold;
-    font-size: .9em;
+}
+@media (--large) {
+    .project-brand {
+        font-weight: normal;
+        font-size: .8em;
+        letter-spacing: 1px;
+    }
 }
 .project-brand img {
-    padding: 5px;
+    padding: 15px;
     border-radius: 100em;
-    background: var(--swatch-white);
+    background: white;
+    margin-bottom: 10px;
+}
+@media (--large) {
+    .project-brand img {
+        margin-bottom: 5px;
+    }
 }
 .apple-brand img {
-    padding: 7px 8px 9px;
+    padding: 18px;
 }
 .project-description {
     align-self: center;
