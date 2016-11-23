@@ -6,7 +6,6 @@
 
 body {
     font-family: sans-serif;
-    font-size: 14px;
 }
 i:before {
     content: var(--content-bullet);
@@ -30,8 +29,12 @@ strong {
 .links,
 .article-kicker:not(:first-child),
 .projects,
-.outro {
-    display: none;
+.section-skills,
+.section-grid,
+.intro,
+.outro,
+.section-education article:last-child {
+    display: none !important;
 }
 
 .header-title:after {
@@ -40,11 +43,4 @@ strong {
     content: attr(data-contact-info);
     display: block;
     margin: 1em 0;
-}
-
-.section-skills {
-    display: none;
-}
-.section-grid {
-    page-break-before: always;
 }

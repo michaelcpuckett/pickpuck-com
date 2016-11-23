@@ -52,7 +52,7 @@
                     "headline": "2-Com",
                     "kicker": "<strong>Web Developer</strong> <i aria-hidden=\"true\"></i> Nashville, TN <i aria-hidden=\"true\"></i> 2010 - 2012",
                     "paragraphs": [
-                        "I worked on a web app that generated marketing materials for small businesses using pre-designed templates and their uploaded logo and information."
+                        "I worked on a web app that generated marketing materials for small businesses."
                     ]
                 }
             ]
@@ -168,6 +168,7 @@
             ]
         }, {
             "headline": "Education",
+            "class": "education",
             "articles": [
                 {
                     "headline": "Western Kentucky University",
