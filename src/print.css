@@ -27,15 +27,10 @@ strong {
 }
 
 .header-tagline,
-h2,
 .links,
 .article-kicker:not(:first-child),
 .projects,
-.section-skills,
-.section-grid,
-.intro,
-.outro,
-.section-education article:last-child {
+.outro {
     display: none !important;
 }
 
@@ -45,4 +40,9 @@ h2,
     content: attr(data-contact-info);
     display: block;
     margin: 1em 0;
+}
+
+.section-skills,
+.section-grid {
+    page-break-before: always
 }
