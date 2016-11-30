@@ -16,13 +16,13 @@
             "title": "Github"
         }, {
             "url": "javascript:window.print()",
-            "title": "CV",
+            "title": "Resume",
             "last": true
         }
     ],
     "sections": [
         {
-            "headline": "Employment",
+            "headline": "Experience",
             "articles": [
                 {
                     "headline": "Apple",
@@ -83,7 +83,7 @@
                         {
                             "brand": "Apple",
                             "shortname": "apple",
-                            "description": "I built pixel-perfect interfaces to support <strong>product launches, campaigns, and transactions on apple.com</strong>. I created a living styleguide and led the transition of the UI codebase to Sass and SMACSS (Scalable &amp; Modular Architecture) style."
+                            "description": "I built pixel-perfect interfaces to support <strong>product launches, campaigns, and transactions on apple.com</strong>. I created a living styleguide and architected the transition of the UI codebase to SMACSS (Scalable &amp; Modular Architecture) style."
                         }, {
                             "brand": "iostudio",
                             "shortname": "iostudio",
@@ -97,7 +97,7 @@
                     "features": [
                         {
                             "title": "MVC/FRP Frameworks",
-                            "description": "I have experience with the previous generation of MVC frameworks, such as <strong>Angular</strong> and <strong>Backbone</strong>. I specialize in the next generation of frameworks based on web components and functional-reactive programming (FRP) concepts, like <strong>React</strong>."
+                            "description": "I have experience with the previous generation of MVC frameworks, such as <strong>Angular1</strong> and <strong>Backbone</strong>. I specialize in the next generation of frameworks based on web components and functional-reactive programming (FRP) concepts, like <strong>React</strong>."
                         }, {
                             "title": "iOS/Android App Development",
                             "description": "I strongly believe that React is the right choice for web apps and mobile apps. I don't know Swift or Java, but I'm right at home with <strong>React Native</strong>, a JavaScript framework that leverages native code to produce highly performant native apps."
@@ -106,7 +106,7 @@
                             "description": "To avoid technical debt, I focus on maintainability by establishing processes, standards and tooling to support writing <strong>testable, modular, peer-reviewed</strong> code."
                         }, {
                             "title": "Scripting &amp; Back-End Development",
-                            "description": "I've written build systems and CLI scripts with NodeJS and developed web servers and APIs with a MEAN (<strong>Mongo, Express, Angular, NodeJS</strong>) stack or similar."
+                            "description": "I've written build systems and CLI scripts with NodeJS and I've hacked on web servers and APIs with a MEAN stack or similar."
                         }
                     ],
                     "projects": [
@@ -114,12 +114,12 @@
                             "shortname": "cnn",
                             "brand": "CNN",
                             "reverse": true,
-                            "description": "Together with a small team of engineers, I helped migrate cnn.com from a Java backend to an <strong>Express web server</strong> that received JSON data from a nosql CMS. My main responsibility was templating data into markup. By using an <strong>isomorphic template engine</strong>, we gained the flexibility to send pre-rendered markup from the server or to generate markup from JSON on the client, from the same templates."
+                            "description": "Together with a small team of engineers, I helped migrate cnn.com from a Java backend to an <strong>Express web server</strong> that received JSON data from a CMS. My main responsibility was templating data into markup. By using an <strong>isomorphic template engine</strong>, we gained the flexibility to send pre-rendered markup from the server or to generate markup from JSON on the client, from the same templates."
                         }, {
                             "shortname": "iostudio",
                             "brand": "iostudio",
                             "reverse": true,
-                            "description": "I wrote the front-end of a <strong>single page web app written in Angular that helped National Guard recruiters</strong> keep track of their potential and active recruits. Features included authentication, account priveledges, a calendar, and CRUD (create, read, update, delete) operations on the data over a REST API."
+                            "description": "I wrote the front-end of a <strong>single page web app written in Angular1 that helped National Guard recruiters</strong> keep track of their potential and active recruits. Features included authentication, account priveledges, a calendar, and CRUD (create, read, update, delete) operations on the data over a REST API."
                         }
                     ]
                 }

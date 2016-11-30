@@ -30,6 +30,8 @@ strong {
 .links,
 .article-kicker:not(:first-child),
 .projects,
+.section-grid,
+.section-education article:last-child,
 .outro {
     display: none !important;
 }
@@ -42,7 +44,6 @@ strong {
     margin: 1em 0;
 }
 
-.section-skills,
-.section-grid {
+.section-skills {
     page-break-before: always
 }
