@@ -63,7 +63,7 @@
                 {
                     "class": "cool",
                     "headline": "Front-End Web Development",
-                    "kicker": "HTML <i aria-hidden=\"true\"></i> CSS/Sass <i aria-hidden=\"true\"></i> JS <i aria-hidden=\"true\"></i> Photoshop",
+                    "kicker": "HTML <i aria-hidden=\"true\"></i> CSS/Sass <i aria-hidden=\"true\"></i> JS",
                     "features": [
                         {
                             "title": "Pixel Perfect Implementation",
