@@ -180,12 +180,8 @@ i:before {
 .article-kicker {
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 30px;
 }
-.article-kicker:first-of-type {
-    margin-top: 0;
-}
-.section-skills .article-kicker:not(:first-of-type) {
+.section-skills .article-kicker {
     color: white;
     font-size: .9em;
     padding: 5px 25px;
@@ -194,13 +190,13 @@ i:before {
     text-align: center;
 }
 @media (--large) {
-    .section-skills .article-kicker:not(:first-of-type) {
+    .section-skills .article-kicker {
         text-align: left;
     }
 }
 
 .article-cool .article-headline,
-.section-skills .article-cool .article-kicker:not(:first-of-type) {
+.section-skills .article-cool .article-kicker {
     background-color: midnightblue;
 }
 .article-cool {
@@ -213,7 +209,7 @@ i:before {
     background-color: #f5d5f5;
 }
 .article-serene .article-headline,
-.section-skills .article-serene .article-kicker:not(:first-of-type) {
+.section-skills .article-serene .article-kicker {
     background-color: darkgreen;
 }
 .article-serene {
@@ -317,7 +313,7 @@ i:before {
 
 .features {
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin: 15px 0 45px 0;
 }
 .feature-title {
     font-size: 1.15em;
@@ -333,11 +329,11 @@ i:before {
     left: 0;
 }
 :first-child > .feature-title {
-    margin-top: 15px;
+    margin-top: 0;
 }
 @media (--large) {
     :nth-child(2) > .feature-title {
-        margin-top: 15px;
+        margin-top: 0;
     }
 }
 .feature-description {
@@ -368,7 +364,7 @@ i:before {
     }
 }
 .projects li {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 .projects li:first-child {
     margin-top: 0;
@@ -414,7 +410,7 @@ i:before {
 }
 @media (--large) {
     .row .project-description {
-        padding-left: 15px;
+        padding-left: 18px;
     }
     .row-reverse .project-description {
         padding-right: 15px;
