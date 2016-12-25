@@ -114,7 +114,7 @@
                             "shortname": "cnn",
                             "brand": "CNN",
                             "reverse": true,
-                            "description": "Together with a small team of engineers, I helped migrate cnn.com from a Java backend to an <strong>Express web server</strong> that received JSON data from a CMS. My main responsibility was templating data into markup. By using an <strong>isomorphic template engine</strong>, we gained the flexibility to send pre-rendered markup from the server or to generate markup from JSON on the client, from the same templates."
+                            "description": "Together with a small team of engineers, I helped migrate cnn.com from a legacy backend to an <strong>Express web server</strong> that received JSON data from a CMS. My main responsibility was templating data into markup. By using an <strong>isomorphic template engine</strong>, we gained the flexibility to send pre-rendered markup from the server or to generate markup from JSON on the client, from the same templates."
                         }, {
                             "shortname": "iostudio",
                             "brand": "iostudio",
