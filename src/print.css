@@ -32,14 +32,15 @@ strong {
 .projects,
 .section-grid,
 .section-education article:last-child,
-.outro {
+.outro,
+.section-contact {
     display: none !important;
 }
 
 .header-title:after {
     font-size: 1rem;
     font-weight: normal;
-    content: attr(data-contact-info);
+    content: "pickpuck.com ∙ michaelcpuckett@gmail.com ∙ 615.209.1380";
     display: block;
     margin: 1em 0;
 }

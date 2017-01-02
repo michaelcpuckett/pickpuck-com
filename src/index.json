@@ -2,11 +2,10 @@
     "displayName": "Michael Puckett",
     "displayTitle": "JavaScript Engineer",
     "displayLocation": "Louisville, KY 40206",
-    "contactInfo": "pickpuck.com ∙ michaelcpuckett@gmail.com ∙ 615.209.1380",
     "badgeUrl": "avatar.jpg",
     "links": [
         {
-            "url": "mailto:michael.c.puckett@gmail.com?subject=yo",
+            "url": "#email",
             "title": "E-mail"
         }, {
             "url": "http://linkedin.com/in/michaelcpuckett",

@@ -16,7 +16,7 @@ TODO:
 !}}<body>
     <div class="container">
         <header class="header">
-            <h1 class="header-title" data-contact-info="{{contactInfo}}">{{displayName}}</h1>
+            <h1 class="header-title">{{displayName}}</h1>
             <p class="header-tagline">{{displayTitle}}</p>
         </header>
         <main class="main">
@@ -100,30 +100,27 @@ TODO:
                 </section>
             {{/sections}}
 
-            <section class="section">
-                <div class="outro">
-                    <div class="summary">
-                        <div class="badge">
-                            <img src="{{badgeUrl}}" alt height="130" width="130" />
+            <section class="section section-contact">
+                <h2 class="section-headline">Contact</h2>
+                <div class="row">
+                    <article class="article">
+                        <a name="email"></a>
+                        <h3 class="article-headline">E-Mail Me</h3>
+                        <div class="article-body">
+                            <div class="email-form-description">For project or hiring inquiries, please send me a message.</div>
+                            <div id="email-form-root"></div>
                         </div>
-                        <div class="summary-text">
-                            <p><strong>{{displayName}}</strong></p>
-                            <p>{{displayLocation}}</p>
-                            <p class="links">
-                                {{#links}}
-                                    <a href="{{{url}}}">{{{title}}}</a>
-                                    {{^last}}
-                                        {{! bullet !}}
-                                        <i aria-hidden="true"></i>
-                                    {{/last}}
-                                {{/links}}
-                            </p>
-                        </div>
+                    </article>
+                    <div class="badge">
+                        <img src="{{badgeUrl}}" alt height="130" width="130" />
+                        <div>{{displayName}}</div>
+                        <div>{{displayLocation}}</div>
                     </div>
                 </div>
             </section>
 
         </main>
     </div>
+    <script src="email.min.js"></script>
 </body>
 </html>

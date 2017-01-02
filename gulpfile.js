@@ -24,6 +24,11 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('./public/'))
 });
 
+gulp.task('scripts', function () {
+    return gulp.src('./src/*.js')
+        .pipe(gulp.dest('./public/'))
+});
+
 gulp.task('markup', function () {
     return gulp.src('./src/*.mustache')
         .pipe(mustache(templateData))
@@ -35,4 +40,4 @@ gulp.task('assets', function () {
         .pipe(gulp.dest('./public/'));
 });
 
-gulp.task('default', ['styles', 'markup', 'assets']);
+gulp.task('default', ['styles', 'scripts', 'markup', 'assets']);
