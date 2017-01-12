@@ -74,7 +74,7 @@
                             "title": "Styleguide Driven Development",
                             "description": "I've found that developers can better collaborate with designers by building a <strong>living library of reusable components</strong> that acts as a shared visual vocabulary."
                         }, {
-                            "title": "Accessibility and Inclusivity",
+                            "title": "Accessibility and Inclusively",
                             "description": "To accommodate all users, including those with screen readers, I keep in mind concerns like <strong>semantic markup</strong> and <strong>color contrast</strong>."
                         }
                     ],
@@ -117,7 +117,7 @@
                             "shortname": "iostudio",
                             "brand": "iostudio",
                             "reverse": true,
-                            "description": "I wrote the front-end of a <strong>single page web app written in Angular1 that helped National Guard recruiters</strong> keep track of their potential and active recruits. Features included authentication, account priveledges, a calendar, and CRUD (create, read, update, delete) operations on the data over a REST API."
+                            "description": "I wrote the front-end of a <strong>single page web app written in Angular1 that helped National Guard recruiters</strong> keep track of their potential and active recruits. Features included authentication, account privileges, a calendar, and CRUD (create, read, update, delete) operations on the data over a REST API."
                         }
                     ]
                 }
