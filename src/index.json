@@ -94,17 +94,17 @@
                     "headline": "Full Stack Application Development",
                     "features": [
                         {
-                            "title": "MVC/FRP Frameworks",
-                            "description": "I have experience with the previous generation of MVC frameworks, such as <strong>Angular1</strong> and <strong>Backbone</strong>. I specialize in the next generation of frameworks based on web components and functional-reactive programming (FRP) concepts, like <strong>React</strong>."
+                            "title": "Frameworks",
+                            "description": "I'm fluent in <strong>React</strong> paired with <strong>Redux</strong>, together among the newest generation of frameworks based on web components and functional reactive programming concepts. I also have experience with MVC frameworks, such as <strong>Angular1</strong> and <strong>Backbone</strong>."
                         }, {
-                            "title": "iOS/Android App Development",
-                            "description": "I strongly believe that React is the right choice for web apps and mobile apps. I don't know Swift or Java, but I'm right at home with <strong>React Native</strong>, a JavaScript framework that leverages native code to produce highly performant native apps."
+                            "title": "iOS/Android Apps",
+                            "description": "JavaScript is the best choice for reusing code across multiple platforms: browsers, desktop applications, web servers, and now mobile apps. I'm not fluent in either Swift or Java, but I've created highly performant, truly native mobile apps with <strong>React Native</strong>."
                         }, {
                             "title": "Crafted, Maintainable Code",
                             "description": "To avoid technical debt, I focus on maintainability by establishing processes, standards and tooling to support writing <strong>testable, modular, peer-reviewed</strong> code."
                         }, {
-                            "title": "Scripting &amp; Back-End Development",
-                            "description": "I've written build systems and CLI scripts with NodeJS and I've hacked on web servers and APIs with a MEAN stack or similar."
+                            "title": "Full Stack JavaScript Development",
+                            "description": "I've written build systems, CLI scripts, and servers with NodeJS. I've used backend technologies like Mongo and services like AWS and Firebase to work with databases."
                         }
                     ],
                     "projects": [
