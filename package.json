@@ -23,5 +23,9 @@
     "gulp-postcss": "^6.2.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.1"
+  },
+  "dependencies": {
+    "gulp-rename": "^1.2.2",
+    "html-to-pdf": "^0.1.11"
   }
 }
