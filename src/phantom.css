@@ -1,6 +1,6 @@
 body {
     font-family: Helvetica, sans-serif;
-    font-size: 10.5pt;
+    font-size: 9pt;
     line-height: 1.5;
 }
 i:before {
@@ -12,6 +12,9 @@ img {
 strong {
     font-weight: normal;
 }
+.article-kicker strong {
+    font-weight: bold;
+}
 
 .header-title,
 .header-tagline {
@@ -20,20 +23,16 @@ strong {
 
 .header-title {
     margin-top: 0;
-    font-size: 17pt;
+    font-size: 18pt;
     margin-bottom: 0;
 }
 
 .section-headline {
-    font-size: 12pt;
-    font-weight: normal;
-    border-bottom: 1px solid #ccc;
-    margin-top: 30px;
-    padding-bottom: 7px;
+    font-size: 13pt;
 }
 
 .article-headline {
-    font-size: 10.5pt;
+    font-size: 10.25pt;
 }
 
 .intro,
@@ -47,12 +46,8 @@ strong {
     display: none !important;
 }
 
-.article-body p {
-    margin-top: 0;
-}
-
 .header-title:after {
-    font-size: 9.5pt;
+    font-size: 9pt;
     font-weight: normal;
     content: attr(data-contact-info);
     display: block;

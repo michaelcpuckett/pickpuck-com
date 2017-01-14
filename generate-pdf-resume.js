@@ -6,12 +6,12 @@ module.exports = function () {
     var html = fs.readFileSync('./phantom/index.html', 'utf8');
     var options = {
         format: 'Letter',
-        "base": "file:///Users/mpuckett/sites/pickpuck-com/phantom/",
+        "base": 'file://' + __dirname + "/phantom/",
         "border": {
-            "top": ".85in",            // default is 0, units: mm, cm, in, px
-            "right": ".85in",
-            "bottom": ".85in",
-            "left": ".85in"
+            "top": ".65in",            // default is 0, units: mm, cm, in, px
+            "right": ".5in",
+            "bottom": ".5in",
+            "left": ".65in"
         }
     };
     pdf.create(html, options).toFile('./public/michael_puckett_resume.pdf', function(err, res) {
