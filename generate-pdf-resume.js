@@ -14,7 +14,7 @@ module.exports = function () {
             "left": ".85in"
         }
     };
-    pdf.create(html, options).toFile('./public/resume.pdf', function(err, res) {
+    pdf.create(html, options).toFile('./public/michael_puckett_resume.pdf', function(err, res) {
           if (err) return console.log(err);
           console.log(res);
         });

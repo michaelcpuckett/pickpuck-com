@@ -15,7 +15,7 @@
             "url": "http://github.com/michaelcpuckett/pickpuck-com",
             "title": "Github"
         }, {
-            "url": "javascript:window.print()",
+            "url": "/michael_puckett_resume.pdf",
             "title": "Resume",
             "last": true
         }
