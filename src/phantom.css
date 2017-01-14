@@ -1,0 +1,64 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+}
+i:before {
+    content: '\2219';
+}
+img {
+    display: none;
+}
+strong {
+    font-weight: normal;
+}
+
+.header-title,
+.header-tagline {
+    text-align: center;
+}
+
+.header-title {
+    margin-top: 0;
+    font-size: 17pt;
+    margin-bottom: 0;
+}
+
+.section-headline {
+    font-size: 12pt;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    margin-top: 30px;
+    padding-bottom: 7px;
+}
+
+.article-headline {
+    font-size: 10.5pt;
+}
+
+.intro,
+.header-tagline,
+.links,
+.article-kicker:not(:first-child),
+.projects,
+.section-grid,
+.section-education article:last-child,
+.outro {
+    display: none !important;
+}
+
+.article-body p {
+    margin-top: 0;
+}
+
+.header-title:after {
+    font-size: 9.5pt;
+    font-weight: normal;
+    content: attr(data-contact-info);
+    display: block;
+    margin: .25em 0 1em;
+}
+
+.section-skills {
+    page-break-before: always
+}
