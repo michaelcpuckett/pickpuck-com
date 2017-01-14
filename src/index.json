@@ -82,7 +82,7 @@
                         {
                             "brand": "Apple",
                             "shortname": "apple",
-                            "description": "I built pixel-perfect interfaces to support <strong>product launches, campaigns, and transactions on apple.com</strong>. I created a living styleguide and architected the transition of the UI codebase to SMACSS (Scalable &amp; Modular Architecture) style. I received extensive training on web accessibility best practices."
+                            "description": "I built pixel-perfect interfaces to support <strong>product launches, campaigns, and transactions on apple.com</strong>. I created a living styleguide and architected the transition of the UI codebase to SMACSS (Scalable &amp; Modular Architecture) style and a more modern build stack. I received extensive training on web accessibility best practices."
                         }, {
                             "brand": "iostudio",
                             "shortname": "iostudio",
