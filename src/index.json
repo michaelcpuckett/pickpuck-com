@@ -98,7 +98,7 @@
                             "description": "To avoid technical debt, I focus on maintainability by establishing processes, standards and tooling to support writing <strong>testable, modular, peer-reviewed</strong> code."
                         }, {
                             "title": "Full Stack JavaScript",
-                            "description": "I've written build systems, CLI scripts, and servers with NodeJS. I've used backend technologies like Mongo and services like AWS and Firebase to work with databases."
+                            "description": "I've written build systems, CLI scripts, and servers with <strong>NodeJS</strong>. I've used backend technologies like Mongo and services like AWS and Firebase to work with databases."
                         }, {
                             "title": "Frameworks",
                             "description": "I'm fluent in <strong>React</strong> paired with <strong>Redux</strong>, together among the newest generation of frameworks based on web components and functional reactive programming concepts. I also have experience with MVC frameworks, such as <strong>Angular1</strong> and <strong>Backbone</strong>."
