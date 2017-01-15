@@ -53,6 +53,14 @@ i:before {
     content: var(--content-bullet);
 }
 
+a {
+    color: inherit;
+}
+
+.links a:not(:visited) {
+    color: blue;
+}
+
 /* Layout */
 
 .container {

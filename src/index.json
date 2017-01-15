@@ -82,11 +82,11 @@
                         {
                             "brand": "Apple",
                             "shortname": "apple",
-                            "description": "I built pixel-perfect interfaces to support <strong>product launches, campaigns, and transactions on apple.com</strong>. I created a living styleguide and architected the transition of the UI codebase to SMACSS (Scalable &amp; Modular Architecture) style and a more modern build stack. I received extensive training on web accessibility best practices."
+                            "description": "I built pixel-perfect interfaces to support <strong>product launches, campaigns, and transactions</strong> on <a href=\"http://www.apple.com\">apple.com</a>. I created a living styleguide and architected the transition of the UI codebase to SMACSS (Scalable &amp; Modular Architecture) style and a more modern build stack. I received extensive training on web accessibility best practices."
                         }, {
                             "brand": "iostudio",
                             "shortname": "iostudio",
-                            "description": "I helped develop nationalguard.com, the <strong>first website of any branch in the U.S. military to go responsive</strong>, and among the first government sites to do so. I worked closely with designers to address visual issues that arose across multiple mobile and tablet screen sizes."
+                            "description": "I helped develop <a href=\"http://www.nationalguard.com\">nationalguard.com</a>, the <strong>first website of any branch in the U.S. military to go responsive</strong>, and among the first government sites to do so. I worked closely with designers to address visual issues that arose across multiple mobile and tablet screen sizes."
                         }
                     ]
                 }, {
@@ -112,7 +112,7 @@
                             "shortname": "cnn",
                             "brand": "CNN",
                             "reverse": true,
-                            "description": "Together with a small team of engineers, I helped migrate cnn.com from a legacy backend to an <strong>Express web server</strong> that received JSON data from a CMS. My main responsibility was templating data into markup. By using an <strong>isomorphic template engine</strong>, we gained the flexibility to send pre-rendered markup from the server or to generate markup from JSON on the client, from the same templates."
+                            "description": "Together with a small team of engineers, I helped migrate <a href=\"http://www.cnn.com\">cnn.com</a> from a legacy backend to an <strong>Express web server</strong> that received JSON data from a CMS. My main responsibility was templating data into markup. By using an <strong>isomorphic template engine</strong>, we gained the flexibility to send pre-rendered markup from the server or to generate markup from JSON on the client, from the same templates."
                         }, {
                             "shortname": "iostudio",
                             "brand": "iostudio",
@@ -124,16 +124,25 @@
             ]
         },
         {
-            "headline": "Projects",
+            "headline": "Side Projects",
             "class": "grid",
             "articles": [
                 {
                     "class": "lavish",
-                    "headline": "Google MyMaps Clone",
+                    "headline": "<a href=\"http://dallasgrp.com/map/index.html\">Google My Maps Clone</a>",
                     "kicker": "<strong>Developer</strong> <i aria-hidden=\"true\"></i> Louisville, KY <i aria-hidden=\"true\"></i> 2016",
                     "paragraphs": [
                         "I created and launched a custom map widget built with <strong>React/Redux</strong> and Google's Map APIs and Material Design language.",
-                        "The client requested feature and visual parity with the existing MyMaps widget built by Google. It shows categorized locations on a map, and the user can interact with them."
+                        "The client requested feature and visual parity with the existing My Maps widget built by Google. It shows categorized locations on a map, and the user can interact with them."
+                    ]
+                },
+                {
+                    "class": "lavish",
+                    "headline": "<a href=\"https://github.com/michaelcpuckett/superchat\">Superchat</a>",
+                    "kicker": "<strong>Developer</strong> <i aria-hidden=\"true\"></i> Nashville, TN <i aria-hidden=\"true\"></i> 2013",
+                    "paragraphs": [
+                        "On several occasions, I have joined local developers for weekend-long hackathons to make games and apps.",
+                        "At Hack Nashville 2013, I built Superchat to experiment with web sockets and other HTML5 capabilities. Features included a <strong>chat room, drawing to a shared canvas, and drag-and-drop file uploads</strong> all in real time."
                     ]
                 },
                 {
@@ -143,15 +152,6 @@
                     "paragraphs": [
                         "I volunteered my time to build a <strong>responsive campaign microsite</strong> that let voters send pre-designed postcards to Senator Elizabeth Warren encouraging her to run for president.",
                         "Although Senator Warren did not end up running in 2016, the campaign was a viral hit and sent a message about what grassroots campaigns can achieve online."
-                    ]
-                },
-                {
-                    "class": "lavish",
-                    "headline": "Hack Nashville",
-                    "kicker": "<strong>Developer</strong> <i aria-hidden=\"true\"></i> Nashville, TN <i aria-hidden=\"true\"></i> 2013",
-                    "paragraphs": [
-                        "On several occasions, I have joined local developers for weekend-long hackathons to make games and apps.",
-                        "At Hack Nashville 2013, I built Superchat to experiment with web sockets and other HTML5 capabilities. Features included a <strong>chat room, drawing to a shared canvas, and drag-and-drop file uploads</strong> all in real time."
                     ]
                 },
                 {
