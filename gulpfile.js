@@ -5,6 +5,7 @@ var cssVariables = require('postcss-custom-properties');
 var customMedia = require('postcss-custom-media');
 var mustache = require('gulp-mustache-plus');
 var del = require('del');
+var shell = require('gulp-shell');
 var rename = require('gulp-rename');
 
 var templateData = require('./src/index.json');
@@ -57,9 +58,13 @@ gulp.task('assets', function () {
 gulp.task('public', ['styles', 'markup', 'assets']);
 
 gulp.task('phantom:generate', ['phantom:styles'], function () {
-    generatePdf()
+    generatePdf();
 });
 
 gulp.task('phantom', ['phantom:generate'])
 
-gulp.task('default', ['phantom'])
+gulp.task('default', ['phantom']);
+
+gulp.task('watch', function () {
+    gulp.watch(['./src/*'], ['public']);
+});

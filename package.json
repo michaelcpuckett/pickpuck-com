@@ -21,6 +21,7 @@
     "gulp": "^3.8.11",
     "gulp-mustache-plus": "^1.0.1",
     "gulp-postcss": "^6.2.0",
+    "gulp-shell": "^0.6.0",
     "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.1"
   },
