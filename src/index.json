@@ -74,7 +74,7 @@
                             "title": "Styleguide Driven Development",
                             "description": "I've found that developers can better collaborate with designers by building a <strong>living library of reusable components</strong> that acts as a shared visual vocabulary."
                         }, {
-                            "title": "Accessibility and Inclusively",
+                            "title": "Accessibility and Inclusivity",
                             "description": "To accommodate all users, including those with screen readers, I implement <strong>semantic markup</strong> with <strong>ARIA tags</strong>, and I keep in mind issues like color contrast."
                         }
                     ],
