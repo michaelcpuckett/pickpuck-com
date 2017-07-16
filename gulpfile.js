@@ -1,70 +1,59 @@
-var gulp = require('gulp');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var cssVariables = require('postcss-custom-properties');
-var customMedia = require('postcss-custom-media');
-var mustache = require('gulp-mustache-plus');
-var del = require('del');
-var shell = require('gulp-shell');
-var rename = require('gulp-rename');
+const gulp = require('gulp');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssVariables = require('postcss-custom-properties');
+const customMedia = require('postcss-custom-media');
+const mustache = require('gulp-mustache-plus');
+const del = require('del');
+const shell = require('gulp-shell');
+const rename = require('gulp-rename');
+const chromeLauncher = require('chrome-launcher');
+const templateData = require('./src/index.json');
 
-var templateData = require('./src/index.json');
-
-var generatePdf = require('./generate-pdf-resume');
-
-gulp.task('clean', function (cb) {
-    return del(['./public/','./phantom/.'], cb);
+gulp.task('resume', cb => {
+    return chromeLauncher.launch({
+        chromeFlags: [
+            '--disable-gpu',
+            '--headless',
+            '--print-to-pdf',
+            'http://localhost:3000'
+        ]
+    }).then(chrome => {
+        chrome.kill();
+    });
 });
 
-gulp.task('styles', function () {
+gulp.task('clean', cb => {
+    return del(['./public/'], cb);
+});
+
+gulp.task('styles', () => {
     return gulp.src(['./src/style.css','./src/print.css'])
         .pipe(postcss([
             cssVariables(),
             customMedia(),
-            // autoprefixer({
-            //     browsers: ['> 1%']
-            // })
+            autoprefixer({
+                browsers: ['> 1%']
+            })
         ]))
-        .pipe(gulp.dest('./public/'))
-        .pipe(gulp.dest('./phantom/'))
+        .pipe(gulp.dest('./public/'));
 });
 
-gulp.task('phantom:styles', ['public'], function () {
-    return gulp.src(['./src/phantom.css'])
-        .pipe(rename('print.css'))
-        .pipe(postcss([
-            cssVariables(),
-            customMedia(),
-            // autoprefixer({
-            //     browsers: ['> 1%']
-            // })
-        ]))
-        .pipe(gulp.dest('./phantom/'))
-});
-
-gulp.task('markup', function () {
+gulp.task('markup', () => {
     return gulp.src('./src/*.mustache')
         .pipe(mustache(templateData))
-        .pipe(gulp.dest('./public/'))
-        .pipe(gulp.dest('./phantom/'));
+        .pipe(gulp.dest('./public/'));
 });
 
-gulp.task('assets', function () {
+gulp.task('assets', () => {
     return gulp.src(['./src/*.png', './src/*.jpg', './src/*.html', './src/*.pdf'])
         .pipe(gulp.dest('./public/'))
-        .pipe(gulp.dest('./phantom/'));
 });
 
 gulp.task('public', ['styles', 'markup', 'assets']);
 
-gulp.task('phantom:generate', ['phantom:styles'], function () {
-    generatePdf();
-});
+gulp.task('default', ['public']);
 
-gulp.task('phantom', ['phantom:generate'])
-
-gulp.task('default', ['phantom']);
-
-gulp.task('watch', function () {
+gulp.task('watch', () => {
     gulp.watch(['./src/*'], ['public']);
 });
