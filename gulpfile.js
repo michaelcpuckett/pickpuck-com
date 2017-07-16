@@ -7,23 +7,26 @@ const mustache = require('gulp-mustache-plus');
 const del = require('del');
 const shell = require('gulp-shell');
 const rename = require('gulp-rename');
-const chromeLauncher = require('chrome-launcher');
 const templateData = require('./src/index.json');
 
-gulp.task('resume', cb => {
-    return chromeLauncher.launch({
-        chromeFlags: [
-            '--disable-gpu',
-            '--headless',
-            '--print-to-pdf',
-            'http://localhost:3000'
-        ]
-    }).then(chrome => {
-        chrome.kill();
-    });
+const HeadlessChrome = require('simple-headless-chrome');
+
+async function navigateWebsite(cb) {
+  const browser = new HeadlessChrome({
+    headless: true
+  });
+  await browser.init();
+  await browser.goTo('http://localhost:3000');
+  await browser.printToPDF();
+  await browser.close();
+  cb();
+}
+
+gulp.task('resume', (cb) => {
+    return navigateWebsite(cb);
 });
 
-gulp.task('clean', cb => {
+gulp.task('clean', (cb) => {
     return del(['./public/'], cb);
 });
 
