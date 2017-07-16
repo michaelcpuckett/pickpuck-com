@@ -8,22 +8,26 @@ const del = require('del');
 const shell = require('gulp-shell');
 const rename = require('gulp-rename');
 const templateData = require('./src/index.json');
-
+const fs = require('fs');
+const process = require('process');
 const HeadlessChrome = require('simple-headless-chrome');
 
-async function navigateWebsite(cb) {
+async function navigateWebsite (cb) {
   const browser = new HeadlessChrome({
     headless: true
   });
   await browser.init();
   await browser.goTo('http://localhost:3000');
-  await browser.printToPDF();
+  const pdf = await browser.printToPDF({}, true);
   await browser.close();
-  cb();
+  fs.writeFile('resume.pdf', pdf, cb);
 }
 
-gulp.task('resume', (cb) => {
-    return navigateWebsite(cb);
+gulp.task('resume', function (cb) {
+    navigateWebsite(function () {
+        cb();
+        process.exit(0);
+    });
 });
 
 gulp.task('clean', (cb) => {
