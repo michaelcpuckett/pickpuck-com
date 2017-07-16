@@ -12,7 +12,8 @@ const fs = require('fs');
 const process = require('process');
 const HeadlessChrome = require('simple-headless-chrome');
 
-async function navigateWebsite (cb) {
+// must run node 7
+async function printToPDF (cb) {
   const browser = new HeadlessChrome({
     headless: true
   });
@@ -20,13 +21,14 @@ async function navigateWebsite (cb) {
   await browser.goTo('http://localhost:3000');
   const pdf = await browser.printToPDF({}, true);
   await browser.close();
-  fs.writeFile('resume.pdf', pdf, cb);
+  fs.writeFile('./public/michael_puckett_resume.pdf', pdf, cb);
 }
 
-gulp.task('resume', function (cb) {
-    navigateWebsite(function () {
-        cb();
-        process.exit(0);
+gulp.task('resume', ['public'], async function (cb) {
+    await new Promise((resolve, reject) => {
+      printToPDF(function () {
+          resolve(cb);
+      });
     });
 });
 
@@ -61,6 +63,6 @@ gulp.task('public', ['styles', 'markup', 'assets']);
 
 gulp.task('default', ['public']);
 
-gulp.task('watch', () => {
-    gulp.watch(['./src/*'], ['public']);
+gulp.task('watch', ['public'], () => {
+    gulp.watch(['./src/*'], ['resume']);
 });
