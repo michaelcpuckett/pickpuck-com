@@ -1,4 +1,4 @@
-module.exports = { default: {
+module.exports = {
     "displayName": `Michael Puckett`,
     "displayTitle": `JavaScript Engineer`,
     "displayLocation": `Louisville, KY 40206`,
@@ -189,4 +189,4 @@ module.exports = { default: {
             ]
         }
     ]
-}}
+}
