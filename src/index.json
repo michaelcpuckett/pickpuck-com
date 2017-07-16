@@ -25,7 +25,7 @@
             "headline": "Experience",
             "articles": [
                 {
-                    "headline": "Prosoft - Humana",
+                    "headline": "Humana (Prosoft)",
                     "kicker": "<strong>Front-End Web Developer</strong> <i aria-hidden=\"true\"></i> Louisville, KY <i aria-hidden=\"true\"></i> 2016-2017",
                     "paragraphs": [
                         "I create accessible web components that are shared across many enterprise products."
@@ -37,7 +37,7 @@
                         "I helped build and maintain the front-end for apple.com across several redesigns."
                     ]
                 }, {
-                    "headline": "TekSystems - CNN",
+                    "headline": "CNN (TekSystems)",
                     "kicker": "<strong>Senior Web Developer</strong> <i aria-hidden=\"true\"></i> Atlanta, GA <i aria-hidden=\"true\"></i> 2013",
                     "paragraphs": [
                         "I worked on the responsive redesign and replatforming of CNN.com."

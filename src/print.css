@@ -4,10 +4,30 @@
     --content-nbsp: '\00a0';
 }
 
+@page {
+    margin: .75in 1in;
+}
+
+html {
+  font-size: 10.5pt;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
     font-family: sans-serif;
-    font-size: 11.5pt;
+    line-height: 1.45;
+    margin: 0;
 }
+
 i:before {
     content: var(--content-bullet);
 }
@@ -17,13 +37,66 @@ img {
 strong {
     font-weight: normal;
 }
+
+.section {
+  display: grid;
+  grid-template-columns: 1.75in 1fr;
+}
+
+.section-headline {
+  grid-column: 1;
+}
+
+article {
+  grid-column: 2;
+}
+
 .article-kicker strong {
-    font-weight: bold;
+  font-weight: normal;
+}
+
+.feature-title {
+  font-weight: bold;
+  margin-top: .5rem;
+}
+
+.article {
+  margin-bottom: 1rem;
+}
+
+.section-skills .article {
+  margin-bottom: 0;
+}
+
+.section-skills {
+  margin-bottom: 1rem;
+}
+
+.header {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.header-title {
+  font-size: 42pt;
+}
+
+.summary {
+  display: none;
 }
 
 .header-title,
 .header-tagline {
-    text-align: center;
+  margin-top: 0;
+  text-align: left;
+}
+
+.section-headline {
+  font-size: 1.667rem;
+}
+
+.article-headline {
+  font-size: 1.25rem;
 }
 
 .header-tagline,
@@ -38,10 +111,10 @@ strong {
 
 .header-title:after {
     font-size: 1rem;
+    padding-top: 0em;
     font-weight: normal;
     content: attr(data-contact-info);
     display: block;
-    margin: 1em 0;
 }
 
 .section-skills {
