@@ -185,6 +185,9 @@ a {
 .article-body p {
     margin-top: 15px;
 }
+.article-technologies {
+  display: none;
+}
 .article-kicker {
     text-transform: uppercase;
     letter-spacing: 2px;

@@ -26,40 +26,46 @@ module.exports = {
             "articles": [
                 {
                     "headline": `Humana (Prosoft)`,
-                    "kicker": `<strong>Front-End Web Developer</strong> <i aria-hidden="true"></i> Louisville, KY <i aria-hidden="true"></i> 2016-2017`,
+                    "kicker": `<strong>Front-End Web Developer</strong> <i aria-hidden="true"></i> Louisville, KY <i aria-hidden="true"></i> 2016 - 2017`,
                     "paragraphs": [
                         `I create accessible web components that are shared across many enterprise products.`
-                    ]
+                    ],
+                    "technologies": ['VueJS', 'Git', 'Webpack']
                 }, {
                     "headline": `Apple`,
                     "kicker": `<strong>UI Engineer</strong> <i aria-hidden="true"></i> Cupertino, CA <i aria-hidden="true"></i> 2013 - 2016`,
                     "paragraphs": [
                         `I helped build and maintain the front-end for apple.com across several redesigns.`
-                    ]
+                    ],
+                    "technologies": ['CanJS', 'Mustache.js', 'SVN', 'Gulp']
                 }, {
                     "headline": `CNN (TekSystems)`,
                     "kicker": `<strong>Senior Web Developer</strong> <i aria-hidden="true"></i> Atlanta, GA <i aria-hidden="true"></i> 2013`,
                     "paragraphs": [
                         `I worked on the responsive redesign and replatforming of CNN.com.`
-                    ]
+                    ],
+                    "technologies": ['Node', 'Express', 'Dust.js', 'CouchDB', 'Git']
                 }, {
                     "headline": `iostudio`,
                     "kicker": `<strong>Web Developer</strong> <i aria-hidden="true"></i> Nashville, TN <i aria-hidden="true"></i> 2012 - 2013`,
                     "paragraphs": [
                         `I built marketing websites and web apps for clients, including the National Guard.`
-                    ]
-                }, {
+                    ],
+                    "technologies": ['Angular1', 'Backbone.js', 'Handlebars.js', 'Git', 'Grunt']
+                }, /*{
                     "headline": `Fruit of the Loom`,
                     "kicker": `<strong>Web Developer</strong> <i aria-hidden="true"></i> Bowling Green, KY <i aria-hidden="true"></i> 2012`,
                     "paragraphs": [
                         `I designed and developed a relaunch of jerzees.com and maintained other brand websites.`
-                    ]
-                }, {
+                    ],
+                    "technologies": ['jQuery']
+                },*/ {
                     "headline": `2-Com`,
                     "kicker": `<strong>Web Developer</strong> <i aria-hidden="true"></i> Nashville, TN <i aria-hidden="true"></i> 2010 - 2012`,
                     "paragraphs": [
                         `I worked on a web app that generated marketing materials for small businesses.`
-                    ]
+                    ],
+                    "technologies": ['jQuery', 'Backbone.js', 'Mustache.js', 'TFS']
                 }
             ]
         }, {
@@ -83,17 +89,6 @@ module.exports = {
                             "title": `Accessibility and Inclusivity`,
                             "description": `To accommodate all users, including those with screen readers, I implement <strong>semantic markup</strong> with <strong>ARIA tags</strong>, and I keep in mind issues like color contrast.`
                         }
-                    ],
-                    "projects": [
-                        {
-                            "brand": `Apple`,
-                            "shortname": `apple`,
-                            "description": `I built pixel-perfect interfaces to support <strong>product launches, campaigns, and transactions</strong> on <a href="http://www.apple.com">apple.com</a>. I created a living styleguide and architected the transition of the UI codebase to SMACSS (Scalable &amp; Modular Architecture) style and a more modern build stack. I received extensive training on web accessibility best practices.`
-                        }, {
-                            "brand": `iostudio`,
-                            "shortname": `iostudio`,
-                            "description": `I helped develop <a href="http://www.nationalguard.com">nationalguard.com</a>, the <strong>first website of any branch in the U.S. military to go responsive</strong>, and among the first government sites to do so. I worked closely with designers to address visual issues that arose across multiple mobile and tablet screen sizes.`
-                        }
                     ]
                 }, {
                     "class": `serene`,
@@ -112,24 +107,11 @@ module.exports = {
                             "title": `iOS/Android/Desktop Apps`,
                             "description": `I believe JavaScript is the best choice for reusing code across multiple platforms, no longer limited to just browsers. I'm not fluent in Swift or Java, but I've created apps that leverage native code with the <strong>React Native</strong> ecosystem.`
                         }
-                    ],
-                    "projects": [
-                        {
-                            "shortname": `cnn`,
-                            "brand": `CNN`,
-                            "reverse": true,
-                            "description": `Together with a small team of engineers, I helped migrate <a href="http://www.cnn.com">cnn.com</a> from a legacy backend to an <strong>Express web server</strong> that received JSON data from a CMS. My main responsibility was templating data into markup. By using an <strong>isomorphic template engine</strong>, we gained the flexibility to send pre-rendered markup from the server or to generate markup from JSON on the client, from the same templates.`
-                        }, {
-                            "shortname": `iostudio`,
-                            "brand": `iostudio`,
-                            "reverse": true,
-                            "description": `I wrote the front-end of a <strong>single page web app written in Angular1 that helped National Guard recruiters</strong> keep track of their potential and active recruits. Features included authentication, account privileges, a calendar, and CRUD (create, read, update, delete) operations on the data over a REST API.`
-                        }
                     ]
                 }
             ]
         },
-        {
+        /*{
             "headline": `Side Projects`,
             "class": `grid`,
             "articles": [
@@ -170,7 +152,7 @@ module.exports = {
                     ]
                 }
             ]
-        }, {
+        },*/ {
             "headline": `Education`,
             "class": `education`,
             "articles": [

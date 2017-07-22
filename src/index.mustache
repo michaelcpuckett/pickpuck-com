@@ -61,6 +61,14 @@ TODO:
                                     {{#paragraphs}}
                                         <p>{{{.}}}</p>
                                     {{/paragraphs}}
+                                    
+                                    {{#technologies.length}}
+                                      <ul class="article-technologies">
+                                        {{#technologies}}
+                                          <li>{{.}}</li>
+                                        {{/technologies}}
+                                      </ul>
+                                    {{/technologies.length}}
 
                                     {{#features.length}}
                                         <dl class="features row">
