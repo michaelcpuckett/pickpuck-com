@@ -102,10 +102,10 @@ module.exports = {
                             "description": `I've written build systems, CLI scripts, and servers with <strong>NodeJS</strong>. I've used backend technologies like Mongo and services like AWS and Firebase to work with databases.`
                         }, {
                             "title": `Frameworks`,
-                            "description": `I'm fluent in <strong>React</strong> paired with <strong>Redux</strong>, together among the newest generation of frameworks based on web components and functional reactive programming concepts. I also have experience with MVC frameworks, such as <strong>Angular1</strong> and <strong>Backbone</strong>.`
+                            "description": `I'm fluent in <strong>Vue</strong> and <strong>React</strong>, together among the newest generation of frameworks based on web components and reactive programming concepts. I have had experience with MVC frameworks, such as <strong>Angular1</strong> and <strong>Backbone</strong>.`
                         }, {
                             "title": `iOS/Android/Desktop Apps`,
-                            "description": `I believe JavaScript is the best choice for reusing code across multiple platforms, no longer limited to just browsers. I'm not fluent in Swift or Java, but I've created apps that leverage native code with the <strong>React Native</strong> ecosystem.`
+                            "description": `I believe JavaScript is the best choice for reusing code across multiple platforms, no longer limited to just browsers. I'm not fluent in Swift or Java, but I've created apps that leverage native code with <strong>React Native</strong> and <strong>NativeScript</strong>.`
                         }
                     ]
                 }
