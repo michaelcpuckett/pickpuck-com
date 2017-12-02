@@ -1,7 +1,7 @@
 module.exports = {
     "displayName": `Michael Puckett`,
-    "displayTitle": `JavaScript Engineer`,
-    "displayLocation": `Louisville, KY 40206`,
+    "displayTitle": `UI Engineer`,
+    "displayLocation": `Louisville, KY 40204`,
     "contactInfo": `pickpuck.com ∙ michaelcpuckett@gmail.com ∙ 615.209.1380`,
     "badgeUrl": `avatar.jpg`,
     "links": [
@@ -26,30 +26,30 @@ module.exports = {
             "articles": [
                 {
                     "headline": `Humana (Prosoft)`,
-                    "kicker": `<strong>Front-End Web Developer</strong> <i aria-hidden="true"></i> Louisville, KY <i aria-hidden="true"></i> 2016 - 2017`,
+                    "kicker": `<strong>Web Developer</strong> <i aria-hidden="true"></i> Louisville, KY <i aria-hidden="true"></i> 2016 - Present`,
                     "paragraphs": [
-                        `I create accessible web components that are shared across many enterprise products.`
+                        `I build and maintain a library of accessible web components that are shared across many enterprise products.`
                     ],
-                    "technologies": ['VueJS', 'Git', 'Webpack']
+                    "technologies": ['Vue.js', 'Git', 'Webpack']
                 }, {
                     "headline": `Apple`,
                     "kicker": `<strong>UI Engineer</strong> <i aria-hidden="true"></i> Cupertino, CA <i aria-hidden="true"></i> 2013 - 2016`,
                     "paragraphs": [
-                        `I helped build and maintain the front-end for apple.com across several redesigns.`
+                        `I built interfaces to support product launches, campaigns, and transactions on apple.com.`
                     ],
-                    "technologies": ['CanJS', 'Mustache.js', 'SVN', 'Gulp']
+                    "technologies": ['Can.js', 'Mustache.js', 'SVN', 'Gulp']
                 }, {
                     "headline": `CNN (TekSystems)`,
                     "kicker": `<strong>Senior Web Developer</strong> <i aria-hidden="true"></i> Atlanta, GA <i aria-hidden="true"></i> 2013`,
                     "paragraphs": [
-                        `I worked on the responsive redesign and replatforming of CNN.com.`
+                        `I worked on the responsive redesign and replatforming of cnn.com.`
                     ],
                     "technologies": ['Node', 'Express', 'Dust.js', 'CouchDB', 'Git']
                 }, {
                     "headline": `iostudio`,
                     "kicker": `<strong>Web Developer</strong> <i aria-hidden="true"></i> Nashville, TN <i aria-hidden="true"></i> 2012 - 2013`,
                     "paragraphs": [
-                        `I built marketing websites and web apps for clients, including the National Guard.`
+                        `I built marketing websites and web apps for national clients, including the National Guard.`
                     ],
                     "technologies": ['Angular1', 'Backbone.js', 'Handlebars.js', 'Git', 'Grunt']
                 }, /*{
@@ -63,7 +63,7 @@ module.exports = {
                     "headline": `2-Com`,
                     "kicker": `<strong>Web Developer</strong> <i aria-hidden="true"></i> Nashville, TN <i aria-hidden="true"></i> 2010 - 2012`,
                     "paragraphs": [
-                        `I worked on a web app that generated marketing materials for small businesses.`
+                        `I worked on a web app that generated print marketing materials for small businesses.`
                     ],
                     "technologies": ['jQuery', 'Backbone.js', 'Mustache.js', 'TFS']
                 }
@@ -87,7 +87,7 @@ module.exports = {
                             "description": `I've found that developers can better collaborate with designers by building a <strong>living library of reusable components</strong> that acts as a shared visual vocabulary.`
                         }, {
                             "title": `Accessibility and Inclusivity`,
-                            "description": `To accommodate all users, including those with screen readers, I implement <strong>semantic markup</strong> with <strong>ARIA tags</strong>, and I keep in mind issues like color contrast.`
+                            "description": `To accommodate all users, including those with screen readers, I implement <strong>semantic markup</strong> using <strong>ARIA</strong> best practices.`
                         }
                     ]
                 }, {
@@ -105,7 +105,7 @@ module.exports = {
                             "description": `I'm fluent in <strong>Vue</strong> and <strong>React</strong>, together among the newest generation of frameworks based on web components and reactive programming concepts. I have had experience with MVC frameworks, such as <strong>Angular1</strong> and <strong>Backbone</strong>.`
                         }, {
                             "title": `iOS/Android/Desktop Apps`,
-                            "description": `I believe JavaScript is the best choice for reusing code across multiple platforms, no longer limited to just browsers. I'm not fluent in Swift or Java, but I've created apps that leverage native code with <strong>React Native</strong> and <strong>NativeScript</strong>.`
+                            "description": `I believe JavaScript is the best choice for reusing code across multiple platforms, no longer confined to the web. I've created apps that leverage native code with bridges like <strong>React Native</strong> and <strong>Weex</strong>, without relying on platform-specific languages.`
                         }
                     ]
                 }
