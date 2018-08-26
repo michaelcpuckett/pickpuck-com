@@ -131,6 +131,7 @@ article {
 .links,
 .article-kicker:not(:first-child),
 .projects,
+[data-headline="2-Com"],
 .section-grid,
 .section-education article:last-child,
 .outro {
@@ -145,6 +146,6 @@ article {
     display: block;
 }
 
-/* .section-skills {
+.section-skills {
     page-break-before: always
-} */
+}

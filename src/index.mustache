@@ -51,7 +51,7 @@ TODO:
 
                     {{#articles}}
                         {{^hidden}}
-                            <article class="article{{#class}} article-{{.}}{{/class}}">
+                            <article data-headline="{{headline}}" class="article{{#class}} article-{{.}}{{/class}}">
                                 <h3 class="article-headline">{{{headline}}}</h3>
                                 <div class="article-body">
                                     {{#kicker}}

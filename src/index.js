@@ -25,12 +25,17 @@ module.exports = {
             "headline": `Experience`,
             "articles": [
                 {
-                    "headline": `Humana (Prosoft)`,
-                    "kicker": `<strong>Web Developer</strong> <i aria-hidden="true"></i> Louisville, KY <i aria-hidden="true"></i> 2016 - Present`,
+                    "headline": "LiveSchool",
+                    "kicker": `<strong>Web Developer</strong> <i aria-hidden="true"></i> Remote <i aria-hidden="true"></i> 2018 - Present`,
+                    "technologies": ['ES6', 'Vue.js', 'Firebase', 'Git']
+                },
+                {
+                    "headline": `Humana`, // (Prosoft)
+                    "kicker": `<strong>Web Developer</strong> <i aria-hidden="true"></i> Louisville, KY <i aria-hidden="true"></i> 2016 - 2018`,
                     "paragraphs": [
-                        `I build and maintain a library of accessible web components that are shared across many enterprise products.`
+                        `I built and maintained a library of accessible web components that was shared across many enterprise products.`
                     ],
-                    "technologies": ['Vue.js', 'Git', 'Webpack']
+                    "technologies": ['ES6', 'Vue.js', 'Git', 'Webpack']
                 }, {
                     "headline": `Apple`,
                     "kicker": `<strong>UI Engineer</strong> <i aria-hidden="true"></i> Cupertino, CA <i aria-hidden="true"></i> 2013 - 2016`,
@@ -39,7 +44,7 @@ module.exports = {
                     ],
                     "technologies": ['Can.js', 'Mustache.js', 'SVN', 'Gulp']
                 }, {
-                    "headline": `CNN (TekSystems)`,
+                    "headline": `CNN`, // (TekSystems)
                     "kicker": `<strong>Senior Web Developer</strong> <i aria-hidden="true"></i> Atlanta, GA <i aria-hidden="true"></i> 2013`,
                     "paragraphs": [
                         `I worked on the responsive redesign and replatforming of cnn.com.`
