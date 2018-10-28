@@ -1,17 +1,20 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <title></title>
-  <meta name="description" content="" />
+  <title>Accessible Web Pages with 5D HTML - pickpuck.com</title>
+  <meta name="description" content="Create better experiences by understanding that HTML exists in five dimensions: visual, auditory, tactile, vocal, and programmatic." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <style>
-    body {
+    :root {
       font-size: 19.5px;
       line-height: 1.5;
       font-family: Open Sans, sans-serif;
-      color: #262722;
+      color: #280F19;
       background: #fff9f9;
+    }
+
+    body {
       padding: 0;
       margin: 0;
     }
@@ -21,11 +24,16 @@
       }
     }
     article { max-width: 820px; margin: 0 auto; }
-    h1 { font-size: 2em; text-align: center; }
+    h1 { font-size: 2.85em; text-align: center; text-shadow: 1px 1px 4px black; }
+    @media (max-width: 520px) {
+      h1 {
+        font-size: 2.333em;
+      }
+    }
     h2 { font-size: 1.667em; font-weight: normal; }
     h3 { font-size: 1.2em;  }
     main {
-      padding: 0 .5em;
+      padding: 0 .75em;
       margin: 1em 0;
     }
     .home {
@@ -34,7 +42,7 @@
     }
     header,
     footer {
-      background-color: #262722;
+      background-color: #280F19;
       color: #fff9f9;
     }
     header a,
@@ -57,7 +65,7 @@
     body > header a:hover,
     body > footer a:hover {
       color: #fff9f9;
-      background-color: blue;
+      background-color: ;
     }
 
     a:not(:hover):not(:active) {
@@ -71,32 +79,78 @@
       font-style: normal;
       color: black;
     }
+
+    em:before {
+      content: '(begin italics)';
+    }
+    em:after {
+      content: '(end italics)';
+    }
+
+    .visually-hidden,
+    em:before,
+    em:after {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+    main header {
+      background-image: url('./a11y.jpg');
+      padding-bottom: 87%;
+      background-size: cover;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      background: rgba(0,0,0,.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    header h1 span {
+      padding: 3px 0;
+    }
   </style>
 </head>
 <body>
-  <header role="banner">
+  <header>
     <a class="home" href="/">Back to pickpuck.com</a>
   </header>
-  <main role="main">
+  <main>
     <article>
       <header>
-        <h1>Accessible Web Pages with 4D HTML</h1>
+        <h1><span>Accessible Web Pages</span> <span>with 5D HTML</span></h1>
       </header>
 
-      <h2>What is 4D HTML?</h2>
+      <h2>What is 5D HTML?</h2>
       <p>
-        Why isn't web development as easy as drag and drop? <em>It's because the underlying structure matters more than the visual representation alone.</em> We need to think about web pages less like blank canvases and more like text documents. We need to put more emphasis on supporting a diverse range of users, their preferences, and the various means by which they can complete a user journey.
+        The underlying structure of a web page matters more than the visual representation alone.
       </p>
       <p>
-        HTML, once sent down to a client, can exist in four dimensions. One dimension is visual, which is most familiar for sighted users, with three different input modes. Another is auditory, which includes voice control and synthesized speech. There is a tactile dimension for non-sighted and non-hearing users. Finally, there is a fourth dimension for search engines to crawl the web page and for other programmatic analysis. The 4D HTML thought process is about understanding and accomodating each one.
+        We need to think about web pages less like blank canvases and more like text documents. We need to put more emphasis on supporting a diverse range of users, their preferences, and the various means by which they can complete a user journey.
       </p>
-        <h3>Does Accessibility Matter?</h3>
-        <p>
-          <em>Everyone has an accessibility limitation sometimes.</em> Consider the range of users who could be trying to access your website: from someone who is deafblind, to someone who is paralyzed and cannot move most of their body, to someone who has an injured arm that will eventually heal, to an able bodied person who has their hands full temporarily. The 4D HTML thought process is a starting point for addressing this wide range of user needs.
-        </p>
-        <p>
-          Additionally, some organizations must comply with accessibility standards by law.
-        </p>
+      <p>
+        That means understanding that HTML exists in five dimensions:
+      </p>
+      <ul>
+        <li>Visual</li>
+        <li>Auditory</li>
+        <li>Tactile</li>
+        <li>Vocal</li>
+        <li>Programmatic</li>
+      </ul>
 
       <h2>The Visual Dimension</h2>
       <p>
@@ -114,10 +168,10 @@
           However, <em>focus is the most important part of navigating a page for keyboard users.</em> If you had to give up your mouse, do you think you could still use a web browser? You should give it a try! The way to manipulate focus is by using the Tab key. To move to the next focusable element, tab forward. To move to the previous focusable element, shift + tab backward. Then pressing the Enter key will trigger the element's action. It is important to keep the visual order of elements in the DOM in the same order as the source code, otherwise moving to the next tabstop would take you somewhere you may not expect. That means being careful with floats, and avoiding manipulating the order of items in flex and grid layouts.
         </p>
         <p>
-          Pressing Spacebar on any non-actionable scrollable element that receives focus (including the body) will scroll down by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Avoid trying to recreate (or "hijack") scrolling on an element, or else it will lose those native behaviors.
+          Pressing Spacebar on any non-actionable scrollable element that receives focus (including the body) will scroll down by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Don't recreate (or "hijack") the native scroll behavior on an element.
         </p>
         <p>
-          When a user tabs to a form element, such as a radio control, range slider, or select box, they may control the form element using the Arrow keys. <em>Avoid trying to recreate a form element with JavaScript and CSS, otherwise it will lose all its native accessibility features.</em>
+          When a user tabs to a form element, such as a radio control, range slider, or select box, they may control the form element using the Arrow keys. Avoid attempting to recreate a form element with JavaScript and CSS, otherwise it will lose all its native accessibility features.
         </p>
         <p>
           There are some keyboard shortcuts that are part of every application, like for selecting all text, or copying and pasting. These are built into the browser and do not need to be added. Assistive browser add-ons like screen readers may include their own set of keyboard shortcuts. Because of this, it's best not to add any JavaScript that would override any of those default keyboard shortcuts. However, there are some instances, like when showing a modal dialog, where a keyboard user would expect to be able to use the escape key to return to the main content.
@@ -137,7 +191,7 @@
           There should be a high contrast between the background and text color. Nothing should be differentiated using colors only, because some people are colorblind. Some people have a specific colorblindness, like not being able to differentiate between green and red, and others see no color at all.
         </p>
         <p>
-          There are some user preferences for sighted users that should be respected and accommodated. Animations and transitions should be turned off if the browser reports that the user <em>"prefers reduced motion"</em> (possibly due to a vestibular disorder). A user may wish to override CSS with user styles or turn off CSS completely and the page should still be usable.
+          There are some user preferences for sighted users that should be respected and accommodated. Animations and transitions should be turned off if the browser reports that the user "prefers reduced motion" (possibly due to a vestibular disorder). A user may wish to override CSS with user styles or turn off CSS completely and the page should still be usable.
         </p>
         <p>
           To avoid confusion, especially for people with cognitive difficulties, distinct, logical and consistent design variations should exist for focus states, hover states, active states, pressed states, disabled states, etc. If having a visible focus state is distracting for mouse users, it can be removed when using a mouse and visible when using a keyboard. This differentiation can be achieved with a library called what-input.
@@ -153,7 +207,7 @@
           <em>Screen readers use a synthesized voice to announce the label and properties of the currently focused element.</em>
         </p>
         <p>
-          You may remember that tabbing only focuses actionable elements, so the containers for text content of a page cannot normally be selected by keyboard. But a screen reader opens up new ways of navigating the page and manipulating the virtual cursor. Screen reader users can navigate left and right to select every element, and the text inside will be read aloud. Screen reader users typically skim the page, either by speeding up the audio so they get the information faster, or by accessing a list of the page's elements. A list of elements gives a screen reader user the ability to scan for and jump to a specific link, a specific heading, or any other part of the page, without having to tab through or use the Left/Right Arrow keys.
+          You may remember that tabbing only focuses actionable elements, so the containers for text content of a page normally cannot be selected by keyboard. But a screen reader opens up new ways of navigating the page and manipulating the virtual cursor. Screen reader users can navigate left and right to select every element, and the text inside will be read aloud. Screen reader users typically skim the page, either by speeding up the audio so they get the information faster, or by accessing a list of the page's elements. A list of elements gives a screen reader user the ability to scan for and jump to a specific link, a specific heading, or any other part of the page, without having to tab through or use the Left/Right Arrow keys.
         </p>
         <p>
           Usually, a screen reader comes as part of your operating system, and you can turn it on in the accessibility section of system settings. If not, software can be downloaded for free. While debugging the screen reader experience, sighted developers can turn the sound off and see the announcements appear visually on screen.
@@ -164,25 +218,34 @@
 
         <h3>Semantic Markup</h3>
         <p>
-          Web accessibility is largely about marking up the page so that a screen reader's virtual cursor scanning and navigation features work properly. When a user focuses a button, the screen reader won't just read the text inside the button. It will also announce that it is a button. The button may have additional state properties, such as being disabled, that also need to be announced to the user. <em>This extra metadata sometimes comes "for free" by using the right HTML elements and attributes.</em> For example, marking up all headings using heading elements (h1-h6) will make all them available when the screen reader scans for the list of headings. Properly marking up a table will provide additional keyboard controls for navigating the rows and columns. Other times we need to go a step further. For those cases, we can turn to ARIA.
+          Web accessibility is in part about marking up the page so that a screen reader's virtual cursor scanning and navigation features work properly. When a user focuses a button, the screen reader won't just read the text inside the button. It will also announce that it is a button. The button may have additional state properties, such as being disabled, that also need to be announced to the user.
+        </p>
+        <p>
+          This extra metadata sometimes comes for free by using the right HTML elements and attributes. For example, marking up all headings using heading elements (h1-h6) will make all them available when the screen reader scans for the list of headings. Properly marking up a table will provide additional keyboard controls for navigating the rows and columns.
+        </p>
+        <p>
+          Other times we need to go a step further. For those cases, we can turn to ARIA.
         </p>
 
         <h3>ARIA</h3>
         <p>
-          ARIA stands for <em>Accessible Rich Internet Applications</em>. The "rich" part refers to the dynamic nature of JavaScript-heavy web pages. ARIA attributes can be added to and removed from HTML elements in order to indicate state changes. It is also used to indicate relationships between elements. Certain combinations of elements and ARIA attributes are recommended for common scenarios, designed to work consistently across different screen reader software. For example, properly marking up a set of tabs will announce the component as a "tab control," which will be familiar to the user because it replicates the behavior of tabs across their operating system.
-        </p>
-
-        <h3>Voice Control</h3>
-        <p>
-          Users, due to mobility limitations or other reasons, may use their voice to select, read, and activate parts of a web page. These users may scan the page visually and then use voice recognition software to select an element using its label. Because of this, it is important that the underlying accessible label for actionable items match the text that appears visually on screen.
+          ARIA stands for Accessible Rich Internet Applications The "rich" part refers to the dynamic nature of JavaScript-heavy web pages. ARIA attributes can be added to and removed from HTML elements in order to indicate state changes. They are also used to indicate relationships between elements. Certain combinations of elements and ARIA attributes are recommended for common scenarios, designed to work consistently across different screen reader software. For example, properly marking up a set of tabs will announce the component as a "tab control," which will be familiar to the user because it replicates the behavior of tabs across their operating system.
         </p>
 
       <h2>The Tactile Dimension</h2>
         <p>
-          Screen readers can be connected to <em>refreshable Braille displays.</em> Anything that can be read aloud by a screen reader can instead be read by touch. The amount of available space on the display can cause some announcements to be shortened.
+          Screen readers can be connected to refreshable Braille displays. Anything that can be read aloud by a screen reader can instead be read by touch. The amount of available space on the display can cause some announcements to be shortened.
+        </p>
+
+      <h2>The Vocal Dimension</h2>
+        <p>
+          Users, due to mobility limitations or other reasons, may use their voice to navigate the web. They can select and activate parts of a web page, input text by dictation, toggle form controls, tab through a page, and call up lists of specific element types.
         </p>
         <p>
-          Users who have varying degrees of sight and hearing limitations may use a combination of assistive technologies at one time, including reading a line of Braille while listening to the same announcement as speech, occassionally referring to a zoom-in screened.
+          Voice users typically scan the page visually and then use voice recognition software to select an element using its visual label. Because of this, it is helpful to have the underlying accessible label for actionable items match the text that appears visually on screen.
+        </p>
+        <p>
+          Additionally, voice users have an interface to control page scrolling, so it is best to keep the body element of the page scrollable. Voice users have full control of the mouse cursor, but may prefer to use buttons for complex tasks like drag-and-drop.
         </p>
 
       <h2>The Programmatic Dimension</h2>
@@ -199,10 +262,18 @@
           There are additional protocols for marking up how a page summary should appear when being shared on social networks, such as Facebook's Open Graph. Users may also have browser plugins that parse this kind of metadata for various reasons.
         </p>
 
+      <h2>Summary</h2>
+        <p>
+          How many people are adversely affected by inaccessible HTML? Certainly more than the number of remaining Internet Explorer users. <span title="Priorities, amirite?"><span aria-hidden="true">🙃</span></span>
+        </p>
+        <p>
+          Consider the range of users who could be trying to access your website: from someone who has an injured arm that will eventually heal, to someone who is permanently deafblind, to an able bodied person who has their hands full at the moment. <em>Everyone has an accessibility limitation sometimes.</em> An accessibility plan should address the full gamut of user scenarios, with 5D HTML as the foundation.
+        </p>
+
       <h2>Resources</h2>
       <ul>
         <li>
-          <em><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex">ARIA Design Patterns</a></em>
+          <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex">ARIA Design Patterns</a>
         </li>
         <li>
           <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA Attributes</a>
@@ -217,10 +288,21 @@
           <a href="https://github.com/ten1seven/what-input">What Input? Library</a>
         </li>
         <li>
+          <a href="https://validator.nu/">HTML Validator</a>
+        </li>
+        <li>
+          <a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">
+            axe Chrome Extension
+          </a>
+        </li>
+        <li>
           <a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web Design (Wiki)</a>
         </li>
         <li>
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">"Prefers Reduced Motion" Media Query</a>
+        </li>
+        <li>
+          <a href="http://www.mit.edu/~rjc/aria/emphasis.html">Conveying Emphasized Text to Screen Readers</a>
         </li>
         <li>
           <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">Accessibility Tree (Google)</a>
@@ -253,7 +335,10 @@
           <a href="https://support.google.com/accessibility/android/answer/6283677?hl=en">TalkBack for Android (Free)</a>
         </li>
         <li>
-          <a href="https://www.nuance.com/dragon/dragon-for-pc/home-edition.html">Dragon Naturally Speaking (~$150)</a>
+          <a href="https://www.nuance.com/dragon/dragon-for-pc/home-edition.html">Buy Dragon Naturally Speaking (~$150)</a>
+        </li>
+        <li>
+          <a href="https://www.nuance.com/products/help/dragon/dragon-for-pc/enx/professionalgroup/main/Content/Web/web_basics.htm">How to use Dragon Naturally Speaking with a Web Browser</a>
         </li>
         <li>
           <a href="https://en.wikipedia.org/wiki/Refreshable_braille_display">Refreshable Braille Display (Wiki)</a>
@@ -261,7 +346,7 @@
       </ul>
     </article>
   </main>
-  <footer role="contentinfo">
+  <footer>
     <a class="home" href="/">Back to pickpuck.com</a>
   </footer>
 </body>
