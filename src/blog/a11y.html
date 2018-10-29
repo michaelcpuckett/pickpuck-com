@@ -165,10 +165,10 @@
           Sighted users who primarily use a mouse to navigate the web may be unaware of the concept of focus. Only one element on a page can have focus at one time. This acts like a virtual cursor in a text document. Switching focus with a mouse requires pointing and clicking on an actionable element, so this is not usually an important concept for mouse-only users. 
         </p>
         <p>
-          However, <em>focus is the most important part of navigating a page for keyboard users.</em> If you had to give up your mouse, do you think you could still use a web browser? You should give it a try! The way to manipulate focus is by using the Tab key. To move to the next focusable element, tab forward. To move to the previous focusable element, shift + tab backward. Then pressing the Enter key will trigger the element's action. It is important to keep the visual order of elements in the DOM in the same order as the source code, otherwise moving to the next tabstop would take you somewhere you may not expect. That means being careful with floats, and avoiding manipulating the order of items in flex and grid layouts.
+          However, <em>focus is the most important part of navigating a page for keyboard users.</em> If you had to give up your mouse, do you think you could still use a web browser? You should give it a try! The way to manipulate focus is by using the Tab key. To move to the next focusable element, tab forward. To move to the previous focusable element, Shift + Tab backward. Then pressing the Enter key will trigger the element's action. It is important to keep the visual order of elements in the DOM in the same order as the source code, otherwise moving to the next tabstop would take you somewhere you may not expect. That means being careful with floats, and avoiding manipulating the order of items in flex and grid layouts.
         </p>
         <p>
-          Pressing Spacebar on any non-actionable scrollable element that receives focus (including the body) will scroll down by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Don't recreate (or "hijack") the native scroll behavior on an element.
+          Pressing Spacebar on any non-actionable scrollable element that receives focus (including the body) will scroll down by one screen. Shift + Spacebar scrolls up by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Don't recreate (or "hijack") the native scroll behavior on an element.
         </p>
         <p>
           When a user tabs to a form element, such as a radio control, range slider, or select box, they may control the form element using the Arrow keys. Avoid attempting to recreate a form element with JavaScript and CSS, otherwise it will lose all its native accessibility features.
@@ -324,6 +324,9 @@
         </li>
         <li>
           <a href="https://support.microsoft.com/en-us/help/22798/windows-10-complete-guide-to-narrator">Windows 10 Narrator (Free)</a>
+        </li>
+        <li>
+          <a href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn">Chrome Vox Extension for Chrome (Free)</a>
         </li>
         <li>
           <a href="https://www.apple.com/accessibility/mac/vision/">VoiceOver for MacOS (Free)</a>
