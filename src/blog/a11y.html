@@ -138,28 +138,31 @@
         <div>
           <h2>What is 5D HTML?</h2>
           <p>
-            The underlying structure of a web page matters more than the visual representation alone.
+            As a web developer or designer, you may have noticed a trend towards accessibility. We're seeing more emphasis placed on supporting a diverse range of users, their preferences, and the various means by which they can complete a user journey.
           </p>
           <p>
-            We need to think about web pages less like blank canvases and more like text documents. We need to put more emphasis on supporting a diverse range of users, their preferences, and the various means by which they can complete a user journey.
+            How is this achieved?
+          </p>
+          <p>
+            One way to start is to think about pages less like blank canvases and more like text documents. The underlying structure of a web page matters more than the visual representation alone.
           </p>
           <p>
             That means understanding that HTML exists in five dimensions:
           </p>
           <ul>
-            <li>Visual</li>
-            <li>Auditory</li>
-            <li>Tactile</li>
-            <li>Vocal</li>
-            <li>Programmatic</li>
+            <li><a href="#visual">Visual</a></li>
+            <li><a href="#auditory">Auditory</a></li>
+            <li><a href="#tactile">Tactile</a></li>
+            <li><a href="#vocal">Vocal</a></li>
+            <li><a href="#programmatic">Programmatic</a></li>
           </ul>
 
-          <h2>The Visual Dimension</h2>
+          <h2><a id="visual"></a>The Visual Dimension</h2>
           <p>
-            Sighted users may prefer to read information on a page visually. A Responsive Design is usually necessary to account for the size and form factor of every device, from a narrow smartphone with an inset panel obscuring part of the screen to a 4K widescreen desktop. The markup should be the same and CSS should be responsible for rendering the layout at various screen sizes. The page should respond even if the users rotates the device or changes the size of the browser window.
+            Sighted users may prefer to read information on a page visually. You probably know that a Responsive Design is  necessary to account for the size and form factor of every device, from a narrow smartphone to a 4K widescreen desktop. The markup should be the same and CSS (using media queries or grid) should be responsible for rendering the layout at various screen sizes. The page should respond even if the users rotates the device or changes the size of the browser window.
           </p>
           <p>
-            When considering the visual dimension, there are three primary input methods: mouse, keyboard, and touch. Be aware that many devices can accept any of these three input types at one time. Some devices can switch between primary input modes. There are some additional forms of input we should consider for people with mobility issues, such as head movement and joysticks, which are converted into mouse/keyboard/touch commands.
+            When considering the visual dimension, there are three primary input methods: mouse, keyboard, and touch. Be aware that many devices can accept any of these three input types at one time. There are other forms of input devices and their signals are converted to one of the primary methods.
           </p>
 
             <h3>Focus, Form Controls &amp; Scrollable Elements</h3>
@@ -199,7 +202,7 @@
               To avoid confusion, especially for people with cognitive difficulties, distinct, logical and consistent design variations should exist for focus states, hover states, active states, pressed states, disabled states, etc. If having a visible focus state is distracting for mouse users, it can be removed when using a mouse and visible when using a keyboard. This differentiation can be achieved with a library called what-input.
             </p>
 
-          <h2>The Auditory Dimension</h2>
+          <h2><a id="auditory"></a>The Auditory Dimension</h2>
             <p>
               For understanding how non-sighted people use web pages, let's remember the concept of the virtual cursor, which can be controlled using the Tab key. If you are sighted, imagine closing your eyes and selecting the next focusable element. You wouldn't know what it is, unless the computer told you in some other way. That's where screen readers come in.
             </p>
@@ -237,12 +240,12 @@
               ARIA stands for Accessible Rich Internet Applications The "rich" part refers to the dynamic nature of JavaScript-heavy web pages. ARIA attributes can be added to and removed from HTML elements in order to indicate state changes. They are also used to indicate relationships between elements. Certain combinations of elements and ARIA attributes are recommended for common scenarios, designed to work consistently across different screen reader software. For example, properly marking up a set of tabs will announce the component as a "tab control," which will be familiar to the user because it replicates the behavior of tabs across their operating system.
             </p>
 
-          <h2>The Tactile Dimension</h2>
+          <h2><a id="tactile"></a>The Tactile Dimension</h2>
             <p>
               Screen readers can be connected to refreshable Braille displays. What would get read aloud by a screen reader can instead be read by touch. The amount of available space on the display can cause some announcements to be shortened, so screen readers usually have a visual Braille mode for debugging.
             </p>
 
-          <h2>The Vocal Dimension</h2>
+          <h2><a id="vocal"></a>The Vocal Dimension</h2>
             <p>
               Users, due to mobility limitations or other reasons, may use their voice to navigate the web. They can select and activate parts of a page, input text, toggle form controls, tab through a page, and call up lists of specific element types.
             </p>
@@ -253,7 +256,7 @@
               Voice users usually have full control of the mouse cursor, but may prefer to use buttons for complex tasks like drag-and-drop. They could have a simplified interface for page scrolling, so it is best to keep the body element itself scrollable.
             </p>
 
-          <h2>The Programmatic Dimension</h2>
+          <h2><a id="programmatic"></a>The Programmatic Dimension</h2>
             <p>
               Lastly, we should consider the ability for external sites and services to gather information from the page for indexing and sharing. How is this an accessibility concern? Users on these external sites should be able to find, bookmark and share your page easily.
             </p>
@@ -269,10 +272,10 @@
 
         <h2>Summary</h2>
           <p>
-            How many people are adversely affected by inaccessible HTML? Certainly more than the number of remaining Internet Explorer users. <span title="Priorities, amirite?"><span aria-hidden="true">🙃</span></span>
+            Consider the range of users who could be trying to access your website: from someone who has an injured arm that will eventually heal, to someone who is permanently deafblind, to an able bodied person who has their hands full at the moment. The point is, <em>everyone has an accessibility limitation sometimes.</em>
           </p>
           <p>
-            Consider the range of users who could be trying to access your website: from someone who has an injured arm that will eventually heal, to someone who is permanently deafblind, to an able bodied person who has their hands full at the moment. <em>Everyone has an accessibility limitation sometimes.</em> An accessibility plan should address the full gamut of user scenarios, with 5D HTML as the foundation.
+            A web accessibility plan should address the full gamut of user scenarios, and 5D HTML can help form the foundation.
           </p>
         </div>
 
