@@ -65,7 +65,6 @@
     body > header a:hover,
     body > footer a:hover {
       color: #fff9f9;
-      background-color: ;
     }
 
     a:not(:hover):not(:active) {
@@ -122,6 +121,7 @@
     header h1 span {
       padding: 3px 0;
     }
+
   </style>
 </head>
 <body>
@@ -134,219 +134,229 @@
         <h1><span>Accessible Web Pages</span> <span>with 5D HTML</span></h1>
       </header>
 
-      <h2>What is 5D HTML?</h2>
-      <p>
-        The underlying structure of a web page matters more than the visual representation alone.
-      </p>
-      <p>
-        We need to think about web pages less like blank canvases and more like text documents. We need to put more emphasis on supporting a diverse range of users, their preferences, and the various means by which they can complete a user journey.
-      </p>
-      <p>
-        That means understanding that HTML exists in five dimensions:
-      </p>
-      <ul>
-        <li>Visual</li>
-        <li>Auditory</li>
-        <li>Tactile</li>
-        <li>Vocal</li>
-        <li>Programmatic</li>
-      </ul>
+      <div>
+        <div>
+          <h2>What is 5D HTML?</h2>
+          <p>
+            The underlying structure of a web page matters more than the visual representation alone.
+          </p>
+          <p>
+            We need to think about web pages less like blank canvases and more like text documents. We need to put more emphasis on supporting a diverse range of users, their preferences, and the various means by which they can complete a user journey.
+          </p>
+          <p>
+            That means understanding that HTML exists in five dimensions:
+          </p>
+          <ul>
+            <li>Visual</li>
+            <li>Auditory</li>
+            <li>Tactile</li>
+            <li>Vocal</li>
+            <li>Programmatic</li>
+          </ul>
 
-      <h2>The Visual Dimension</h2>
-      <p>
-        Sighted users may prefer to read information on a page visually. A Responsive Design is usually necessary to account for the size and form factor of every device, from a narrow smartphone with an inset panel obscuring part of the screen to a 4K widescreen desktop. The markup should be the same and CSS should be responsible for rendering the layout at various screen sizes. The page should respond even if the users rotates the device or changes the size of the browser window.
-      </p>
-      <p>
-        When considering the visual dimension, there are three primary input methods: mouse, keyboard, and touch. Be aware that many devices can accept any of these three input types at one time. Some devices can switch between primary input modes. There are some additional forms of input we should consider for people with mobility issues, such as head movement and joysticks, which are converted into mouse/keyboard/touch commands.
-      </p>
+          <h2>The Visual Dimension</h2>
+          <p>
+            Sighted users may prefer to read information on a page visually. A Responsive Design is usually necessary to account for the size and form factor of every device, from a narrow smartphone with an inset panel obscuring part of the screen to a 4K widescreen desktop. The markup should be the same and CSS should be responsible for rendering the layout at various screen sizes. The page should respond even if the users rotates the device or changes the size of the browser window.
+          </p>
+          <p>
+            When considering the visual dimension, there are three primary input methods: mouse, keyboard, and touch. Be aware that many devices can accept any of these three input types at one time. Some devices can switch between primary input modes. There are some additional forms of input we should consider for people with mobility issues, such as head movement and joysticks, which are converted into mouse/keyboard/touch commands.
+          </p>
 
-        <h3>Focus, Form Controls &amp; Scrollable Elements</h3>
-        <p>
-          Sighted users who primarily use a mouse to navigate the web may be unaware of the concept of focus. Only one element on a page can have focus at one time. This acts like a virtual cursor in a text document. Switching focus with a mouse requires pointing and clicking on an actionable element, so this is not usually an important concept for mouse-only users. 
-        </p>
-        <p>
-          However, <em>focus is the most important part of navigating a page for keyboard users.</em> If you had to give up your mouse, do you think you could still use a web browser? You should give it a try! The way to manipulate focus is by using the Tab key. To move to the next focusable element, tab forward. To move to the previous focusable element, Shift + Tab backward. Then pressing the Enter key will trigger the element's action. It is important to keep the visual order of elements in the DOM in the same order as the source code, otherwise moving to the next tabstop would take you somewhere you may not expect. That means being careful with floats, and avoiding manipulating the order of items in flex and grid layouts.
-        </p>
-        <p>
-          Pressing Spacebar on any non-actionable scrollable element that receives focus (including the body) will scroll down by one screen. Shift + Spacebar scrolls up by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Don't recreate (or "hijack") the native scroll behavior on an element.
-        </p>
-        <p>
-          When a user tabs to a form element, such as a radio control, range slider, or select box, they may control the form element using the Arrow keys. Avoid attempting to recreate a form element with JavaScript and CSS, otherwise it will lose all its native accessibility features.
-        </p>
-        <p>
-          There are some keyboard shortcuts that are part of every application, like for selecting all text, or copying and pasting. These are built into the browser and do not need to be added. Assistive browser add-ons like screen readers may include their own set of keyboard shortcuts. Because of this, it's best not to add any JavaScript that would override any of those default keyboard shortcuts. However, there are some instances, like when showing a modal dialog, where a keyboard user would expect to be able to use the escape key to return to the main content.
-        </p>
-        <p>
-          Some complex scenarios, like drag-and-drop or resizing a panel, can be achieved by providing actionable elements that can be focused using the keyboard. However, you may want to consider redesigning components that rely too heavily on mouse-only interactions.
-        </p>
-        <p>
-          For devices where the primary pointing device is a finger touch, there is no mouse cursor, so there is little or no concept of hover. No critical information should be shown only via hover. The tap target on actionable items should be tall and wide enough for everyone to find and press easily.
-        </p>
+            <h3>Focus, Form Controls &amp; Scrollable Elements</h3>
+            <p>
+              Sighted users who primarily use a mouse to navigate the web may be unaware of the concept of focus. Only one element on a page can have focus at one time. This acts like a virtual cursor in a text document. Switching focus with a mouse requires pointing and clicking on an actionable element, so this is not usually an important concept for mouse-only users. 
+            </p>
+            <p>
+              However, <em>focus is the most important part of navigating a page for keyboard users.</em> If you had to give up your mouse, do you think you could still use a web browser? You should give it a try! The way to manipulate focus is by using the Tab key. To move to the next focusable element, Tab forward. To move to the previous focusable element, Shift + Tab backward. Then pressing the Enter key will trigger the element's action. It is important to keep the visual order of elements in the DOM in the same order as the source code, otherwise moving to the next tabstop would take you somewhere you may not expect. That means being careful with floats, and avoiding manipulating the order of items in flex and grid layouts.
+            </p>
+            <p>
+              Pressing Spacebar on any non-actionable scrollable element that receives focus (including the body) will scroll down by one screen. Shift + Spacebar scrolls up by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Don't recreate (or "hijack") the native scroll behavior on an element.
+            </p>
+            <p>
+              When a user tabs to a form element, such as a radio control, range slider, or select box, they may control the form element using the Arrow keys. Avoid attempting to recreate a form element with JavaScript and CSS, otherwise it will lose all its native accessibility features.
+            </p>
+            <p>
+              There are some keyboard shortcuts that are part of every application, like for selecting all text, or copying and pasting. These are built into the browser and do not need to be added. Assistive browser add-ons like screen readers may include their own set of keyboard shortcuts. Because of this, it's best not to add any JavaScript that would override any of those default keyboard shortcuts. However, there are some instances, like when showing a modal dialog, where a keyboard user would expect to be able to use the escape key to return to the main content.
+            </p>
+            <p>
+              Some complex scenarios, like drag-and-drop or resizing a panel, can be achieved by providing actionable elements that can be focused using the keyboard. However, you may want to consider redesigning components that rely too heavily on mouse-only interactions.
+            </p>
+            <p>
+              For devices where the primary pointing device is a finger touch, there is no mouse cursor, so there is little or no concept of hover. No critical information should be shown only via hover. The tap target on actionable items should be tall and wide enough for everyone to find and press easily.
+            </p>
 
-        <h3>Accommodating People with Vision Impairments, Vestibular Disorders &amp; Cognitive Difficulties</h3>
-        <p>
-          Users with limited vision often increase the zoom level of the page (with command and +/- keys). Never disable zooming, and make sure complex interactions don't depend on specific heights, widths, or font sizes.
-        </p>
-        <p>
-          There should be a high contrast between the background and text color. Nothing should be differentiated using colors only, because some people are colorblind. Some people have a specific colorblindness, like not being able to differentiate between green and red, and others see no color at all.
-        </p>
-        <p>
-          There are some user preferences for sighted users that should be respected and accommodated. Animations and transitions should be turned off if the browser reports that the user "prefers reduced motion" (possibly due to a vestibular disorder). A user may wish to override CSS with user styles or turn off CSS completely and the page should still be usable.
-        </p>
-        <p>
-          To avoid confusion, especially for people with cognitive difficulties, distinct, logical and consistent design variations should exist for focus states, hover states, active states, pressed states, disabled states, etc. If having a visible focus state is distracting for mouse users, it can be removed when using a mouse and visible when using a keyboard. This differentiation can be achieved with a library called what-input.
-        </p>
+            <h3>Accommodating People with Vision Impairments, Vestibular Disorders &amp; Cognitive Difficulties</h3>
+            <p>
+              Users with limited vision often increase the zoom level of the page (with command and +/- keys). Never disable zooming, and make sure complex interactions don't depend on specific heights, widths, or font sizes.
+            </p>
+            <p>
+              There should be a high contrast between the background and text color. Nothing should be differentiated using colors only, because some people are colorblind. Some people have a specific colorblindness, like not being able to differentiate between green and red, and others see no color at all.
+            </p>
+            <p>
+              There are some user preferences for sighted users that should be respected and accommodated. Animations and transitions should be turned off if the browser reports that the user "prefers reduced motion" (possibly due to a vestibular disorder). A user may wish to override CSS with user styles or turn off CSS completely and the page should still be usable.
+            </p>
+            <p>
+              To avoid confusion, especially for people with cognitive difficulties, distinct, logical and consistent design variations should exist for focus states, hover states, active states, pressed states, disabled states, etc. If having a visible focus state is distracting for mouse users, it can be removed when using a mouse and visible when using a keyboard. This differentiation can be achieved with a library called what-input.
+            </p>
 
-      <h2>The Auditory Dimension</h2>
-        <p>
-          For understanding how non-sighted people use web pages, let's remember the concept of the virtual cursor, which can be controlled using the Tab key. If you are sighted, imagine closing your eyes and selecting the next focusable element. You wouldn't know what it is, unless the computer told you in some other way. That's where screen readers come in.
-        </p>
+          <h2>The Auditory Dimension</h2>
+            <p>
+              For understanding how non-sighted people use web pages, let's remember the concept of the virtual cursor, which can be controlled using the Tab key. If you are sighted, imagine closing your eyes and selecting the next focusable element. You wouldn't know what it is, unless the computer told you in some other way. That's where screen readers come in.
+            </p>
 
-        <h3>Screen Readers</h3>
-        <p>
-          <em>Screen readers use a synthesized voice to announce the label and properties of the currently focused element.</em>
-        </p>
-        <p>
-          You may remember that tabbing only focuses actionable elements, so the containers for text content of a page normally cannot be selected by keyboard. But a screen reader opens up new ways of navigating the page and manipulating the virtual cursor. Screen reader users can navigate left and right to select every element, and the text inside will be read aloud. Screen reader users typically skim the page, either by speeding up the audio so they get the information faster, or by accessing a list of the page's elements. A list of elements gives a screen reader user the ability to scan for and jump to a specific link, a specific heading, or any other part of the page, without having to tab through or use the Left/Right Arrow keys.
-        </p>
-        <p>
-          Usually, a screen reader comes as part of your operating system, and you can turn it on in the accessibility section of system settings. If not, software can be downloaded for free. While debugging the screen reader experience, sighted developers can turn the sound off and see the announcements appear visually on screen.
-        </p>
-        <p>
-          Browsers expose data to screen readers via the Accessibility Tree and communicate via the Accessibility API (instead of the DOM). These can be debugged in the web inspector or at the operating system level.
-        </p>
+            <h3>Screen Readers</h3>
+            <p>
+              <em>Screen readers use a synthesized voice to announce the label and properties of the currently focused element.</em>
+            </p>
+            <p>
+              Screen reader users typically input using the keyboard. You may remember that Tabbing only focuses actionable elements, so the containers for text content of a page normally cannot be selected by keyboard. But a screen reader opens up new ways of navigating the page and manipulating the virtual cursor. Screen reader users can navigate left and right with the Arrow keys to select every element, and the text inside will be read aloud. On mobile devices, the touch pad can be put in a mode that allows the user to swipe directionally to navigate and double tap to activate the currently focused element.
+            </p>
+            <p>
+              Screen reader users typically skim the page, either by speeding up the audio so they get the information faster or by accessing an index of the page's elements. Keyboard shortcuts or touch gestures can call up a list of elements, giving a screen reader user the ability to scan for and jump to a specific link, a specific heading, or any other part of the page, without having to Tab through or use the Left/Right Arrow keys.
+            </p>
+            <p>
+              Usually, a screen reader comes as part of your operating system, and you can turn it on in the accessibility section of the system's settings. If not, software can be downloaded for free. While debugging the screen reader experience, sighted developers can turn the sound off and see the announcements appear visually on screen.
+            </p>
+            <p>
+              Browsers communicate via the Accessibility API (instead of the DOM API). Screen readers will read the browser's Accessibility Tree (instead of DOM Tree), which can be debugged in most web inspectors or at the operating system level.
+            </p>
 
-        <h3>Semantic Markup</h3>
-        <p>
-          Web accessibility is in part about marking up the page so that a screen reader's virtual cursor scanning and navigation features work properly. When a user focuses a button, the screen reader won't just read the text inside the button. It will also announce that it is a button. The button may have additional state properties, such as being disabled, that also need to be announced to the user.
-        </p>
-        <p>
-          This extra metadata sometimes comes for free by using the right HTML elements and attributes. For example, marking up all headings using heading elements (h1-h6) will make all them available when the screen reader scans for the list of headings. Properly marking up a table will provide additional keyboard controls for navigating the rows and columns.
-        </p>
-        <p>
-          Other times we need to go a step further. For those cases, we can turn to ARIA.
-        </p>
+            <h3>Semantic Markup</h3>
+            <p>
+              Web accessibility is in part about marking up the page so that a screen reader's virtual cursor scanning and navigation features work properly. When a user focuses a button, the screen reader won't just read the text inside the button. It will also announce that it is a button. The button may have additional state properties, such as being disabled, that also need to be announced to the user.
+            </p>
+            <p>
+              This extra metadata sometimes comes for free by using the right HTML elements and attributes. For example, marking up all headings using heading elements (h1-h6) will make all them available when the screen reader scans for the list of headings. Properly marking up a table will provide additional keyboard controls for navigating the rows and columns.
+            </p>
+            <p>
+              Other times we need to go a step further. For those cases, we can turn to ARIA.
+            </p>
 
-        <h3>ARIA</h3>
-        <p>
-          ARIA stands for Accessible Rich Internet Applications The "rich" part refers to the dynamic nature of JavaScript-heavy web pages. ARIA attributes can be added to and removed from HTML elements in order to indicate state changes. They are also used to indicate relationships between elements. Certain combinations of elements and ARIA attributes are recommended for common scenarios, designed to work consistently across different screen reader software. For example, properly marking up a set of tabs will announce the component as a "tab control," which will be familiar to the user because it replicates the behavior of tabs across their operating system.
-        </p>
+            <h3>ARIA</h3>
+            <p>
+              ARIA stands for Accessible Rich Internet Applications The "rich" part refers to the dynamic nature of JavaScript-heavy web pages. ARIA attributes can be added to and removed from HTML elements in order to indicate state changes. They are also used to indicate relationships between elements. Certain combinations of elements and ARIA attributes are recommended for common scenarios, designed to work consistently across different screen reader software. For example, properly marking up a set of tabs will announce the component as a "tab control," which will be familiar to the user because it replicates the behavior of tabs across their operating system.
+            </p>
 
-      <h2>The Tactile Dimension</h2>
-        <p>
-          Screen readers can be connected to refreshable Braille displays. Anything that can be read aloud by a screen reader can instead be read by touch. The amount of available space on the display can cause some announcements to be shortened.
-        </p>
+          <h2>The Tactile Dimension</h2>
+            <p>
+              Screen readers can be connected to refreshable Braille displays. Anything that can be read aloud by a screen reader can instead be read by touch. The amount of available space on the display can cause some announcements to be shortened.
+            </p>
 
-      <h2>The Vocal Dimension</h2>
-        <p>
-          Users, due to mobility limitations or other reasons, may use their voice to navigate the web. They can select and activate parts of a web page, input text by dictation, toggle form controls, tab through a page, and call up lists of specific element types.
-        </p>
-        <p>
-          Voice users typically scan the page visually and then use voice recognition software to select an element using its visual label. Because of this, it is helpful to have the underlying accessible label for actionable items match the text that appears visually on screen.
-        </p>
-        <p>
-          Additionally, voice users have an interface to control page scrolling, so it is best to keep the body element of the page scrollable. Voice users have full control of the mouse cursor, but may prefer to use buttons for complex tasks like drag-and-drop.
-        </p>
+          <h2>The Vocal Dimension</h2>
+            <p>
+              Users, due to mobility limitations or other reasons, may use their voice to navigate the web. They can select and activate parts of a web page, input text by dictation, toggle form controls, tab through a page, and call up lists of specific element types.
+            </p>
+            <p>
+              Voice users typically scan the page visually and then use voice recognition software to select an element using its visual label. Because of this, it is helpful to have the underlying accessible label for actionable items match the text that appears visually on screen.
+            </p>
+            <p>
+              Additionally, voice users have an interface to control page scrolling, so it is best to keep the body element of the page scrollable. Voice users have full control of the mouse cursor, but may prefer to use buttons for complex tasks like drag-and-drop.
+            </p>
 
-      <h2>The Programmatic Dimension</h2>
-        <p>
-          Lastly, we should consider the ability for external sites and services to gather information from the page for indexing and sharing. How is this an accessibility concern? Users on these external sites should be able to find, access and share your page easily.
-        </p>
-        <p>
-          The most obvious external service is search engine crawlers. Most search engines will attempt to run JavaScript and evaluate the DOM, but it is safest to deliver the HTML directly from the server. Google analyzes pages to see if they load fast enough and if they are mobile optimized.
-        </p>
-        <p>
-          Search engine results may show specific data from a web page, such as the author of an article or the price of a product. That information must be properly marked up in order to appear, typically using itemprop attributes and vocabulary from schema.org.
-        </p>
-        <p>
-          There are additional protocols for marking up how a page summary should appear when being shared on social networks, such as Facebook's Open Graph. Users may also have browser plugins that parse this kind of metadata for various reasons.
-        </p>
+          <h2>The Programmatic Dimension</h2>
+            <p>
+              Lastly, we should consider the ability for external sites and services to gather information from the page for indexing and sharing. How is this an accessibility concern? Users on these external sites should be able to find, access and share your page easily.
+            </p>
+            <p>
+              The most obvious external service is search engine crawlers. Most search engines will attempt to run JavaScript and evaluate the DOM, but it is safest to deliver the HTML directly from the server. Google analyzes pages to see if they load fast enough and if they are mobile optimized.
+            </p>
+            <p>
+              Search engine results may show specific data from a web page, such as the author of an article or the price of a product. That information must be properly marked up in order to appear, typically using itemprop attributes and vocabulary from schema.org.
+            </p>
+            <p>
+              There are additional protocols for marking up how a page summary should appear when being shared on social networks, such as Facebook's Open Graph. Users may also have browser plugins that parse this kind of metadata for various reasons.
+            </p>
 
-      <h2>Summary</h2>
-        <p>
-          How many people are adversely affected by inaccessible HTML? Certainly more than the number of remaining Internet Explorer users. <span title="Priorities, amirite?"><span aria-hidden="true">🙃</span></span>
-        </p>
-        <p>
-          Consider the range of users who could be trying to access your website: from someone who has an injured arm that will eventually heal, to someone who is permanently deafblind, to an able bodied person who has their hands full at the moment. <em>Everyone has an accessibility limitation sometimes.</em> An accessibility plan should address the full gamut of user scenarios, with 5D HTML as the foundation.
-        </p>
+        <h2>Summary</h2>
+          <p>
+            How many people are adversely affected by inaccessible HTML? Certainly more than the number of remaining Internet Explorer users. <span title="Priorities, amirite?"><span aria-hidden="true">🙃</span></span>
+          </p>
+          <p>
+            Consider the range of users who could be trying to access your website: from someone who has an injured arm that will eventually heal, to someone who is permanently deafblind, to an able bodied person who has their hands full at the moment. <em>Everyone has an accessibility limitation sometimes.</em> An accessibility plan should address the full gamut of user scenarios, with 5D HTML as the foundation.
+          </p>
+        </div>
 
-      <h2>Resources</h2>
-      <ul>
-        <li>
-          <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex">ARIA Design Patterns</a>
-        </li>
-        <li>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA Attributes</a>
-        </li>
-        <li>
-          <a href="https://schema.org/docs/schemas.html">Schema.org Attributes</a>
-        </li>
-        <li>
-          <a href="https://developers.facebook.com/docs/sharing/webmasters/#markup">Open Graph Attributes</a>
-        </li>
-        <li>
-          <a href="https://github.com/ten1seven/what-input">What Input? Library</a>
-        </li>
-        <li>
-          <a href="https://validator.nu/">HTML Validator</a>
-        </li>
-        <li>
-          <a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">
-            axe Chrome Extension
-          </a>
-        </li>
-        <li>
-          <a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web Design (Wiki)</a>
-        </li>
-        <li>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">"Prefers Reduced Motion" Media Query</a>
-        </li>
-        <li>
-          <a href="http://www.mit.edu/~rjc/aria/emphasis.html">Conveying Emphasized Text to Screen Readers</a>
-        </li>
-        <li>
-          <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">Accessibility Tree (Google)</a>
-        </li>
-        <li>
-          <a href="https://en.wikipedia.org/wiki/Vestibular_system#Pathologies">Vestibular Disorders (Wiki)</a>
-        </li>
-        <li>
-          <a href="https://en.wikipedia.org/wiki/Color_blindness">Color Blindness (Wiki)</a>
-        </li>
-        <li>
-          <a href="https://en.wikipedia.org/wiki/Cognitive_disorder">Cognitive Disorders (Wiki)</a>
-        </li>
-        <li>
-          <a href="https://www.nvaccess.org/download/">NVDA for Windows (Free)</a>
-        </li>
-        <li>
-          <a href="https://store.freedomscientific.com/collections/software-products/products/jaws-home-edition-screen-reading-software">JAWS for Windows (~$1000)</a>
-        </li>
-        <li>
-          <a href="https://support.microsoft.com/en-us/help/22798/windows-10-complete-guide-to-narrator">Windows 10 Narrator (Free)</a>
-        </li>
-        <li>
-          <a href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn">Chrome Vox Extension for Chrome (Free)</a>
-        </li>
-        <li>
-          <a href="https://www.apple.com/accessibility/mac/vision/">VoiceOver for MacOS (Free)</a>
-        </li>
-        <li>
-          <a href="https://www.apple.com/accessibility/iphone/vision/">VoiceOver for iPhone (Free)</a>
-        </li>
-        <li>
-          <a href="https://support.google.com/accessibility/android/answer/6283677?hl=en">TalkBack for Android (Free)</a>
-        </li>
-        <li>
-          <a href="https://www.nuance.com/dragon/dragon-for-pc/home-edition.html">Buy Dragon Naturally Speaking (~$150)</a>
-        </li>
-        <li>
-          <a href="https://www.nuance.com/products/help/dragon/dragon-for-pc/enx/professionalgroup/main/Content/Web/web_basics.htm">How to use Dragon Naturally Speaking with a Web Browser</a>
-        </li>
-        <li>
-          <a href="https://en.wikipedia.org/wiki/Refreshable_braille_display">Refreshable Braille Display (Wiki)</a>
-        </li>
-      </ul>
+
+      <aside>
+        <h2>Resources</h2>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex">ARIA Design Patterns</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA Attributes</a>
+          </li>
+          <li>
+            <a href="https://schema.org/docs/schemas.html">Schema.org Attributes</a>
+          </li>
+          <li>
+            <a href="https://developers.facebook.com/docs/sharing/webmasters/#markup">Open Graph Attributes</a>
+          </li>
+          <li>
+            <a href="https://github.com/ten1seven/what-input">What Input? Library</a>
+          </li>
+          <li>
+            <a href="https://validator.nu/">HTML Validator</a>
+          </li>
+          <li>
+            <a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">
+              axe Chrome Extension
+            </a>
+          </li>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web Design (Wiki)</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">"Prefers Reduced Motion" Media Query</a>
+          </li>
+          <li>
+            <a href="http://www.mit.edu/~rjc/aria/emphasis.html">Conveying Emphasized Text to Screen Readers</a>
+          </li>
+          <li>
+            <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">Accessibility Tree (Google)</a>
+          </li>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Vestibular_system#Pathologies">Vestibular Disorders (Wiki)</a>
+          </li>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Color_blindness">Color Blindness (Wiki)</a>
+          </li>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Cognitive_disorder">Cognitive Disorders (Wiki)</a>
+          </li>
+          <li>
+            <a href="https://www.nvaccess.org/download/">NVDA for Windows (Free)</a>
+          </li>
+          <li>
+            <a href="https://store.freedomscientific.com/collections/software-products/products/jaws-home-edition-screen-reading-software">JAWS for Windows (~$1000)</a>
+          </li>
+          <li>
+            <a href="https://support.microsoft.com/en-us/help/22798/windows-10-complete-guide-to-narrator">Windows 10 Narrator (Free)</a>
+          </li>
+          <li>
+            <a href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn">Chrome Vox Extension for Chrome (Free)</a>
+          </li>
+          <li>
+            <a href="https://www.apple.com/accessibility/mac/vision/">VoiceOver for MacOS (Free)</a>
+          </li>
+          <li>
+            <a href="https://www.apple.com/accessibility/iphone/vision/">VoiceOver for iPhone (Free)</a>
+          </li>
+          <li>
+            <a href="https://support.google.com/accessibility/android/answer/6283677?hl=en">TalkBack for Android (Free)</a>
+          </li>
+          <li>
+            <a href="https://www.nuance.com/dragon/dragon-for-pc/home-edition.html">Buy Dragon Naturally Speaking (~$150)</a>
+          </li>
+          <li>
+            <a href="https://www.nuance.com/products/help/dragon/dragon-for-pc/enx/professionalgroup/main/Content/Web/web_basics.htm">How to use Dragon Naturally Speaking with a Web Browser</a>
+          </li>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Refreshable_braille_display">Refreshable Braille Display (Wiki)</a>
+          </li>
+        </ul>
+      </aside>
+      </div>
     </article>
   </main>
   <footer>
