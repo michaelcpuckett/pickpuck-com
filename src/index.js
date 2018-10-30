@@ -6,6 +6,10 @@ module.exports = {
     "badgeUrl": `avatar.jpg`,
     "links": [
         {
+            "url": `/blog/a11y.html`,
+            "title": `Blog`
+        },
+        {
             "url": `mailto:michael.c.puckett@gmail.com?subject=yo`,
             "title": `E-mail`
         }, {
