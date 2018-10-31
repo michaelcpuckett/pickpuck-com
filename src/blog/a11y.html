@@ -25,13 +25,16 @@
     }
     article { max-width: 820px; margin: 0 auto; }
     h1 { font-size: 2.85em; text-align: center; text-shadow: 1px 1px 4px black; }
+    h2 {  margin-top: 2em; font-size: 1.85em; font-weight: normal; }
+    h3 { font-size: 1.25em;  }
     @media (max-width: 520px) {
       h1 {
         font-size: 2.333em;
       }
+      h2 {
+        font-size: 1.75em;
+      }
     }
-    h2 { font-size: 1.85em; font-weight: normal; }
-    h3 { font-size: 1.25em;  }
     main {
       padding: 0 1em;
       margin: 2em 0;
@@ -122,6 +125,7 @@
       padding: 3px 0;
     }
 
+
   </style>
 </head>
 <body>
@@ -176,7 +180,7 @@
               When a user tabs to a form element, such as a radio control, range slider, or select box, they may control the form element using the Arrow keys. Avoid attempting to recreate a form element with JavaScript and CSS, otherwise it will lose all its native accessibility features.
             </p>
             <p>
-              There are some keyboard shortcuts that are part of every application, like for selecting all text, or copying and pasting. These are built into the browser and do not need to be added. Assistive browser add-ons like screen readers may include their own set of keyboard shortcuts. Because of this, it's best not to add any JavaScript that would override any of those default keyboard shortcuts. However, there are some instances, like when showing a modal dialog, where a keyboard user would expect to be able to use the escape key to return to the main content.
+              Assistive browser add-ons like screen readers may include their own set of keyboard shortcuts. Because of this, it's best not to add any JavaScript that would override any of those default keyboard shortcuts. However, there are some instances, like when showing a modal dialog, where a keyboard user would expect to be able to use the escape key to return to the main content.
             </p>
             <p>
               Some complex scenarios, like drag-and-drop or resizing a panel, can be achieved by providing actionable elements that can be focused using the keyboard. However, you may want to consider redesigning components that rely too heavily on mouse-only interactions.
@@ -190,10 +194,10 @@
               Now let's take a moment to talk about accessible CSS.
             </p>
             <p>
-              There should be a high contrast between the background and text color. Nothing should be differentiated using colors only, because some people are colorblind. Some people have a specific colorblindness, like not being able to differentiate between green and red, and others see no color at all.
+              There are some user preferences for sighted users that should be respected and accommodated. Animations and transitions should be turned off if the browser reports that the user "prefers reduced motion" (possibly due to a vestibular disorder). A user may wish to override CSS with user styles or turn off CSS completely and the page should still be usable.
             </p>
             <p>
-              There are some user preferences for sighted users that should be respected and accommodated. Animations and transitions should be turned off if the browser reports that the user "prefers reduced motion" (possibly due to a vestibular disorder). A user may wish to override CSS with user styles or turn off CSS completely and the page should still be usable.
+              There should be a high contrast between the background and text color. Nothing should be differentiated using colors only, because some people are colorblind.
             </p>
             <p>
               To avoid confusion, especially for people with cognitive difficulties, distinct, logical and consistent design variations should exist for focus states, hover states, active states, pressed states, disabled states, etc. If having a visible focus state is distracting for mouse users, it can be removed when using a mouse and visible when using a keyboard. This differentiation can be achieved with a library called what-input.
@@ -267,7 +271,7 @@
               There are additional protocols for marking up how a page summary should appear when being shared on social networks, such as Facebook's Open Graph. Users may also have browser plugins that parse this kind of metadata for various reasons.
             </p>
 
-        <h2>Summary</h2>
+        <h2>Conclusion</h2>
           <p>
             Consider the range of users who could be trying to access your website: from someone who has an injured arm that will eventually heal, to someone who is permanently deafblind, to an able bodied person who has their hands full at the moment. The point is, <em>everyone has an accessibility limitation sometimes.</em>
           </p>
