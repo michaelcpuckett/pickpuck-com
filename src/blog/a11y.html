@@ -194,7 +194,7 @@
               Screen reader users typically input using the keyboard. You may remember that Tabbing only focuses actionable elements, so the containers for text content of a page normally cannot be selected by keyboard. But a screen reader opens up new ways of navigating the page and manipulating the virtual cursor. Now, the user can navigate left and right with the Arrow keys to select every element, and the text inside will be read aloud. On mobile devices, the touch pad can be put in a mode that allows the user to swipe directionally to navigate and double tap to activate the currently focused element.
             </p>
             <p>
-              Screen reader users typically skim the page, either by speeding up the audio so they get the information faster or by accessing an index of the page's elements. Keyboard shortcuts or touch gestures can call up a list of elements, giving a screen reader user the ability to scan for and jump to a specific link, a specific heading, or any other part of the page, without having to Tab through or use the Left/Right Arrow keys.
+              Screen reader users typically skim the page, either by speeding up the audio so they get the information faster or by accessing an index of the page's elements. Keyboard shortcuts or touch gestures can call up a list of elements, giving a screen reader user the ability to scan for and jump to a specific link, a specific heading, or any other part of the page, without having to Tab through or use the Arrow keys.
             </p>
             <p>
               Usually, a screen reader comes as part of your operating system, and you can turn it on in the accessibility section of the system's settings. If not, software can be downloaded for free. While debugging the screen reader experience, sighted developers can turn the sound off and see the announcements appear visually on screen.
@@ -213,7 +213,7 @@
 
             <h3>ARIA</h3>
             <p>
-              ARIA stands for Accessible Rich Internet Applications The "rich" part refers to the dynamic nature of JavaScript-heavy web pages. ARIA attributes can be added to and removed from HTML elements in order to indicate state changes. They are also used to indicate relationships between elements.
+              ARIA stands for Accessible Rich Internet Applications. The "rich" part refers to the dynamic nature of JavaScript-heavy web pages. ARIA attributes can be added to and removed from HTML elements in order to indicate state changes. They are also used to indicate relationships between elements.
             </p>
             <p>
               Certain combinations of elements and ARIA attributes are recommended for common scenarios, designed to work consistently across different screen reader software. For example, properly marking up a set of tabs will announce the component as a "tab control," which will be familiar to the user because it replicates the behavior of tabs across their operating system. These standardized experiences cannot be replicated without using ARIA.
@@ -243,10 +243,7 @@
               Lastly, we should consider the ability for external sites and services to gather information from the page for indexing and sharing. How is this an accessibility concern? Users on these external sites should be able to find, bookmark and share your page easily.
             </p>
             <p>
-              The most obvious external service is search engine crawlers. Most search engines will attempt to run JavaScript and evaluate the DOM, but it is safest to deliver the HTML directly from the server. Google analyzes pages to see if they load fast enough and if they are mobile optimized.
-            </p>
-            <p>
-              Search engine results may show specific data from a web page, such as the author of an article or the price of a product. That information must be properly marked up in order to appear, typically using itemprop attributes and vocabulary from schema.org.
+              The most obvious external service is search engine crawlers. Search engine results may show specific data from a web page, such as the author of an article or the price of a product. That information must be properly marked up in order to appear, typically using itemprop attributes and vocabulary from schema.org.
             </p>
             <p>
               There are additional protocols for marking up how a page summary should appear when being shared on social networks, such as Facebook's Open Graph. Users may also have browser plugins that parse this kind of metadata for various reasons.
