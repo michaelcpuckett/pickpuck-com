@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Accessible Web Pages with 5D HTML - pickpuck.com</title>
-  <meta name="description" content="Create better experiences by understanding that HTML exists in five dimensions: visual, aural, tactile, vocal, and programmatic." />
+  <title>Multidimensional HTML</title>
+  <meta name="description" content="Future-proof your code by understanding that HTML exists in at least six dimensions." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <style>
@@ -119,25 +119,35 @@
   <main>
     <article>
       <header>
-        <h1><span>Accessible Web Pages</span> <span>with 5D HTML</span></h1>
+        <h1 aria-label="Multidimensional HTML">
+          <span aria-hidden="true" style="padding:25px;display:flex;flex-direction:column">
+            <span style="padding:0 25px;display:flex;flex-wrap:wrap;justify-content:center;"><span>Multi</span><span>dimensional</span></span>
+            <span>HTML</span>
+          </span>
+        </h1>
       </header>
 
       <div>
         <div>
-          <h2>What is 5D HTML?</h2>
+          <h2>Write Once, Run Anywhere<span class="visually-hidden">(Introduction)</span></h2>
           <p>
-            Although we can do great things with JavaScript and CSS, the foundation of web accessibility is HTML.
+            If you build web pages, you're probably keenly aware that you're not building for people who use the same technology as you. The code you write will be run on many different browsers by many different kinds of people.
           </p>
           <p>
-            It's important to understand that HTML exists in five dimensions:
+            The future of the web is looking more inclusive and more immersive. More people than ever are using voice and audio interfaces to interact with their phones and smart speakers. And emerging tech like augmented/virtual reality is positioned to bring the web to life. How do we account for all the ways people can interact with our code?
           </p>
-          <ul>
-            <li><a href="#visual">Visual</a></li>
-            <li><a href="#aural">Aural</a> (Auditory)</li>
-            <li><a href="#tactile">Tactile</a></li>
-            <li><a href="#vocal">Vocal</a></li>
-            <li><a href="#programmatic">Programmatic</a></li>
-          </ul>
+          <p>
+            It's all possible because HTML is not a direct conversion from text to a graphical interface. It's a representation of objects and their state, which is a paradigm that can be applied to many kinds of interfaces.
+          </p>
+            <h3 id="heading-dimensions">The 6 Dimensions of HTML</h3>
+            <ul aria-labelledby="heading-dimensions">
+              <li><a href="#visual">Visual</a></li>
+              <li><a href="#auditory">Auditory</a></li>
+              <li><a href="#tactile">Tactile</a></li>
+              <li><a href="#vocal">Vocal</a></li>
+              <li><a href="#programmatic">Programmatic</a></li>
+              <li><a href="#immersive">Immersive</a></li>
+            </ul>
 
           <h2><a id="visual"></a>The Visual Dimension</h2>
           <p>
@@ -164,37 +174,27 @@
               You shouldn't need to code any JavaScript that listens for keyboard events if you are using the proper HTML elements. The click event handler will work across all input types. When inside a modal dialog, do listen for the Escape key, which should return focus to the main content. Otherwise, adding any special keyboard commands risks interfering with user preferences or other running software.
             </p>
             <p>
-              Most common mouse interactions, like drag-and-drop or resizing, can be achieved by adding actionable elements to the focus order and providing a click event handler. In other cases, a design change may be necessary to add the proper affordances.
+              Parallels to common mouse functionality, like drag-and-drop or resizing, can be achieved using the keyboard by adding actionable elements to the focus order. In some cases, a design change may be necessary to add the proper affordances.
+            </p>
+            <p>
+              Also consider that markup in the visual dimension is powered by CSS. There are some system preferences for users with vision deficiencies and vestibular disorders that should be respected and accommodated. Animations and transitions should be turned off if the browser reports that the user "prefers reduced motion". Low-vision users may wish to override CSS with user styles that provide higher contrast or a bigger font size. Test the page with CSS disabled to ensure it's still usable.
             </p>
 
-            <h3>Accommodating People with Vision Impairments, Vestibular Disorders &amp; Cognitive Difficulties</h3>
+          <h2><a id="auditory"></a>The Auditory Dimension</h2>
             <p>
-              Now let's take a moment to talk about accessible CSS.
+              For understanding how blind people use web pages, we need to look at screen readers. Screen readers are browser or system add-ons that use a synthesized voice to announce the label and properties of the currently focused element.
             </p>
             <p>
-              There are some user preferences for sighted users that should be respected and accommodated. Animations and transitions should be turned off if the browser reports that the user "prefers reduced motion" (possible due to a vestibular disorder). A user may wish to override CSS with user styles or turn off CSS completely and the page should still be usable.
+              Screen reader users typically input using the keyboard. You may remember that Tabbing only focuses actionable elements, so the containers for text content of a page normally cannot be selected by keyboard. But a screen reader opens up new ways of navigating the page and manipulating the virtual cursor. The user can navigate left and right with the Arrow keys to select every element, and the text inside will be read aloud. On mobile devices, the touch pad can be put in a mode that allows the user to swipe directionally to navigate and double tap to activate the currently focused element.
             </p>
             <p>
-              There should be a high contrast between the background and text color. Nothing should be distinguished using color only, because some people cannot perceive differences between certain colors.
-            </p>
-            <p>
-              To avoid confusion, especially for people with cognitive difficulties, provide distinct, logical and consistent design variations for focus states, hover states, active states, pressed states, disabled states, etc. If having a visible focus state is distracting for you or some of your users, adding an input checking library will give you the ability to turn off focus only for mouse users.
-            </p>
-
-          <h2><a id="aural"></a>The Aural Dimension</h2>
-            <p>
-              For understanding how non-sighted people use web pages, let's remember the concept of the virtual cursor, which can be controlled using the Tab key. If you are sighted, imagine closing your eyes and selecting the next focusable element. You wouldn't know what it is, unless the computer told you in some other way. That's where screen readers come in.
-            </p>
-
-            <h3>Screen Readers</h3>
-            <p>
-              Screen readers use a synthesized voice to announce the label and properties of the currently focused element.
-            </p>
-            <p>
-              Screen reader users typically input using the keyboard. You may remember that Tabbing only focuses actionable elements, so the containers for text content of a page normally cannot be selected by keyboard. But a screen reader opens up new ways of navigating the page and manipulating the virtual cursor. Now, the user can navigate left and right with the Arrow keys to select every element, and the text inside will be read aloud. On mobile devices, the touch pad can be put in a mode that allows the user to swipe directionally to navigate and double tap to activate the currently focused element.
-            </p>
-            <p>
-              Keyboard shortcuts or touch gestures can call up an index of element types, giving a screen reader user the ability to scan for and jump to a specific link, a specific heading, or any other part of the page.
+              Keyboard shortcuts or touch gestures can call up an index of element types, giving a screen reader user the ability to scan for and jump to a specific link, a specific heading, or any other part of the page. Because of this, each accessible label should make sense out of context. When repeating the same elements in a list, there should be invisible accessible text that describes it. For example, a shopping list may have a list item with an element marked up as such:
+              <figure>
+                <div><code>&lt;button&gt;</code></div>
+                <div><code>&nbsp;&nbsp;Edit</code></div>
+                <div><code>&nbsp;&nbsp;&lt;span class="visually-hidden"&gt;(Bananas)&lt;/span&gt;</code></div>
+                <div><code>&lt;/button&gt;</code></div>
+              </figre>
             </p>
             <p>
               Usually, a screen reader comes as part of your operating system, and you can turn it on in the accessibility section of the system's settings. If not, software can be downloaded for free. While debugging the screen reader experience, sighted developers can turn the sound off and see the announcements appear visually on screen.
@@ -232,21 +232,32 @@
 
           <h2><a id="vocal"></a>The Vocal Dimension</h2>
             <p>
-              Users, due to mobility limitations or other reasons, may use their voice to navigate the web. They can select and activate parts of a page, input text, toggle form controls, tab through a page, and call up lists of specific element types.
+              Users, for a number of reasons, may use their voice to navigate the web.
             </p>
             <p>
-              Voice users may scan the page visually and then use voice recognition software to select an element using its visual label. Because of this, the underlying accessible labels for actionable items should match the text that appears visually on screen.
+              Some users have special voice recognition software for their operating system. They can select and activate parts of a page, input text, toggle form controls, tab through a page, and call up lists of specific element types.
+            </p>
+            <p>
+              Sighted voice users may scan the page and then select an element using its visual label. Because of this, the underlying accessible labels for actionable items should match the text that appears visually on screen.
             </p>
 
           <h2><a id="programmatic"></a>The Programmatic Dimension</h2>
             <p>
-              Lastly, we should consider the ability for external sites and services to gather information from the page for indexing and sharing. How is this an accessibility concern? Users on these external sites should be able to find, bookmark and share your page easily.
+              We should also consider the ability for external sites and services to gather information from the page for indexing and sharing.
             </p>
             <p>
-              The most obvious external service is search engine crawlers. Search engine results may show specific data from a web page, such as the author of an article or the price of a product. That information must be properly marked up in order to appear, typically using itemprop attributes and vocabulary from schema.org.
+              Devices like smart speakers that have an audio interface for reading web pages may parse the page's sectioning content to return the most relevant information.
+            </p>
+            <p>
+              Search engine results may show specific data from a web page, such as the author of an article or the price of a product. That information must be properly marked up in order to appear, typically using itemprop attributes and vocabulary from schema.org.
             </p>
             <p>
               There are additional protocols for marking up how a page summary should appear when being shared on social networks, such as Facebook's Open Graph. Users may also have browser plugins that parse this kind of metadata for various reasons.
+            </p>
+
+          <h2><a id="immersive">The Immersive Dimension</a></h2>
+            <p>
+              Finally, let's look to the future. WebVR is already here, and WebXR has just been announced.
             </p>
         </div>
 
