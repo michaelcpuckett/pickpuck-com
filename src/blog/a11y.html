@@ -131,10 +131,10 @@
         <div>
           <h2>Write Once, Run Anywhere<span class="visually-hidden">(Introduction)</span></h2>
           <p>
-            If you build web pages, you're probably keenly aware that you're not building for people who use the same technology as you. The code you write will be run on many different browsers by many different kinds of people.
+            If you build web pages, you're probably keenly aware that you're not building for people who use the same technology as you. The code you write will be run on many different browsers on many different devices.
           </p>
           <p>
-            The future of the web is looking more inclusive and more immersive. More people than ever are using voice and audio interfaces to interact with their phones and smart speakers. And emerging tech like augmented/virtual reality is positioned to bring the web to life. How do we account for all the ways people can interact with our code?
+            The future of the web is looking increasingly inclusive and immersive. More people than ever are using voice and audio interfaces to interact with their phones and smart speakers. And emerging tech like augmented/virtual reality is positioned to bring the web to life. How do we account for all the ways people can interact with our code?
           </p>
           <p>
             It's all possible because HTML is not a direct conversion from text to a graphical interface. It's a representation of objects and their state, which is a paradigm that can be applied to many kinds of interfaces.
@@ -153,32 +153,30 @@
           <p>
             Most web experiences are optimized for mouse users. But many people, for various reasons, use a keyboard, either exclusively or in tandem with a mouse or touch interface.
           </p>
-
-            <h3>Using the Keyboard</h3>
-            <p>
-              Sighted users who primarily use a mouse to navigate the web may be unaware of the concept of focus. Only one element on a page can have focus at one time. This acts like a virtual cursor in a text document.
-            </p>
-            <p>
-              The way to manipulate focus with the keyboard is by using the Tab key. To move to the next focusable element, Tab forward. To move to the previous focusable element, Shift + Tab backward. Then pressing the Enter key will trigger the element's action.
-            </p>
-            <p>
-              It is important to keep the visual order of elements in the DOM in the same order as the source code, otherwise moving to the next tabstop would take you somewhere you may not expect. That means being careful with floats, and avoiding manipulating the order of items in flex and grid layouts.
-            </p>
-            <p>
-              Other than the body, scrollable elements are not typically in the focus order, although they can be made to be by adding <code>tabindex="0"</code>. Pressing Spacebar on any scrollable element that receives focus will scroll down by one screen. Shift + Spacebar scrolls up by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Don't recreate (or "hijack") the native scroll behavior on an element.
-            </p>
-            <p>
-              When a user focuses a form element, such as a radio control, range slider, or select box, they may control the form element using the Arrow keys. Avoid attempting to recreate a form element with JavaScript and CSS, otherwise it will lose all its native accessibility features.
-            </p>
-            <p>
-              You shouldn't need to code any JavaScript that listens for keyboard events if you are using the proper HTML elements. The click event handler will work across all input types. When inside a modal dialog, do listen for the Escape key, which should return focus to the main content. Otherwise, adding any special keyboard commands risks interfering with user preferences or other running software.
-            </p>
-            <p>
-              Parallels to common mouse functionality, like drag-and-drop or resizing, can be achieved using the keyboard by adding actionable elements to the focus order. In some cases, a design change may be necessary to add the proper affordances.
-            </p>
-            <p>
-              Also consider that markup in the visual dimension is powered by CSS. There are some system preferences for users with vision deficiencies and vestibular disorders that should be respected and accommodated. Animations and transitions should be turned off if the browser reports that the user "prefers reduced motion". Low-vision users may wish to override CSS with user styles that provide higher contrast or a bigger font size. Test the page with CSS disabled to ensure it's still usable.
-            </p>
+          <p>
+            Sighted users who primarily use a mouse to navigate the web may be unaware of the concept of focus. Only one element on a page can have focus at a time. This acts like a virtual cursor in a text document.
+          </p>
+          <p>
+            The way to manipulate focus with the keyboard is by using the Tab key. To move to the next focusable element, Tab forward. To move to the previous focusable element, Shift + Tab backward. Then pressing the Enter key will trigger the element's action.
+          </p>
+          <p>
+            It is important to keep the visual order of elements in the DOM in the same order as the source code, otherwise moving to the next tabstop would take you somewhere you may not expect. That means being careful with floats, and avoiding manipulating the order of items in flex and grid layouts.
+          </p>
+          <p>
+            Other than the body, scrollable elements are not typically in the focus order, although they can be made to be by adding <code>tabindex="0"</code>. Pressing Spacebar on any scrollable element that receives focus will scroll down by one screen. Shift + Spacebar scrolls up by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Don't recreate (or "hijack") the native scroll behavior on an element.
+          </p>
+          <p>
+            When a user focuses a form element, such as a radio control, range slider, or select box, they may control the form element using the Arrow keys. Avoid attempting to recreate a form element with JavaScript and CSS, otherwise it will lose all its native accessibility features.
+          </p>
+          <p>
+            You shouldn't need to code any JavaScript that listens for keyboard events if you are using the proper HTML elements. The click event handler will work across all input types. When inside a modal dialog, do listen for the Escape key, which should return focus to the main content. Otherwise, adding any special keyboard commands risks interfering with user preferences or other running software.
+          </p>
+          <p>
+            Parallels to common mouse functionality, like drag-and-drop or resizing, can be achieved using the keyboard by adding actionable elements to the focus order. In some cases, a design change may be necessary to add the proper affordances.
+          </p>
+          <p>
+            Also consider that markup in the visual dimension is powered by CSS. There are some system preferences for users with vision deficiencies and vestibular disorders that should be respected and accommodated. Animations and transitions should be turned off if the browser reports that the user "prefers reduced motion". Low-vision users may wish to override CSS with user styles that provide higher contrast or a bigger font size. Test the page with CSS disabled to ensure it's still usable.
+          </p>
 
           <h2><a id="auditory"></a>The Auditory Dimension</h2>
             <p>
@@ -257,7 +255,7 @@
 
           <h2><a id="immersive">The Immersive Dimension</a></h2>
             <p>
-              Finally, let's look to the future. WebVR is already here, and WebXR has just been announced.
+              Finally, let's look to the future. WebVR is already here, and WebXR has just been announced. (More to come.)
             </p>
             <ul>
               <li><a href="https://hacks.mozilla.org/2018/09/webxr/">WebXR Introduction (Mozilla)</a></li>
