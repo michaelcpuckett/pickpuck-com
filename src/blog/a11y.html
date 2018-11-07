@@ -144,7 +144,7 @@
 
       <div>
         <div>
-          <h2><span role="text">Write Once, Run Anywhere<span class="visually-hidden"> (Introduction)</span></h2>
+          <h2><span role="text">Write Once, Run Anywhere<span class="visually-hidden"> (Introduction)</span></span></h2>
           <p>
             If you build web pages, you're probably keenly aware that you're not just building for people who use the same technology you do. The code you write will be run on many different browsers on many different devices.
           </p>
@@ -202,16 +202,16 @@
             </p>
             <p>
               Keyboard shortcuts or touch gestures can call up an index of element types, giving a screen reader user the ability to scan for and jump to a specific link, a specific heading, or any other part of the page. Because of this, each accessible label should make sense out of context. When repeating the same elements in a list, there should be invisible accessible text that describes it. For example, a shopping list may have a list item with an element marked up as such:
-              <figure aria-label="Code block for accessible text">
-                <figcaption class="visually-hidden">A button that is labelled "Edit", which is available for all users, is accompanied by additional text for screen readers that says "Bananas"</figcaption>
-                <div aria-hidden="true">
-                  <div><code>&lt;button&gt;</code></div>
-                  <div><code>&nbsp;&nbsp;Edit</code></div>
-                  <div><code>&nbsp;&nbsp;&lt;span class="visually-hidden"&gt;(Bananas)&lt;/span&gt;</code></div>
-                  <div><code>&lt;/button&gt;</code></div>
-                </div>
-              </figure>
             </p>
+            <figure aria-label="Code block for accessible text">
+              <figcaption class="visually-hidden">A button that is labelled "Edit", which is available for all users, is accompanied by additional text for screen readers that says "Bananas"</figcaption>
+              <div aria-hidden="true">
+                <div><code>&lt;button&gt;</code></div>
+                <div><code>&nbsp;&nbsp;Edit</code></div>
+                <div><code>&nbsp;&nbsp;&lt;span class="visually-hidden"&gt;(Bananas)&lt;/span&gt;</code></div>
+                <div><code>&lt;/button&gt;</code></div>
+              </div>
+            </figure>
             <p>
               Usually, a screen reader comes as part of your operating system, and you can turn it on in the accessibility section of the system's settings. If not, software can be downloaded for free. While debugging the screen reader experience, sighted developers can turn the sound off and see the announcements appear visually on screen.
             </p>
@@ -267,6 +267,7 @@
             <p>
               There are additional protocols for marking up how a page summary should appear when being shared on social networks, such as Facebook's Open Graph.
             </p>
+            <p>
               Users may have browser plugins that access the elements or metadata on a page for various reasons. Password managers, for example, need to be able to parse login screens.
             </p>
 
