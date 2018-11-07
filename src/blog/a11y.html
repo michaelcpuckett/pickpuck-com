@@ -175,7 +175,7 @@
             The way to manipulate focus with the keyboard is by using the Tab key. To move to the next focusable element, Tab forward. To move to the previous focusable element, Shift + Tab backward. Then pressing the Enter key will trigger the element's action.
           </p>
           <p>
-            It is important to keep the visual order of elements in the DOM in the same order as the source code, otherwise moving to the next tabstop would take you somewhere you may not expect. That means being careful with floats, and avoiding manipulating the order of items in flex and grid layouts.
+            It is important to keep the visual order of elements in the DOM in the same order as the source code, otherwise moving to the next tabstop could take you somewhere you might not expect. That means being careful with floats, and avoiding manipulating the order of items in flex and grid layouts.
           </p>
           <p>
             Other than the body, scrollable elements are not typically in the focus order, although they can be made to be by adding <span role="text" aria-label="Tab index equals Zero"><code aria-hidden="true">tabindex="0"</code></span>. Pressing Spacebar on any scrollable element that receives focus will scroll down by one screen. Shift + Spacebar scrolls up by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Don't recreate (or "hijack") the native scroll behavior on an element.
