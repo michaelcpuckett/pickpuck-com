@@ -91,6 +91,7 @@
       padding-bottom: 87%;
       background-size: cover;
       position: relative;
+      pointer-events: none;
     }
     header h1 {
       margin: 0;
@@ -107,6 +108,20 @@
     }
     header h1 span {
       padding: 3px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      background-image: url(bullet.svg);
+      background-repeat: no-repeat;
+      background-size: auto 25%;
+      background-position: left center;
+      padding-left: 1.25em;
+      margin-left: .25em;
     }
 
 
@@ -129,7 +144,7 @@
 
       <div>
         <div>
-          <h2>Write Once, Run Anywhere<span class="visually-hidden">(Introduction)</span></h2>
+          <h2><span role="text">Write Once, Run Anywhere<span class="visually-hidden"> (Introduction)</span></h2>
           <p>
             If you build web pages, you're probably keenly aware that you're not just building for people who use the same technology you do. The code you write will be run on many different browsers on many different devices.
           </p>
@@ -137,7 +152,7 @@
             The future of the web is looking increasingly inclusive and immersive. More people than ever are using voice and audio interfaces to interact with their phones and smart speakers. And emerging tech like augmented/virtual reality is positioned to bring the web to life. How do we account for all the ways people can interact with our code?
           </p>
           <p>
-            It's possible by treating HTML not as not a direct conversion from text to a graphical interface, but as a representation of objects and their state. Such a paradigm can be expressed in multiple dimensions.
+            It's possible by treating HTML not as a direct conversion from text to a graphical interface, but as a representation of objects and their state. Such a paradigm can be expressed in multiple dimensions.
           </p>
             <h3 id="heading-dimensions">6 Dimensions of HTML (and Counting)</h3>
             <ul aria-labelledby="heading-dimensions">
@@ -163,7 +178,7 @@
             It is important to keep the visual order of elements in the DOM in the same order as the source code, otherwise moving to the next tabstop would take you somewhere you may not expect. That means being careful with floats, and avoiding manipulating the order of items in flex and grid layouts.
           </p>
           <p>
-            Other than the body, scrollable elements are not typically in the focus order, although they can be made to be by adding <code>tabindex="0"</code>. Pressing Spacebar on any scrollable element that receives focus will scroll down by one screen. Shift + Spacebar scrolls up by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Don't recreate (or "hijack") the native scroll behavior on an element.
+            Other than the body, scrollable elements are not typically in the focus order, although they can be made to be by adding <span role="text" aria-label="Tab index equals Zero"><code aria-hidden="true">tabindex="0"</code></span>. Pressing Spacebar on any scrollable element that receives focus will scroll down by one screen. Shift + Spacebar scrolls up by one screen. Pressing the Up or Down Arrow keys scrolls incrementally. The Home key scrolls to the top, and the End key scrolls to the bottom. Don't recreate (or "hijack") the native scroll behavior on an element.
           </p>
           <p>
             When a user focuses a form element, such as a radio control, range slider, or select box, they may control the form element using the Arrow keys. Avoid attempting to recreate a form element with JavaScript and CSS, otherwise it will lose all its native accessibility features.
@@ -187,11 +202,14 @@
             </p>
             <p>
               Keyboard shortcuts or touch gestures can call up an index of element types, giving a screen reader user the ability to scan for and jump to a specific link, a specific heading, or any other part of the page. Because of this, each accessible label should make sense out of context. When repeating the same elements in a list, there should be invisible accessible text that describes it. For example, a shopping list may have a list item with an element marked up as such:
-              <figure>
-                <div><code>&lt;button&gt;</code></div>
-                <div><code>&nbsp;&nbsp;Edit</code></div>
-                <div><code>&nbsp;&nbsp;&lt;span class="visually-hidden"&gt;(Bananas)&lt;/span&gt;</code></div>
-                <div><code>&lt;/button&gt;</code></div>
+              <figure aria-label="Code block for accessible text">
+                <figcaption class="visually-hidden">A button that is labelled "Edit", which is available for all users, is accompanied by additional text for screen readers that says "Bananas"</figcaption>
+                <div aria-hidden="true">
+                  <div><code>&lt;button&gt;</code></div>
+                  <div><code>&nbsp;&nbsp;Edit</code></div>
+                  <div><code>&nbsp;&nbsp;&lt;span class="visually-hidden"&gt;(Bananas)&lt;/span&gt;</code></div>
+                  <div><code>&lt;/button&gt;</code></div>
+                </div>
               </figure>
             </p>
             <p>
@@ -200,7 +218,7 @@
 
             <h3>Semantic Markup</h3>
             <p>
-              A web page must be marked up properly in order for a screen reader's virtual cursor scanning and navigation features work properly. When a user focuses a button, the screen reader won't just read the text inside the button. It will also announce that it is a button element.
+              A web page must be marked up properly in order for a screen reader's virtual cursor scanning and navigation features to work properly. When a user focuses a button, the screen reader won't just read the text inside the button. It will also announce that it is a button element.
             </p>
             <p>
               The button may have additional state properties, such as being disabled, that also need to be announced to the user. This extra metadata sometimes comes for free by using the right HTML elements and attributes. For example, marking up all headings using heading elements (h1-h6) will make all them available when the screen reader scans for the list of headings. Properly marking up a table will provide additional keyboard controls for navigating the rows and columns.
@@ -233,7 +251,7 @@
               Users, for a number of reasons, may use their voice to navigate the web.
             </p>
             <p>
-              Some users have robust voice recognition software for their operating system, and Android devices allow full control with Voice Access. Using only their voice, users can select and activate parts of a page, input text, toggle form controls, tab through a page, and call up lists of specific element types. Sighted voice users may scan the page and then select an element using its visual label. Because of this, the underlying accessible labels for actionable items should include the text that appears visually on screen.
+              Some users have robust voice recognition software for their operating system, and Android devices allow full control with Voice Access. Using only their voice, users can select and activate parts of a page, input text, toggle form controls, Tab through a page, and call up lists of specific element types. Sighted voice users may scan the page and then select an element using its visual label. Because of this, the underlying accessible labels for actionable items should include the text that appears visually on screen.
             </p>
 
           <h2><a id="programmatic"></a>The Programmatic Dimension</h2>
@@ -247,21 +265,23 @@
               Search engine results may show specific data from a web page, such as the author of an article or the price of a product. That information must be properly marked up in order to appear, typically using itemprop attributes and vocabulary from schema.org.
             </p>
             <p>
-              There are additional protocols for marking up how a page summary should appear when being shared on social networks, such as Facebook's Open Graph. Users may also have browser plugins that parse this kind of metadata for various reasons.
+              There are additional protocols for marking up how a page summary should appear when being shared on social networks, such as Facebook's Open Graph.
+            </p>
+              Users may have browser plugins that access the elements or metadata on a page for various reasons. Password managers, for example, need to be able to parse login screens.
             </p>
 
           <h2><a id="immersive">The Immersive Dimension</a></h2>
             <p>
-              Finally, let's look to the future. WebVR is already here, and WebXR has just been announced. (More to come.)
+              Finally, let's look to the future of immersive tech, which includes virtual reality and augmented reality (collectively "XR"). WebXR is a JavaScript API that is currently being developed to support XR devices. Consider the wide range of applications for fully or partially immersive experiences, especially for ecommerce, communication, and education.
             </p>
-            <ul>
-              <li><a href="https://hacks.mozilla.org/2018/09/webxr/">WebXR Introduction (Mozilla)</a></li>
-            </ul>
+            <p>
+              One challenge with XR is that it is rendered graphically with the notoriously inaccessible <span role="text" aria-label="canvas"><code aria-hidden="true">&lt;canvas&gt;</code></span> element. Developers will likely need to create an accessible version in the DOM in addition to the XR experience. It might seem that HTML has nothing to offer us here, but it is likely that standards-based web components will fill the gap. Instead of having double the code, developers can create components that render both to the DOM and as WebXR, and then use those components to compose a combined interface that accomodates all users.
+            </p>
         </div>
 
 
-      <aside>
-        <h2>Resources</h2>
+      <aside aria-labelledby="heading-resources"> 
+        <h2 id="heading-resources">Resources</h2>
         <ul>
           <li>
             <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex">ARIA Design Patterns</a>
@@ -291,9 +311,6 @@
           </li>
           <li>
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">"Prefers Reduced Motion" Media Query</a>
-          </li>
-          <li>
-            <a href="http://www.mit.edu/~rjc/aria/emphasis.html">Conveying Emphasized Text to Screen Readers</a>
           </li>
           <li>
             <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">Accessibility Tree (Google)</a>
@@ -341,6 +358,18 @@
           </li>
           <li>
             <a href="https://en.wikipedia.org/wiki/Refreshable_braille_display">Refreshable Braille Display (Wiki)</a>
+          </li>
+          <li>
+            <a href="https://hacks.mozilla.org/2018/09/webxr/">WebXR Introduction (Mozilla)</a>
+          </li>
+          <li>
+            <a href="https://immersive-web.github.io/webxr">WebXR Spec (Subject to Change)</a>
+          </li>
+          <li>
+            <a href="https://aframe.io/docs/0.8.0/introduction/html-and-primitives.html">A-Frame (Web component library for older WebVR spec)</a>
+          </li>
+          <li>
+            <a href="http://wicg.github.io/aom">Proposed Accessibility Object Model (AOM) API</a>
           </li>
         </ul>
       </aside>
