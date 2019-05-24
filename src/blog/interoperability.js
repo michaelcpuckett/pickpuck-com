@@ -263,11 +263,10 @@ new Vue({
               <h2 id="personalization">Personalization</h2>
               <p>Most operating systems now offer
                 <app-glossary-link slug="dark mode">dark mode</app-glossary-link>, which can be detected
-                by web pages. It is possible we will see more of these UI settings that are designed
+                by web pages. It is possible we will see more UI settings that are designed
                 to meet personal preferences.</p>
               <p>
-                Furthermore, accessibility features are often hidden gems which are handy enough for
-                everyone.
+                Furthermore, accessibility features are often hidden gems for power users.
               </p>
               <p>
                 On my iPhone, I have the <app-glossary-link slug="reduce motion">reduce motion</app-glossary-link>
@@ -276,7 +275,7 @@ new Vue({
               </p>
               <p>
                 On my iPad Pro,
-                when I connect my keyboard, I turn on the screen reader, VoiceOver, but set it to mute.
+                when I connect my keyboard, I turn on the system's screen reader, VoiceOver, but set it to mute.
                 This enables <app-glossary-link slug="full access keyboard navigation">full keyboard access</app-glossary-link>
                 so I don't always have to use the large <app-glossary-link slug="coarse pointer input">touch interface</app-glossary-link>.
               </p>
@@ -293,8 +292,9 @@ new Vue({
                 build an accessible, interoperable web site.
               </p>
               <p>
-                There also needs to be a mechanism for creating and tracking IDs to be used by
-                the ARIA attributes <code>aria-labelledby</code> and <code>aria-describedby</code>.
+                There should be a mechanism for creating and tracking IDs, which 
+                are used for labeling and to indicate relationships between
+                elements.
               </p>
             </section>
             <aside aria-labelledby="heading-resources">
