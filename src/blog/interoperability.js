@@ -292,8 +292,12 @@ new Vue({
                 build an accessible, interoperable web site.
               </p>
               <p>
-                There should be a mechanism for creating and tracking IDs, which 
-                are used for labeling and to indicate relationships between
+                This web page is built with Vue components. The markup for repeated areas
+                is templated. The dynamic aspects utilize native elements (such as <code>dialog</code>)
+                where possible. Even simple web pages can benefit from generating
+                markup from web components. For instance, it can help to have
+                a dynamic a mechanism for creating and tracking IDs, which 
+                are used for labeling and to indicating relationships between
                 elements.
               </p>
             </section>
