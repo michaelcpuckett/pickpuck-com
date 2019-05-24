@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Future-proof your code by writing HTML that crosses multiple dimensions." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accessible and Interoperable HTML</title>
+  <style>
+    :root {
+      font-size: 18px;
+      line-height: 1.5;
+      font-family: 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+      color: #fff9f9;
+      background: #2e0118;
+      --vspace-normal: 15px;
+      --vspace-modifier: 3;
+    }
+
+    @media (min-width: 960px) {
+      :root {
+        --vspace-modifier: 4.5;
+        font-size: 20px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+
+    :root,
+    body {
+      -webkit-overflow-scrolling: none;
+      overscroll-behavior: none;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    article {
+      /* max-width: 1080px; */
+      margin: 0 auto;
+    }
+
+    main {
+      line-height: 1.667;
+      /* padding: 0 1em; */
+      /* margin: 2em 0;
+      min-height: 100vh; */
+    }
+
+    .visually-hidden {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .glossary-metadata {
+      margin-bottom: 1em;
+      text-align: center;
+    }
+
+    .glossary-metadata * {
+      display: inline;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    main {
+      /* max-width: 1280px; */
+      margin: 0 auto;
+      font-size: 1em;
+    }
+
+    p {
+      padding: 0 0 var(--vspace-normal);
+      margin: 0 0 var(--vspace-normal);
+    }
+
+    h1 {
+      font-size: 2.333rem;
+      margin: var(--vspace-normal) 0;
+      padding: 0;
+      text-align: center;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 760px) {
+      h1 {
+        font-size: 2.667rem;
+      }
+    }
+
+    h2 {
+      font-size: 1.667rem;
+      margin: 0 0 calc(var(--vspace-normal) * var(--vspace-modifier));
+      padding: 0;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: .5px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin: 0;
+      /* margin: 0 0 var(--vspace-normal); */
+      padding: var(--vspace-normal) 0;
+      font-weight: 400;
+      letter-spacing: .5px;
+      line-height: 1.3;
+    }
+
+    .app-dl {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: calc(var(--vspace-modifier) * var(--vspace-normal));
+      text-align: center;
+    }
+
+    /* @media (min-width: 760px) {
+      .app-dl {
+        padding: 0 calc(var(--vspace-modifier) * var(--vspace-normal));
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      }
+    } */
+
+    .app-definition {
+      margin: 0;
+      background: #fefefe;
+      padding: calc((var(--vspace-modifier) / 1.5) * var(--vspace-normal));
+      color: black;
+      transition: all .333s;
+      position: relative;
+      backface-visibility: visible;
+    }
+
+    .app-section {
+      width: 100%;
+      overflow: auto;
+      flex-basis: auto;
+      flex-grow: 0;
+      flex-shrink: 100;
+      min-height: 3rem;
+    }
+
+    button {
+      appearance: none;
+      padding: 0;
+      margin: 0;
+      display: inline;
+      background: none;
+      font: inherit;
+      border: none;
+      color: currentColor;
+      text-decoration: underline;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .app-definition:focus {
+      background: yellow;
+    }
+
+    .glossary-header {
+      padding: calc(var(--vspace-modifier) * var(--vspace-normal)) 0;
+    }
+
+    .app-section_traditional {
+      background: #393933;
+    }
+
+    .app-section_emerging {
+      background: #992255;
+    }
+
+    .app-section_parsing-differences {
+      background: rgb(12, 12, 68);
+    }
+
+    summary {
+      list-style: none;
+      display: flex;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    @media (min-width: 760px) {
+      main {
+        width: 70vw;
+        flex-grow: 0;
+        flex-basis: 70vw;
+        max-height: 100vh;
+        height: 100vh;
+        overflow: auto;
+        margin: 0;
+        /* padding: 40px; */
+      }
+    }
+    @media (max-width: 759px) {
+      .dialog {
+        position: fixed;
+        height: 100vh;
+        overflow: scroll;
+        position: fixed;
+        display: flex;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        flex-grow: 0; 
+        left: 0;
+        right: auto;
+        top: 0;
+        transition: all .25s;
+      }
+    }
+
+    @media (min-width: 760px) {
+      .dialog {
+        position: sticky;
+        height: 100vh;
+        overflow: scroll;
+        display: flex;
+        width: 30vw;
+        padding: 0;
+        margin: 0;
+        flex-grow: 0;
+        flex-basis: 30vw;
+        left: auto;
+        right: auto;
+        transition: all .25s;
+      }
+    }
+
+
+    @media (min-width: 760px) {
+      main {
+        width: 70vw;
+        flex-grow: 0;
+        flex-basis: 70vw;
+        max-height: 100vh;
+        height: 100vh;
+        overflow: auto;
+        margin: 0;
+        padding: 40px;
+      }
+    }
+    
+    @media (min-width: 760px) {
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+        flex-direction: row;
+      }
+    }
+
+    .dialog:not([open]) {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .dialog:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="optimal-select.js"></script>
+  <script src="social.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128368551-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128368551-1');
+  </script> -->
+
+</body>
+
+</html>

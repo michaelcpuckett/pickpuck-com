@@ -1,0 +1,630 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="description" content="Future-proof your code by writing HTML that crosses multiple dimensions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible and Interoperable HTML</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      font-size: 22px;
+      line-height: 1.5;
+      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+      color: #2e0118;
+      background: #fff9f9;
+      --vspace-normal: 25px;
+      --vspace-modifier: 3;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+
+    :root,
+    body {
+      -webkit-overflow-scrolling: none;
+      overscroll-behavior: none;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    article {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    main {
+      line-height: 1.667;
+      /* padding: 0 1em; */
+      /* margin: 2em 0;
+      min-height: 100vh; */
+    }
+
+    .visually-hidden {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .glossary-metadata {
+      margin-bottom: var(--vspace-normal);
+      font-weight: 400;
+      font-size: .775em;
+      letter-spacing: 1px;
+    }
+
+    .glossary-metadata * {
+      display: inline;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    main {
+      /* max-width: 1280px; */
+      margin: 0 auto;
+      padding: var(--vspace-normal);
+      font-size: 1em;
+    }
+
+    p {
+      padding: 0 0 var(--vspace-normal);
+      margin: 0 0 var(--vspace-normal);
+    }
+
+    h1 {
+      font-size: 2.667rem;
+      margin: var(--vspace-normal) 0;
+      padding: 0 0 var(--vspace-normal);
+      font-weight: 400;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: black;
+    }
+    @media (max-width: 559px) {
+      h1 {
+        text-align: center;
+        font-size: 1.333rem;
+        font-weight: 900;
+      }
+    }
+    @media (min-width: 560px) {
+      h1 {
+        font-size: 3.667rem;
+      }
+    }
+
+    h2 {
+      font-size: 1em;
+      margin: 0 0 calc(var(--vspace-normal) * 2);
+      padding: var(--vspace-normal);
+      width: 100%;
+      transform: translateX(calc(-1 * var(--vspace-normal)));
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-align: center;
+      line-height: 1.3;
+      background: #f8fea1;
+      color: black;
+    }
+    code {
+      font: inherit;
+    }
+    @media (min-width: 1060px) {
+      h2 {
+        text-align: left;
+        width: calc(100% - (.25 * var(--vspace-normal)));
+      }
+    }
+
+    h3 {
+      font-size: 1em;
+      margin: 0;
+      /* margin: 0 0 var(--vspace-normal); */
+      padding: var(--vspace-normal) 0;
+      font-weight: 400;
+      letter-spacing: .5px;
+      line-height: 1.3;
+    }
+
+    .app-glossary-link {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .app-dl {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: calc(var(--vspace-modifier) * var(--vspace-normal));
+      text-align: center;
+    }
+
+    /* @media (min-width: 1060px) {
+      .app-dl {
+        padding: 0 calc(var(--vspace-modifier) * var(--vspace-normal));
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      }
+    } */
+
+    .app-definition {
+      margin: 0;
+      background: #fefefe;
+      padding: calc((var(--vspace-modifier) / 1.5) * var(--vspace-normal));
+      color: #393933;
+      transition: all .333s;
+      position: relative;
+      backface-visibility: visible;
+    }
+
+    .app-section {
+      width: 100%;
+      overflow: auto;
+      flex-basis: auto;
+      flex-grow: 0;
+      flex-shrink: 100;
+      min-height: 3rem;
+    }
+
+    button {
+      appearance: none;
+      padding: 0;
+      margin: 0;
+      display: inline;
+      background: none;
+      font: inherit;
+      border: none;
+      color: currentColor;
+      text-decoration: underline;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .app-definition {
+      background: #f8fea1;
+    }
+
+    .glossary-header {
+      padding: calc(var(--vspace-modifier) * var(--vspace-normal)) 0;
+    }
+
+    .app-section_traditional {
+      background: #393933;
+    }
+
+    .app-section_emerging {
+      background: #992255;
+    }
+
+    .app-section_parsing-differences {
+      background: rgb(12, 12, 68);
+    }
+
+    summary {
+      list-style: none;
+      display: flex;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .dialog h3 {
+      text-align: center;
+      color: white;
+      padding: calc(var(--vspace-normal) * var(--vspace-modifier));
+      font-weight: 900;
+    }
+    .dialog {
+      font-size: .875em;
+      border: 0;
+    }
+    .app-definition {
+      height: 100vh;
+      justify-content: center;
+    }
+    @media (max-width: 1059px) {
+      .dialog {
+        position: fixed;
+        height: 100%;
+        overflow: scroll;
+        position: fixed;
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        flex-grow: 0; 
+        left: 0;
+        right: auto;
+        top: 0;
+        transition: all .25s;
+      }
+
+      .dialog-backdrop {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1060px) {
+      
+      .container {
+        display: grid;
+        grid-auto-flow: column;
+      }
+      .dialog {
+        position: fixed;
+        box-shadow: 0 12px 12px 12px rgba(0,0,0,.3);
+        right: 0;
+        top: 0;
+        display: flex;
+        width: 420px;
+        padding: 0;
+        margin: 0;
+        flex-grow: 0;
+        flex-basis: 420px;
+        left: auto;
+        transition: all .25s ease-out;
+        overflow: auto;
+        height: 100%;
+        z-index: 1;
+      }
+      .dialog:not([open]) {
+        transform: translateX(100%);
+      }
+
+      .dialog:not([open]) + .dialog-backdrop {
+        opacity: 0;
+      }
+
+      .dialog[open] + .dialog-backdrop {
+        background: rgba(0,0,0,.3);
+        z-index: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: opacity .25s ease-out;
+        opacity: 1;
+      }
+    }
+
+    .dialog:hover {
+      opacity: 1;
+    }
+
+    .dialog:not([open]) {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+  </style>
+</head>
+
+<body class="vsc-initialized">
+  <div role="presentation" class="container"><main aria-labelledby="article-h1" class="article-container"><article itemscope="itemscope" itemtype="http://schema.org/Article" class="article"><header><h1 id="article-h1" itemprop="headline">
+              Accessible
+              &amp;
+              Interoperable
+              HTML
+            </h1> <div role="presentation" class="visually-hidden"><div role="presentation" class="glossary-author"><div role="presentation">By</div> <div itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><div itemprop="givenName">Michael</div> <div itemprop="familyName">Puckett</div></div></div> <div role="presentation" class="glossary-date"><div role="presentation">on</div> <time role="presentation" itemprop="datePublished" datetime="2019-05-19">
+                  May 19, 2019
+                </time></div></div></header> <div><section aria-labelledby="accessibility"><h2 id="accessibility">Accessibility</h2> <p>
+                How do people with disabilities use the internet?
+                Most blind people do not use a <span tabindex="0" role="link" class="app-glossary-link">mouse</span>.
+                Instead, they use <span tabindex="0" role="link" class="app-glossary-link">keyboard input</span> to operate a <span tabindex="0" role="link" class="app-glossary-link">screen reader</span>.
+                People who are deafblind might use a screen reader with a <span tabindex="0" role="link" class="app-glossary-link">refreshable Braille display</span>.
+                Some people use neither a mouse nor a keyboard and instead use their voice to issue commands to <span tabindex="0" role="link" class="app-glossary-link">speech recognition software</span>.
+              </p> <p>
+                These alternative ways of navigating the web rely on properly marked up HTML code.
+              </p> <p>              
+                For
+                example, marking up all headings using heading elements (h1-h6) will make them available when
+                a screen reader user navigates via the <span tabindex="0" role="link" class="app-glossary-link">heading outline</span>.
+              </p> <p>
+                When a user <span tabindex="0" role="link" class="app-glossary-link">focuses</span>
+                an element, it will announce the type of element, and
+                also any relevant state properties, such as being disabled.
+                Some of these state properties are defined by
+                <span tabindex="0" role="link" class="app-glossary-link">ARIA</span> attributes,
+                which can be
+                added to and removed from elements in order to
+                indicate state changes and relationships to other elements.
+              </p></section> <section aria-labelledby="interoperability"><h2 id="interoperability">Interoperability</h2> <p>
+                We should also consider the ability for external sites and services to gather information from the page for
+                indexing and sharing.
+              </p> <p>
+              Audio-enabled <span tabindex="0" role="link" class="app-glossary-link">digital assistants</span>, for instance,
+              often parse web pages' <span tabindex="0" role="link" class="app-glossary-link">speakable summaries</span>, <span tabindex="0" role="link" class="app-glossary-link">document outlines</span>
+                and <span tabindex="0" role="link" class="app-glossary-link">structured data</span> to find information.
+                The relevant data it finds is packaged into an experience that is <span tabindex="0" role="link" class="app-glossary-link">native</span> to that service's <span tabindex="0" role="link" class="app-glossary-link">voice UI</span>.
+              </p> <p>
+                Browsers may have plugins or provide features, such as <span tabindex="0" role="link" class="app-glossary-link">reader view</span>, that parse web pages, so it is best to provide as much relevant metadata as possible
+                and always adhere to the <span tabindex="0" role="link" class="app-glossary-link">HTML specification</span>.
+              </p></section> <section aria-labelledby="engineering-strategies"><h2 id="engineering-strategies">Engineering Strategies</h2> <p>
+                The rules of accessibility and interoperability can be complex and cumbersome.
+                Some kind of automation needs to be in place in order to keep
+                application code simple and bug-free.
+              </p> <p>
+                Creating a library of reusable web components is the best way to
+                build an accessible, interoperable web site.
+              </p> <p>
+                There also needs to be a mechanism for creating and tracking IDs to be used by
+                the ARIA attributes <code>aria-labelledby</code> and <code>aria-describedby</code>.
+              </p></section> <aside aria-labelledby="heading-resources"><h2 id="heading-resources">Resources</h2> <ul aria-labelledby="heading-resources"><li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex">ARIA Design Patterns</a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA Attributes</a></li> <li><a href="https://schema.org/docs/schemas.html">Schema.org Attributes</a></li> <li><a href="https://developers.facebook.com/docs/sharing/webmasters/#markup">Open Graph Attributes</a></li> <li><a href="https://github.com/ten1seven/what-input">What Input? Library</a></li> <li><a href="https://validator.nu/">HTML Validator</a></li> <li><a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">
+                    axe Chrome Extension
+                  </a></li> <li><a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web Design (Wiki)</a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">"Prefers Reduced
+                    Motion" Media Query</a></li> <li><a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">Accessibility
+                    Tree (Google)</a></li> <li><a href="https://en.wikipedia.org/wiki/Vestibular_system#Pathologies">Vestibular Disorders (Wiki)</a></li> <li><a href="https://en.wikipedia.org/wiki/Color_blindness">Color Blindness (Wiki)</a></li> <li><a href="https://en.wikipedia.org/wiki/Cognitive_disorder">Cognitive Disorders (Wiki)</a></li> <li><a href="https://www.nvaccess.org/download/">NVDA for Windows (Free)</a></li> <li><a href="https://store.freedomscientific.com/collections/software-products/products/jaws-home-edition-screen-reading-software">JAWS
+                    for Windows (Available for Purchase)</a></li> <li><a href="https://support.microsoft.com/en-us/help/22798/windows-10-complete-guide-to-narrator">Windows 10
+                    Narrator (Free)</a></li> <li><a href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn">Chrome Vox
+                    Extension for Chrome (Free)</a></li> <li><a href="https://www.apple.com/accessibility/mac/vision/">VoiceOver for MacOS (Free)</a></li> <li><a href="https://www.apple.com/accessibility/iphone/vision/">VoiceOver for iPhone (Free)</a></li> <li><a href="https://support.google.com/accessibility/android/answer/6283677?hl=en">TalkBack for Android
+                    (Free)</a></li> <li><a href="https://support.google.com/accessibility/android/answer/6151848">
+                    Voice Access for Android (Free)
+                  </a></li> <li><a href="https://www.nuance.com/dragon/dragon-for-pc/home-edition.html">Buy Dragon Naturally Speaking
+                    (Available for Purchase)</a></li> <li><a href="https://www.nuance.com/products/help/dragon/dragon-for-pc/enx/professionalgroup/main/Content/Web/web_basics.htm">How
+                    to use Dragon Naturally Speaking with a Web Browser</a></li> <li><a href="https://en.wikipedia.org/wiki/Refreshable_braille_display">Refreshable Braille Display (Wiki)</a></li></ul></aside></div></article></main> <div role="presentation"><dialog id="dialog" aria-modal="false" aria-labelledby="h2" class="dialog"><div itemscope="itemscope" itemtype="http://schema.org/DefinedTermSet" class="app-dl-root glossary" aria-labelledby="h2"><h2 aria-hidden="true" id="h2" itemprop="headline" class="visually-hidden">
+              Glossary of Terms for Accessible and Interoperable HTML
+            </h2> <section aria-labelledby="x_gruj6cx" class="app-section app-section_traditional"><h3 id="x_gruj6cx">
+                  Traditional End User Technologies
+                </h3> <div role="presentation"><div aria-hidden="true" id="x_wzta5lt" class="visually-hidden">Vocabulary Terms for</div> <ul aria-labelledby="x_wzta5lt x_gruj6cx" class="app-dl"><li tabindex="-1" id="graphical-user-interface" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="graphical user interface" itemprop="name">
+                        Graphical User Interface
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          The current state of the document tree is
+                          rendered into a visual representation
+                          and refreshed 60 times a second. People who
+                          aren't using assistive technologies
+                          read and navigate the web using a
+                          graphical user interface.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="fine-pointer-input" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="fine pointer input" itemprop="name">
+                        Fine Pointer Input
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          The page can be scrolled and controls can be activated with
+                          a fine (precise) pointing device, typically a mouse controlled
+                          with the dominant hand and fingers.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="coarse-pointer-input" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="coarse pointer input" itemprop="name">
+                        Coarse Pointer Input
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          The touch of a finger is treated as a coarse (imprecise) pointing device.
+                          The page can be scrolled by swiping and controls can be activated
+                          by tapping.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="keyboard-input" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="keyboard input" itemprop="name">
+                        Keyboard Input
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Web pages are natively navigable with keyboard input.
+                          The page can be scrolled with the space bar and
+                          controls can be tabbed to and then activated with
+                          the enter key.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="keyboard-focus" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="keyboard focus" itemprop="name">
+                        Keyboard Focus
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          At all times, one element on a web page will be marked as
+                          being in focus. Focus acts like a virtual cursor in
+                          a text document.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="at" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="assistive technology (at)" itemprop="name">
+                        Assistive Technology (AT)
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          An assistive technology is any device or feature that is designed
+                          to facilitate interaction between a computer and a user with a disability.
+                          Screen readers, refreshable Braille displays, and speech recognition software
+                          are three of the most common types of AT.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="screen-reader" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="screen reader" itemprop="name">
+                        Screen Reader
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          A screen reader is software that uses a synthesized voice to announce the labels and properties of elements on a web page.
+                          Screen readers interact with the accessibility tree, a textual representation
+                          of the user interface.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="full-access" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="full access keyboard navigation" itemprop="name">
+                        Full Access Keyboard Navigation
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Screen readers typically enable full access keyboard navigation, where both
+                          interactive and non-interactive items are navigable with the arrow keys.
+                          Screen readers also provide several keyboard shortcuts for navigating the
+                          text-based UI, such as a mode for navigating only headings or only links.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="refreshable-braille-display" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="refreshable braille display" itemprop="name">
+                        Refreshable Braille Display
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          A refreshable Braille display is a device that is used in conjunction
+                          with a screen reader to read a web page's text-based accessibility tree
+                          through touch instead of through speech synthesis.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="speech-recognition" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="speech recognition software" itemprop="name">
+                        Speech Recognition Software
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Speech recognition software accepts voice commands to do things like
+                          scroll the page, click links and buttons, and enter text.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="annotated-gui" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="annotated graphical user interface" itemprop="name">
+                        Annotated Graphical User Interface
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Voice Recognition Software may allow selection of items using
+                          their accessible label. Additionally, unlabelled or mislabeled
+                          items can be selected using an annotated visual overlay with
+                          numbers or letters for easy identifcation.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="reader-view" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="reader view" itemprop="name">
+                        Reader View
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Reader View is a built-in or third-party browser feature that
+                          examines a web page's structure to find its main content and
+                          renders it in a custom layout.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="browser-plugins" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="browser plugins" itemprop="name">
+                        Browser Plugins
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Third-party browser plugins have full access to web page markup, including
+                          metadata. For maximum interoperability, developers should maintain
+                          spec-compliant markup and provide useful structured data.
+                        </p></div> <button type="button">
+        Done
+      </button></li></ul></div></section> <section aria-labelledby="x_sjtmjf5" class="app-section app-section_emerging"><h3 id="x_sjtmjf5">
+                  Recent and Emerging End User Technologies
+                </h3> <div role="presentation"><div aria-hidden="true" id="x_9edwzd9" class="visually-hidden">Vocabulary Terms for</div> <ul aria-labelledby="x_9edwzd9 x_sjtmjf5" class="app-dl"><li tabindex="-1" id="digital-assistant" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="digital assistant" itemprop="name">
+                        Digital Assistant
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Digital assistants parse voice queries
+                          and respond in a synthesized voice. These services often query the web
+                          pages in order to find answers.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="vui" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="voice user interface" itemprop="name">
+                        Voice User Interface
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          A voice user interface, also known as a conversational UI,
+                          operates as a two-way dialogue between
+                          a human and a service using natural language.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="native-results" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="native search results" itemprop="name">
+                        Native Search Results
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Search engines and digital assistants may copy a relevant bit from a web page
+                          and embed it as a native search result, for example as an answer or a widget,
+                          without requiring the user to visit the web page directly.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="speakable" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="speakable web pages" itemprop="name">
+                        Speakable Web Pages
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          When a digital assistant determines that
+                          a web page should be read aloud, it will
+                          look for metadata which labels certain
+                          elements as speakable areas.
+                        </p></div> <button type="button">
+        Done
+      </button></li></ul></div></section> <section aria-labelledby="x_e08h6el" class="app-section app-section_parsing-differences"><h3 id="x_e08h6el">
+                  Developer Technologies
+                </h3> <div role="presentation"><div aria-hidden="true" id="x_u5ynvrw" class="visually-hidden">Vocabulary Terms for</div> <ul aria-labelledby="x_u5ynvrw x_e08h6el" class="app-dl"><li tabindex="-1" id="dom" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="document tree" itemprop="name">
+                        Document Tree
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          The document tree, or Document Object Model (DOM), is a representation
+                          of the nested markup of a web page in its current state.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="aria" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="aria" itemprop="name">
+                        ARIA
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Accessible Rich Internet Applications (ARIA) attributes can be added to elements
+                          to indicate state changes, relationships, and roles (types) to assistive technologies.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="a11y-tree" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="accessibility tree" itemprop="name">
+                        Accessibility Tree
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          The accessibility tree is a stripped-down representation of the
+                          DOM that is derived from elements' roles and ARIA attributes.
+                          Screen readers interact with this tree (the AOM) instead of the DOM.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="structured-data" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="structured data" itemprop="name">
+                        Structured Data
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Structured data is a representation of the DOM that is derived from
+                          microdata associated with certain elements, or from JSON-LD.
+                          When search engines and digital assistants find relevant bits of
+                          structured data on a web page, they may copy it and present it
+                          to the user in a native experience.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="heading-outline" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="heading outline" itemprop="name">
+                        Heading Outline
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          A heading outline is a representation of the DOM that is derived
+                          from heading levels. It is a navigation tool for screen reader users,
+                          who use it to skim through long pages quickly.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="document-outline" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="document outline" itemprop="name">
+                        Document Outline
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          The document outline is a representation of the DOM that is derived
+                          from sectioning content. Vendors may detect sectioning elements
+                          to derive the structure of a document (for reader view, for
+                          example). However, it is not exposed
+                          to the accessibility tree, so it cannot be used as a navigation tool
+                          for screen reader users.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="html-spec" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="html spec compliance" itemprop="name">
+                        HTML Spec Compliance
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          Compared to invalid markup, spec-compliant markup is more likely to work
+                          consistently across browsers and assistive technologies. According to the
+                          HTML specification, elements are only valid inside certain
+                          other elements. A <code>&lt;fieldset&gt;</code> isn't valid inside a
+                          <code>&lt;button&gt;</code>, for example.
+                          Elements also have restrictions on which ARIA roles can be applied to them.
+                        </p></div> <button type="button">
+        Done
+      </button></li> <li tabindex="-1" id="reader-view-heuristics" itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm" class="app-definition"><h4 data-glossary-slug="reader view heuristics" itemprop="name">
+                        Reader View Heuristics
+                      </h4> <div role="presentation" itemprop="description"><p>
+                          When vendors attempt to identify the main content of a web page,
+                          they use a mix of the document outline, structured data, and other
+                          factors based on common HTML usage.
+                        </p> <p>
+                          Without any paragraph tags, for example, Reader View may reject
+                          a web page. When the content of only one section is marked up
+                          with paragraph tags, Reader View may select only that section to display.
+                        </p></div> <button type="button">
+        Done
+      </button></li></ul></div></section></div></dialog> <div role="presentation" class="dialog-backdrop"></div></div></div>
+  <!-- Global site tag (gtag.js) - Google Analytics
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128368551-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128368551-1');
+  </script> -->
+
+
+</body></html>

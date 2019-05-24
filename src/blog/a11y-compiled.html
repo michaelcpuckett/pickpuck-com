@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Future-proof your code by understanding that HTML exists in multiple dimensions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Composing Multidimensional HTML</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <style>
+    :root {
+      font-size: 21px;
+      line-height: 1.667;
+      font-family: Open Sans, sans-serif;
+      color: #fff9f9;
+      background: #2e0118;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (max-width: 819px) {
+      body {
+        font-size: 16.5px;
+      }
+    }
+
+    article {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    main {
+      padding: 0 1em;
+      margin: 2em 0;
+    }
+
+    .visually-hidden {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    main {
+      max-width: 870px;
+      margin: 0 auto;
+      font-size: 1em;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      margin: .5em 0;
+      padding: .5em 0;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin: .5em 0;
+      padding: .5em 0;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin: .5em 0;
+      padding: .5em 0;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      margin: .5em 0;
+      padding: .5em 0;
+    }
+
+    h5 {
+      font-size: 1rem;
+      margin: .5em 0;
+      padding: .5em 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article itemscope="itemscope" itemtype="http://schema.org/DefinedTermSet" aria-labelledby="h1">
+      <h1 id="h1" itemprop="headline">
+        Composing Multidimensional HTML
+      </h1>
+      <div role="presentation"><a href="/" itemprop="author publisher" itemscope="itemscope"
+          itemtype="http://schema.org/Person"><span itemprop="givenName">Michael</span> <span
+            itemprop="familyName">Puckett</span></a></div> <time itemprop="datePublished" datetime="2019-05-19">
+        May 19, 2019
+      </time>
+      <section aria-labelledby="x_rr4eyyf">
+        <h2 id="x_rr4eyyf">
+          Modes of Interaction
+        </h2>
+        <section aria-labelledby="x_yat1cfr">
+          <h3 id="x_yat1cfr">
+            Web Browser
+          </h3>
+          <section aria-labelledby="x_n1h34af">
+            <h4 id="x_n1h34af">
+              Visual-Pointer-Keyboard Context
+            </h4>
+            <div role="presentation">
+              <div aria-hidden="true" id="x_ktru3w1" class="visually-hidden">Vocabulary Terms for</div>
+              <ul aria-labelledby="x_ktru3w1 x_n1h34af">
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Graphical User Interface
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>
+                      The document tree is rendered into a graphical
+                      representation of the current state and gets
+                      refreshed 60 times a second.
+                    </p>
+                  </div>
+                </li>
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Mouse Input
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>
+                      The page can be scrolled and interactive regions of the GUI
+                      can be activated with a pointing pointing device,
+                      controlled with the dominant hand and fingers.
+                    </p>
+                  </div>
+                </li>
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Touch Input
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>The page can be scrolled by swiping and interactive regions of the GUI can
+                      be activated by tapping with the tip of a finger.</p>
+                  </div>
+                </li>
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Keyboard Input
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>The page can be scrolled with the space bar and
+                      interactive regions of the GUI
+                      can be tabbed to and then activated with the enter key.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section aria-labelledby="x_y01p9cz">
+            <h4 id="x_y01p9cz">
+              Audio-Keyboard and Tactile-only Context
+            </h4>
+            <div role="presentation">
+              <div aria-hidden="true" id="x_frtkulv" class="visually-hidden">Vocabulary Terms for</div>
+              <ul aria-labelledby="x_frtkulv x_y01p9cz">
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Textual User Interface (Speech-Synthesized)
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>The Accessibility tree is rendered into a textual representation
+                      of the user interface. It reacts to state changes. It is often
+                      announced as speech, but can also be configured to be seen on-screen
+                      or converted to Braille.</p>
+                  </div>
+                </li>
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Full Access Keyboard Navigation
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>When a screen reader is turned on, both interactive and non-interactive items are
+                      navigable with the arrow keys. When an item is navigated to, it is announced and
+                      becomes the focused item to perform actions on.</p>
+                  </div>
+                </li>
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Refreshable Braille Display
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>Refreshable Braille displays are used to read Accessibility tree information instead
+                      of getting the same information through speech synthesis.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section aria-labelledby="x_sz8eqph">
+            <h4 id="x_sz8eqph">
+              Visual-Vocal Context
+            </h4>
+            <div role="presentation">
+              <div aria-hidden="true" id="x_u1r4wd0" class="visually-hidden">Vocabulary Terms for</div>
+              <ul aria-labelledby="x_u1r4wd0 x_sz8eqph">
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Voice Recognition Software
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>
+                      Software that can accept voice commands to do things like
+                      scroll the page, click links and buttons, and enter text.
+                    </p>
+                    <p>
+                      Using both voice recognition software and a screen reader, users
+                      can read and navigate a web page without facing or being within reach of
+                      their device.
+                    </p>
+                  </div>
+                </li>
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Annotated Graphical User Interface
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>
+                      Voice Recognition Software may allow selection of items using
+                      their accessible label. Additionally, unlabelled or mislabeled
+                      items can be selected using an annoated visual overlay with
+                      numbers or letters for easy identifcation.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section aria-labelledby="x_dfqdcy0">
+            <h4 id="x_dfqdcy0">
+              Immersive Context
+            </h4>
+            <p>
+              Web XR (Augmented/Virtual Reality) standards are emerging to allow
+              immersion in 360 degree environments.
+            </p>
+            <figure><embed src="https://www.youtube.com/embed/GDhujHhUEKc">
+              <figcaption>
+                Demonstration of an augmented reality headset
+              </figcaption>
+            </figure>
+            <div role="presentation">
+              <div aria-hidden="true" id="x_7lxch90" class="visually-hidden">Vocabulary Terms for</div>
+              <ul aria-labelledby="x_7lxch90 x_dfqdcy0">
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Virtual Reality Headset
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    ...
+                  </div>
+                </li>
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Augmented Reality Display
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    ...
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section aria-labelledby="x_uujh4n8">
+          <h3 id="x_uujh4n8">
+            Service-Mediated
+          </h3>
+          <p>
+            Increasingly, there are times when a user is in the middle of something,
+            and wants to use their smart phone or ambient smart speaker setup
+            without using a traditional web browser application to access content from
+            the web.
+          </p>
+          <section aria-labelledby="x_qa15pb8">
+            <h4 id="x_qa15pb8">
+              Audio-Vocal or Audio-Vocal-Visual Context
+            </h4>
+            <div role="presentation">
+              <div aria-hidden="true" id="x_x1pk2xj" class="visually-hidden">Vocabulary Terms for</div>
+              <ul aria-labelledby="x_x1pk2xj x_qa15pb8">
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Digital Assistant
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>
+                      Many smart assistants work in a question-and-answer or conversation-based
+                      format, often triggered by a word or phrase.
+                    </p>
+                    <p>
+                      Smart assistants parse queries and then return the best answer. These services
+                      will often draw from a massive knowledge graph of structured data for
+                      encyclopedic knowledge. Other types of queries may utilize web pages, by way
+                      of search engines, to provide answers.
+                    </p>
+                    <p>
+                      The service that is parsing the web page needs to identify content relevant
+                      to the query and ignore irrelevent navigation and footer content.
+                    </p>
+                    <p>
+                      Some smart assistants have a touch screen for visual display, but still rely largely on
+                      the audio interface and vocal commands. Smart homes can be set up to receive vocal input
+                      and visual results can appear on any screen connected to the network.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section aria-labelledby="x_1phgfo9">
+            <h4 id="x_1phgfo9">
+              Visual Context
+            </h4>
+            <div role="presentation">
+              <div aria-hidden="true" id="x_i278880" class="visually-hidden">Vocabulary Terms for</div>
+              <ul aria-labelledby="x_i278880 x_1phgfo9">
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Rich Search Engine Results
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    <p>
+                      Traditional search engines now commonly embed relevant pieces from a web page
+                      directly on the search results page. Answers to search queries may appear in
+                      large type, lifted from a web page, with a link to the web page, formatted as a citation.
+                    </p>
+                  </div>
+                </li>
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Conversational UI
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    ...
+                  </div>
+                </li>
+                <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+                  <h5 itemprop="name">
+                    Reader View
+                  </h5>
+                  <div role="presentation" itemprop="description">
+                    ...
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section aria-labelledby="x_j6mbjgd">
+        <h2 id="x_j6mbjgd">
+          Parsing Differences
+        </h2>
+        <div role="presentation">
+          <div aria-hidden="true" id="x_cpcj5d2" class="visually-hidden">Vocabulary Terms for</div>
+          <ul aria-labelledby="x_cpcj5d2 x_j6mbjgd">
+            <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+              <h3 itemprop="name">
+                Accessibility Tree
+              </h3>
+              <div role="presentation" itemprop="description">
+                <p>
+                  A representation of the DOM that is derived from elements' roles and
+                  ARIA attributes. Screen readers interact with the Accessibility Tree.
+                </p>
+              </div>
+            </li>
+            <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+              <h3 itemprop="name">
+                Structured Data
+              </h3>
+              <div role="presentation" itemprop="description">
+                <p>A representation of the DOM that is derived from elements' microdata.
+                  Search engines and digital assistants may find and reuse bits of information
+                  from web pages, so the information is available without navigating
+                  to the web page itself.</p>
+              </div>
+            </li>
+            <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+              <h3 itemprop="name">
+                Document Outline
+              </h3>
+              <div role="presentation" itemprop="description">
+                <p>A representation of the DOM that is derived from headings or sectioning content.</p>
+              </div>
+            </li>
+            <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+              <h3 itemprop="name">
+                HTML Spec Compliance
+              </h3>
+              <div role="presentation" itemprop="description">
+                <p>Because some elements are only valid inside certain other elements, markup
+                  should be written with an eye to the spec. A <code>&lt;fieldset&gt;</code>
+                  tag isn't valid inside a <code>&lt;button&gt;</code> tag, for example.
+                  Additionally, some elements have restrictions on which ARIA roles can be applied,
+                  potentially affecting the accessibility tree.</p>
+              </div>
+            </li>
+            <li itemprop="hasDefinedTerm" itemscope="itemscope" itemtype="http://schema.org/DefinedTerm">
+              <h3 itemprop="name">
+                Reader View Heuristics
+              </h3>
+              <div role="presentation" itemprop="description">
+                ...
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+
+</html>
