@@ -246,13 +246,39 @@ new Vue({
               </p>
               <p>
               Audio-enabled <app-glossary-link slug="digital assistant">digital assistants</app-glossary-link>, for instance,
-              often parse web pages' <app-glossary-link slug="speakable web pages">speakable summaries</app-glossary-link>, <app-glossary-link slug="document outline">document outlines</app-glossary-link>
-                and <app-glossary-link slug="structured data">structured data</app-glossary-link> to find information.
+              often parse web pages'
+                <app-glossary-link slug="structured data">structured data</app-glossary-link>
+                and
+                <app-glossary-link slug="document outline">document outlines</app-glossary-link>
+                to find information.
                 The relevant data it finds is packaged into an experience that is <app-glossary-link slug="native search results">native</app-glossary-link> to that service's <app-glossary-link slug="voice user interface">voice UI</app-glossary-link>.
               </p>
               <p>
                 Browsers may have plugins or provide features, such as <app-glossary-link slug="reader view">reader view</app-glossary-link>, that parse web pages, so it is best to provide as much relevant metadata as possible
                 and always adhere to the <app-glossary-link slug="html spec compliance">HTML specification</app-glossary-link>.
+              </p>
+            </section>
+
+            <section aria-labelledby="personalization">
+              <h2 id="personalization">Personalization</h2>
+              <p>Most operating systems now offer
+                <app-glossary-link slug="dark mode">dark mode</app-glossary-link>, which can be detected
+                by web pages. It is possible we will see more of these UI settings that are designed
+                to meet personal preferences.</p>
+              <p>
+                Furthermore, accessibility features are often hidden gems which are handy enough for
+                everyone.
+              </p>
+              <p>
+                On my iPhone, I have the <app-glossary-link slug="reduce motion">reduce motion</app-glossary-link>
+                setting and <app-glossary-link slug="speak screen">speak screen</app-glossary-link> feature enabled. I
+                have disabled touch force sensitivity and shake to undo.
+              </p>
+              <p>
+                On my iPad Pro,
+                when I connect my keyboard, I turn on the screen reader, VoiceOver, but set it to mute.
+                This enables <app-glossary-link slug="full access keyboard navigation">full keyboard access</app-glossary-link>
+                so I don't always have to use the large <app-glossary-link slug="coarse pointer input">touch interface</app-glossary-link>.
               </p>
             </section>
             <section aria-labelledby="engineering-strategies">
@@ -606,16 +632,48 @@ new Vue({
                       </app-dd>
                     </app-definition>
 
-                    <app-definition id="speakable">
+                    <app-definition id="speak-screen">
                       <app-dt :headingLevel="headingLevel">
-                        Speakable Web Pages
+                        Speak Screen
                       </app-dt>
                       <app-dd>
                         <p>
-                          When a digital assistant determines that
-                          a web page should be read aloud, it will
-                          look for metadata which labels certain
-                          elements as speakable areas.
+                          Speak Screen is an accessibility setting that
+                          reads aloud the text on the screen. When set
+                          to read a web page, it is similar to using
+                          reader mode, because it attempts to read
+                          only the main content without any distracting
+                          information or metadata.
+                        </p>
+                      </app-dd>
+                    </app-definition>
+
+                    <app-definition id="reduce-motion">
+                      <app-dt :headingLevel="headingLevel">
+                        Reduce Motion
+                      </app-dt>
+                      <app-dd>
+                        <p>
+                          Reduce Motion is system-wide accessibility preference that is made
+                          available to web pages through the <code>prefers-reduced-motion</code>
+                          CSS media query. It is for anyone who finds complex transitions and
+                          animations distracting, overwhelming, or nauseating, especially
+                          people with vesitbular disorders.
+                        </p>
+                      </app-dd>
+                    </app-definition>
+
+                    <app-definition id="dark-mode">
+                      <app-dt :headingLevel="headingLevel">
+                        Dark Mode
+                      </app-dt>
+                      <app-dd>
+                        <p>
+                          Dark Mode is system-wide preference that is made
+                          available to web pages through the <code>prefers-color-scheme: dark</code>
+                          CSS media query. This enables a partially inverted UI with
+                          white text on a black screen, which may be easier on the eyes
+                          in certain lighting conditions. It is usually better for battery life.
                         </p>
                       </app-dd>
                     </app-definition>
