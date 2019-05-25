@@ -374,7 +374,191 @@
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <main aria-labelledby="article-h1" class="article-container">
+      <article itemscope="itemscope" itemtype="http://schema.org/Article" class="article">
+        <header>
+          <h1 id="article-h1" itemprop="headline">
+            Accessible
+            &amp;
+            Interoperable
+            HTML
+          </h1>
+          <div role="presentation" class="visually-hidden">
+            <div role="presentation" class="glossary-author">
+              <div role="presentation">By</div>
+              <div itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <div itemprop="givenName">Michael</div>
+                <div itemprop="familyName">Puckett</div>
+              </div>
+            </div>
+            <div role="presentation" class="glossary-date">
+              <div role="presentation">on</div> <time role="presentation" itemprop="datePublished"
+                datetime="2019-05-19">
+                May 19, 2019
+              </time>
+            </div>
+          </div>
+        </header>
+        <div>
+          <section aria-labelledby="accessibility">
+            <h2 id="accessibility">Accessibility</h2>
+            <p>
+              How do people with disabilities use the internet?
+              Most blind people do not use a <span tabindex="0" role="link" class="app-glossary-link">mouse</span>.
+              Instead, they use <span tabindex="0" role="link" class="app-glossary-link">keyboard input</span> to
+              operate a <span tabindex="0" role="link" class="app-glossary-link">screen reader</span>.
+              People who are deafblind might use a screen reader with a <span tabindex="0" role="link"
+                class="app-glossary-link">refreshable Braille display</span>.
+              Some people use neither a mouse nor a keyboard and instead use their voice to issue commands to <span
+                tabindex="0" role="link" class="app-glossary-link">speech recognition software</span>.
+            </p>
+            <p>
+              These alternative ways of navigating the web rely on properly marked up HTML code.
+            </p>
+            <p>
+              For
+              example, marking up all headings using heading elements (h1-h6) will make them available when
+              a screen reader user navigates via the <span tabindex="0" role="link" class="app-glossary-link">heading
+                outline</span>.
+            </p>
+            <p>
+              When a user <span tabindex="0" role="link" class="app-glossary-link">focuses</span>
+              an element, it will announce the type of element, and
+              also any relevant state properties, such as being disabled.
+              Some of these state properties are defined by
+              <span tabindex="0" role="link" class="app-glossary-link">ARIA</span> attributes,
+              which can be
+              added to and removed from elements in order to
+              indicate state changes and relationships to other elements.
+            </p>
+          </section>
+          <section aria-labelledby="interoperability">
+            <h2 id="interoperability">Interoperability</h2>
+            <p>
+              We should also consider the ability for external sites and services to gather information from the page
+              for
+              indexing and sharing.
+            </p>
+            <p>
+              Audio-enabled <span tabindex="0" role="link" class="app-glossary-link">digital assistants</span>, for
+              instance,
+              often parse web pages'
+              <span tabindex="0" role="link" class="app-glossary-link">structured data</span>
+              and
+              <span tabindex="0" role="link" class="app-glossary-link">document outlines</span>
+              to find information.
+              The relevant data it finds is packaged into an experience that is <span tabindex="0" role="link"
+                class="app-glossary-link">native</span> to that service's <span tabindex="0" role="link"
+                class="app-glossary-link">voice UI</span>.
+            </p>
+            <p>
+              Browsers may have plugins or provide features, such as <span tabindex="0" role="link"
+                class="app-glossary-link">reader view</span>, that parse web pages, so it is best to provide as much
+              relevant metadata as possible
+              and always adhere to the <span tabindex="0" role="link" class="app-glossary-link">HTML
+                specification</span>.
+            </p>
+          </section>
+          <section aria-labelledby="personalization">
+            <h2 id="personalization">Personalization</h2>
+            <p>Most operating systems now offer
+              <span tabindex="0" role="link" class="app-glossary-link">dark mode</span>, which can be detected
+              by web pages. It is possible we will see more UI settings that are designed
+              to meet personal preferences.</p>
+            <p>
+              Furthermore, accessibility features are often hidden gems for power users.
+            </p>
+            <p>
+              On my iPhone, I have the <span tabindex="0" role="link" class="app-glossary-link">reduce motion</span>
+              setting and <span tabindex="0" role="link" class="app-glossary-link">speak screen</span> feature enabled.
+              I
+              have disabled touch force sensitivity and shake to undo.
+            </p>
+            <p>
+              On my iPad Pro,
+              when I connect my keyboard, I turn on the system's screen reader, VoiceOver, but set it to mute.
+              This enables <span tabindex="0" role="link" class="app-glossary-link">full keyboard access</span>
+              so I don't always have to use the large <span tabindex="0" role="link" class="app-glossary-link">touch
+                interface</span>.
+            </p>
+          </section>
+          <section aria-labelledby="engineering-strategies">
+            <h2 id="engineering-strategies">Engineering Strategies</h2>
+            <p>
+              The rules of accessibility and interoperability can be complex and cumbersome.
+              Some kind of automation needs to be in place in order to keep
+              application code simple and bug-free.
+            </p>
+            <p>
+              Creating a library of reusable web components is the best way to
+              build an accessible, interoperable web site.
+            </p>
+            <p>
+              This web page is built with Vue components. The markup for repeated areas
+              is templated. The dynamic aspects utilize native elements (such as <code>dialog</code>)
+              where possible. Even simple web pages can benefit from generating
+              markup from web components. For instance, it can help to have
+              a dynamic a mechanism for creating and tracking IDs, which
+              are used for labeling and to indicating relationships between
+              elements.
+            </p>
+          </section>
+          <aside aria-labelledby="heading-resources">
+            <h2 id="heading-resources">Resources</h2>
+            <ul aria-labelledby="heading-resources">
+              <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex">ARIA Design Patterns</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA
+                  Attributes</a></li>
+              <li><a href="https://schema.org/docs/schemas.html">Schema.org Attributes</a></li>
+              <li><a href="https://developers.facebook.com/docs/sharing/webmasters/#markup">Open Graph Attributes</a>
+              </li>
+              <li><a href="https://github.com/ten1seven/what-input">What Input? Library</a></li>
+              <li><a href="https://validator.nu/">HTML Validator</a></li>
+              <li><a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">
+                  axe Chrome Extension
+                </a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web Design (Wiki)</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">"Prefers
+                  Reduced
+                  Motion" Media Query</a></li>
+              <li><a
+                  href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">Accessibility
+                  Tree (Google)</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Vestibular_system#Pathologies">Vestibular Disorders (Wiki)</a>
+              </li>
+              <li><a href="https://en.wikipedia.org/wiki/Color_blindness">Color Blindness (Wiki)</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Cognitive_disorder">Cognitive Disorders (Wiki)</a></li>
+              <li><a href="https://www.nvaccess.org/download/">NVDA for Windows (Free)</a></li>
+              <li><a
+                  href="https://store.freedomscientific.com/collections/software-products/products/jaws-home-edition-screen-reading-software">JAWS
+                  for Windows (Available for Purchase)</a></li>
+              <li><a href="https://support.microsoft.com/en-us/help/22798/windows-10-complete-guide-to-narrator">Windows
+                  10
+                  Narrator (Free)</a></li>
+              <li><a href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn">Chrome
+                  Vox
+                  Extension for Chrome (Free)</a></li>
+              <li><a href="https://www.apple.com/accessibility/mac/vision/">VoiceOver for MacOS (Free)</a></li>
+              <li><a href="https://www.apple.com/accessibility/iphone/vision/">VoiceOver for iPhone (Free)</a></li>
+              <li><a href="https://support.google.com/accessibility/android/answer/6283677?hl=en">TalkBack for Android
+                  (Free)</a></li>
+              <li><a href="https://support.google.com/accessibility/android/answer/6151848">
+                  Voice Access for Android (Free)
+                </a></li>
+              <li><a href="https://www.nuance.com/dragon/dragon-for-pc/home-edition.html">Buy Dragon Naturally Speaking
+                  (Available for Purchase)</a></li>
+              <li><a
+                  href="https://www.nuance.com/products/help/dragon/dragon-for-pc/enx/professionalgroup/main/Content/Web/web_basics.htm">How
+                  to use Dragon Naturally Speaking with a Web Browser</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Refreshable_braille_display">Refreshable Braille Display
+                  (Wiki)</a></li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+    </main>
+  </div>
   <script src="vue.js"></script>
   <script src="interoperability.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics
