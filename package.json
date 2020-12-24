@@ -1,0 +1,23 @@
+{
+  "name": "pickpuck-com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+		"login": "./node_modules/firebase-tools/lib/bin/firebase.js login",
+		"deploy": "./node_modules/firebase-tools/lib/bin/firebase.js deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelcpuckett/pickpuck-com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelcpuckett/pickpuck-com/issues"
+  },
+  "homepage": "https://github.com/michaelcpuckett/pickpuck-com#readme",
+  "devDependencies": {
+    "firebase-tools": "^9.1.0"
+  }
+}

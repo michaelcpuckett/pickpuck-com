@@ -1,5 +1,3 @@
-public/
-phantom/
+
 node_modules/
-nohup.out
 *.log
